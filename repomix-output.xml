@@ -167,6 +167,8 @@ PaxHeaders.1451/
   single_agent_planner.py
   visualize.py
 cbs.py
+CBSandCBSwithDisjointSplittingIdea.txt
+chatgpt.txt
 independent.py
 paths_violate_constraint.py
 prioritized.py
@@ -178,6 +180,56 @@ visualize.py
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="CBSandCBSwithDisjointSplittingIdea.txt">
+CBS WITHOUT DISJOIN SPLITTING
+
+If CBS chooses to resolve a vertex collision
+    * where agents a and b are both in cell x at time step t
+
+    -> two negative vertex constraints
+        negative vertex constraint ⟨a, x, t⟩   (that prohibits agent a from being in cell x at time step t)
+        negative vertex constraint ⟨b, x, t⟩   (that prohibits agent b from being in cell x at time step t)
+
+
+ If CBS chooses to resolve an edge collision
+    * where agent a moves from cell x to cell y and agent b moves from cell y to cell x at time step t
+
+    -> then it generates two negative edge constraints
+        negative edge constraint ⟨a, x, y, t⟩   (that prohibits agent a from moving from cell x to cell y at time step t)
+        negative edge constraint ⟨b, y, x, t⟩   (that prohibits agent b from moving from cell y to cell x at time step t)
+
+
+
+CBS WITH DISJOIN SPLITTING
+
+If CBSDS chooses to resolve a vertex collision
+    * where agents a and b are both in cell x at time step t
+
+    -> two negative vertex constraints
+        negative vertex constraint ⟨a, x, t⟩   (that prohibits agent a from being in cell x at time step t)
+        positive vertex constraint that requires agent a to be in cell x at time step t
+
+ If CBSDS chooses to resolve an edge collision
+    * where agent a moves from cell x to cell y and agent b moves from cell y to cell x at time step t
+
+    -> then it generates two negative edge constraints
+        negative edge constraint ⟨a, x, y, t⟩   (that prohibits agent a from moving from cell x to cell y at time step t)
+        positive edge constraint that requires agent a to move from cell x to cell y at time step t
+
+
+            if an agent a is required to be in cell x at time step t, then all other
+            agents (including agent b) are automatically prohibited from being in cell x at time step t since
+            they would otherwise collide with agent a.
+</file>
+
+<file path="chatgpt.txt">
+check my work at build_constraint_table_disjoint and disjoint_splitting
+do not consider others function yet, I will do it later 
+
+DO NOT need to factor if it is return correct results
+fix with minimum change
+</file>
 
 <file path="instances/PaxHeaders.1451/exp0.txt">
 30 mtime=1576552944.659508404
@@ -1683,6 +1735,25 @@ import heapq
 import random
 from single_agent_planner import compute_heuristics, a_star, get_location, get_sum_of_cost
 
+def paths_violate_constraint(constraint, paths):
+    assert constraint['positive'] is True
+    rst = []
+    for i in range(len(paths)):
+        if i == constraint['agent']:
+            continue
+        curr = get_location(paths[i], constraint['timestep'])
+        prev = get_location(paths[i], constraint['timestep'] - 1)
+        if len(constraint['loc']) == 1:  # vertex constraint
+            if constraint['loc'][0] == curr:
+                rst.append(i)
+        else:  # edge constraint
+            if constraint['loc'][0] == prev or constraint['loc'][1] == curr \
+                    or constraint['loc'] == [curr, prev]:
+                rst.append(i)
+    return rst
+
+
+
 
 def detect_collision(path1, path2):
     ##############################
@@ -1772,6 +1843,36 @@ def disjoint_splitting(collision):
     #                          specified timestep, and the second constraint prevents the same agent to traverse the
     #                          specified edge at the specified timestep
     #           Choose the agent randomly
+    random.seed(0)
+
+    pos_agent = random.randint(0, 1)
+
+    constraints = []
+    if pos_agent == 0:
+        if len(collision['loc']) == 1: # vertex 
+            constraints = [
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+        else: # edge
+            constraints = [
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+    else:
+        if len(collision['loc']) == 1: 
+            constraints = [
+                {'agent': collision['a2'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a2'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+        else:  
+            reversed_edge = [collision['loc'][1], collision['loc'][0]]  
+            constraints = [
+                {'agent': collision['a2'], 'loc': reversed_edge, 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a2'], 'loc': reversed_edge, 'timestep': collision['timestep'], 'positive': True},
+            ]
+
+    return constraints
 
     pass
 
@@ -1831,7 +1932,7 @@ class CBSSolver(object):
                 'collisions': []}
         for i in range(self.num_of_agents):  # Find initial path for each agent
             path = a_star(self.my_map, self.starts[i], self.goals[i], self.heuristics[i],
-                          i, root['constraints'])
+                          i, root['constraints'], disjoint=disjoint)
             if path is None:
                 raise BaseException('No solutions')
             root['paths'].append(path)
@@ -1844,8 +1945,8 @@ class CBSSolver(object):
         # print(root['collisions'])
 
         # Task 3.2: Testing
-        for collision in root['collisions']:
-            print(standard_splitting(collision))
+        # for collision in root['collisions']:
+        #     print(standard_splitting(collision))
 
         ##############################
         # Task 3.3: High-Level Search
@@ -1856,42 +1957,83 @@ class CBSSolver(object):
         #                standard_splitting function). Add a new child node to your open list for each constraint
         #           Ensure to create a copy of any objects that your child nodes might inherit
         
-        
-        root['cost'] = get_sum_of_cost(root['paths'])
-        root['collisions'] = detect_collisions(root['paths'])
-        self.push_node(root)
         while (len(self.open_list) > 0):
             P = self.pop_node()
-            if len(P['collisions']) == 0:
+
+            if not P['collisions']:
                 self.print_results(P)
                 return P['paths']
 
             collision = P['collisions'][0]
-            constraints = standard_splitting(collision) 
+
+            if disjoint:
+                constraints = disjoint_splitting(collision)
+            else:
+                constraints = standard_splitting(collision) 
+
+            # for constraint in constraints:
+            #     new_constraints = [c.copy() for c in P['constraints']]
+            #     new_constraints.append(constraint.copy())
+
+            #     new_paths = [p[:] for p in P['paths']]
+
+            #     ai = constraint['agent']
+            #     new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
+            #                     self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
+            #     if new_path is None:
+            #         continue
+
+            #     new_paths[ai] = new_path
+
+            #     Q = {
+            #         'cost': get_sum_of_cost(new_paths),
+            #         'constraints': new_constraints,
+            #         'paths': new_paths,
+            #         'collisions': detect_collisions(new_paths)
+            #     }
+            #     self.push_node(Q)
+
 
             for constraint in constraints:
-                Q = {
-                    'cost': 0,
-                    # 'constraints': [p.copy() for p in P['constraints']] + [constraint],
-                    # 'paths': [p[:] for p in P['paths']],
-                    'constraints': P['constraints'] + [constraint],
-                    'paths': P['paths'],   # shallow copy the list of paths
-                    'collisions': []
-                }
+                new_constraints = [c.copy() for c in P['constraints']]
+                new_constraints.append(constraint.copy())
 
+                new_paths = [p[:] for p in P['paths']]
+
+                # Always replan the agent that received the new constraint
                 ai = constraint['agent']
                 new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
-                                self.heuristics[ai], ai, Q['constraints'])
+                                  self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
                 if new_path is None:
-                    continue  
+                    # no feasible path for the constrained agent -> drop child
+                    continue
+                new_paths[ai] = new_path
 
+                # If disjoint splitting AND the constraint is positive:
+                # the positive constraint on agent ai implies negative constraints on all others.
+                # Replan ALL agents whose current paths violate this positive constraint.
+                if disjoint and constraint.get('positive', False):
+                    violators = paths_violate_constraint(constraint, new_paths)
+                    infeasible = False
+                    for v in violators:
+                        v_path = a_star(self.my_map, self.starts[v], self.goals[v],
+                                        self.heuristics[v], v, new_constraints, disjoint=disjoint)
+                        if v_path is None:
+                            # any violator infeasible -> drop this child entirely
+                            infeasible = True
+                            break
+                        new_paths[v] = v_path
+                    if infeasible:
+                        continue  # do not add this child
 
-                Q['paths'][ai] = new_path
-                Q['collisions'] = detect_collisions(Q['paths'])
-                Q['cost'] = get_sum_of_cost(Q['paths'])
+                Q = {
+                    'cost': get_sum_of_cost(new_paths),
+                    'constraints': new_constraints,
+                    'paths': new_paths,
+                    'collisions': detect_collisions(new_paths)
+                }
+                # print (Q['collisions'], Q['constraints'])
                 self.push_node(Q)
-
-
         self.print_results(root)
         return root['paths']
 
@@ -2087,7 +2229,56 @@ class PrioritizedPlanningSolver(object):
 </file>
 
 <file path="results.csv">
-instances/test_47.txt,65
+instances/test_1.txt,43
+instances/test_10.txt,19
+instances/test_11.txt,35
+instances/test_12.txt,36
+instances/test_13.txt,38
+instances/test_14.txt,24
+instances/test_15.txt,50
+instances/test_16.txt,51
+instances/test_17.txt,39
+instances/test_18.txt,32
+instances/test_19.txt,47
+instances/test_2.txt,18
+instances/test_20.txt,28
+instances/test_21.txt,46
+instances/test_22.txt,51
+instances/test_23.txt,32
+instances/test_24.txt,47
+instances/test_25.txt,40
+instances/test_26.txt,42
+instances/test_27.txt,42
+instances/test_28.txt,41
+instances/test_29.txt,48
+instances/test_3.txt,28
+instances/test_30.txt,44
+instances/test_31.txt,39
+instances/test_32.txt,30
+instances/test_33.txt,28
+instances/test_34.txt,33
+instances/test_35.txt,30
+instances/test_36.txt,23
+instances/test_37.txt,38
+instances/test_38.txt,28
+instances/test_39.txt,36
+instances/test_4.txt,32
+instances/test_40.txt,24
+instances/test_41.txt,45
+instances/test_42.txt,57
+instances/test_43.txt,46
+instances/test_44.txt,33
+instances/test_45.txt,24
+instances/test_46.txt,57
+instances/test_47.txt,66
+instances/test_48.txt,36
+instances/test_49.txt,43
+instances/test_5.txt,26
+instances/test_50.txt,50
+instances/test_6.txt,24
+instances/test_7.txt,34
+instances/test_8.txt,39
+instances/test_9.txt,24
 </file>
 
 <file path="run_experiments.py">
@@ -2276,12 +2467,63 @@ def build_constraint_table(constraints, agent):
     table = dict()
     for constraint in constraints:
         if constraint['agent'] == agent:
-            t = constraint['timestep']
-            table.setdefault(t, []).append(constraint)
+            timestep = constraint['timestep']
+            table.setdefault(timestep, []).append(constraint)
     
     return table
     pass    
 
+
+def build_constraint_table_disjoint(constraints, agent):
+    ##############################
+    # Task 4 
+    table = dict()
+    # print(constraints)
+    # remember, for the case for example, agent a, (u, v), t, pos
+    # we would think of 
+    # agent b, (v, u), t, neg
+    # agent b, u, t, neg
+    # agent b, v, t - 1, neg
+    # but, we dont need those negative vertex constraint, because they should alwasy go together
+    # agent a, (u, v), t, pos,
+    # agent a, u, t, pos
+    # agent a, v, t - 1, pos
+    for constraint in constraints:
+        timestep = constraint['timestep']
+        loc = constraint['loc']
+        pos = constraint.get('positive', False)
+        agent_c = constraint['agent']
+
+        # vertex
+        if len(loc) == 1:
+            if pos: # if this is positive constraint 
+                if agent_c == agent: # add for its own agent with positive constraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': True})
+                else: # if there is another positive constraitn for another agent, the this agent should not step onto this loc, a negative constraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
+            else: # if this is a negative, do same as normal 
+                if agent_c == agent:
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
+        # edge 
+        else: 
+            if pos: # if this is a positive constraint
+                if agent_c == agent: # add for its own agent with positive edge contraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': True})
+                else: # if there is another positive constraint of other agent, this agent should not have a negative edge, negative constraint with negative edge.
+                    u, v = loc[0], loc[1]
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': [v, u], 'timestep': timestep, 'positive': False})
+                    
+                    # just in case. I'm lost :) 
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': [v], 'timestep': timestep, 'positive': False})
+                    if timestep - 1 >= 0:
+                        table.setdefault(timestep, []).append({'agent': agent, 'loc': [u], 'timestep': timestep - 1, 'positive': False})
+
+            else: # if this is a negative, do as normal
+                if agent_c == agent:
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
+    
+    return table
+    pass
 
 def get_location(path, time):
     if time < 0:
@@ -2301,29 +2543,56 @@ def get_path(goal_node):
     path.reverse()
     return path
 
+# def is_constrained(curr_loc, next_loc, next_time, constraint_table):
+#     ##############################
+#     # Task 1.2/1.3: Check if a move from curr_loc to next_loc at time step next_time violates
+#     #               any given constraint. For efficiency the constraints are indexed in a constraint_table
+#     #               by time step, see build_constraint_table.
+#     # print(constraint_table)
+
+#     for steptime, constraints in constraint_table.items():
+#         if steptime < next_time:
+#             for constraint in constraints:
+#                 if constraint.get('isGoal') == True and constraint['loc'] == [next_loc]:
+#                     return True     
+
+#     if next_time not in constraint_table:
+#         return False
+
+#     for constraint in constraint_table[next_time]:
+#         if constraint['loc'] == [next_loc] or [curr_loc, next_loc] == constraint['loc']:
+#             return True
+        
+#     return False
+
+#     pass
 
 def is_constrained(curr_loc, next_loc, next_time, constraint_table):
-    ##############################
-    # Task 1.2/1.3: Check if a move from curr_loc to next_loc at time step next_time violates
-    #               any given constraint. For efficiency the constraints are indexed in a constraint_table
-    #               by time step, see build_constraint_table.
-    # print(constraint_table)
+    # 0) Pre-time goal locking (unchanged)
     for steptime, constraints in constraint_table.items():
         if steptime < next_time:
-            for constraint in constraints:
-                if constraint.get('isGoal') == True and constraint['loc'] == [next_loc]:
-                    return True     
+            for c in constraints:
+                if c.get('isGoal') and len(c['loc']) == 1 and c['loc'][0] == next_loc:
+                    return True
 
-    if next_time not in constraint_table:
-        return False
+    # 1) NEGATIVES FIRST: deny immediately if any negative matches
+    for c in constraint_table.get(next_time, []):
+        if not c.get('positive'):
+            if c['loc'] == [next_loc] or c['loc'] == [curr_loc, next_loc]:
+                return True
 
-    for constraint in constraint_table[next_time]:
-        if constraint['loc'] == [next_loc] or [curr_loc, next_loc] == constraint['loc']:
-            return True
-        
+    # 2) POSITIVES SECOND: if positives exist, the move must match at least one
+    pos = [c for c in constraint_table.get(next_time, []) if c.get('positive')]
+    if pos:
+        for c in pos:
+            if (len(c['loc']) == 1 and c['loc'][0] == next_loc) or \
+               (len(c['loc']) == 2 and c['loc'] == [curr_loc, next_loc]):
+                return False  # satisfies a positive
+        return True  # positives exist but none matched -> violation
+
+    # 3) No constraints blocking -> allowed
     return False
 
-    pass
 
 
 def push_node(open_list, node):
@@ -2340,15 +2609,18 @@ def compare_nodes(n1, n2):
     return n1['g_val'] + n1['h_val'] < n2['g_val'] + n2['h_val']
 
 
-def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None):
+def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None, disjoint=False):
     """ my_map      - binary obstacle map
         start_loc   - start position
         goal_loc    - goal position
         agent       - the agent that is being re-planned
         constraints - constraints defining where robot should or cannot go at each timestep
     """
-    table = build_constraint_table(constraints, agent)
-    
+    if disjoint:
+        table = build_constraint_table_disjoint(constraints, agent)
+    else:
+        table = build_constraint_table(constraints, agent)
+        
     ##############################
     # Task 1.1: Extend the A* search to search in the space-time domain
     #           rather than space domain, only.
@@ -2361,8 +2633,21 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
     push_node(open_list, root)
     closed_list[(root['loc'], root['timestep'])] = root
 
+    def get_max(curr):
+        b = True
+        for t, cs in table.items():
+            if t > curr['timestep']:
+                for c in cs:
+                    # only vertex constraints on the goal matter once you're waiting there
+                    if curr['loc'] == goal_loc and c.get('positive',False) == False:
+                        b = False                        
+        return b
+    
+    # earliest_goal_timestep = goal_block_until
+    # earliest_goal_timestep = 0
+    # earliest_goal_timestep = max(table.keys()) if len(table) > 0 else 0
 
-    earliest_goal_timestep = max(table.keys()) if len(table) > 0 else 0
+    earliest_goal_timestep = max(table.keys(), default=0)
 
     while len(open_list) > 0:
         curr = pop_node(open_list)
@@ -2371,9 +2656,8 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
         if maxTimeStep != None:
             if curr['timestep'] >= maxTimeStep:
                 return None
-        if curr['loc'] == goal_loc and curr['timestep'] >= earliest_goal_timestep:
+        if curr['loc'] == goal_loc and get_max(curr):
             return get_path(curr)
-
 
         for dir in range(4):
             child_loc = move(curr['loc'], dir)
