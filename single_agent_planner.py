@@ -62,26 +62,63 @@ def build_constraint_table(constraints, agent):
     table = dict()
     for constraint in constraints:
         if constraint['agent'] == agent:
-            t = constraint['timestep']
-            table.setdefault(t, []).append(constraint)
+            timestep = constraint['timestep']
+            table.setdefault(timestep, []).append(constraint)
     
     return table
     pass    
 
 
-def build_constraint_table(constraints, agent, positive=False):
+def build_constraint_table_disjoint(constraints, agent):
     ##############################
     # Task 4 
     table = dict()
+    # print(constraints)
+    # remember, for the case for example, agent a, (u, v), t, pos
+    # we would think of 
+    # agent b, (v, u), t, neg
+    # agent b, u, t, neg
+    # agent b, v, t - 1, neg
+    # but, we dont need those negative vertex constraint, because they should alwasy go together
+    # agent a, (u, v), t, pos,
+    # agent a, u, t, pos
+    # agent a, v, t - 1, pos
     for constraint in constraints:
-        if constraint['agent'] == agent:
-            t = constraint['timestep']
-            table.setdefault(t, []).append(constraint)
+        timestep = constraint['timestep']
+        loc = constraint['loc']
+        pos = constraint.get('positive', False)
+        agent_c = constraint['agent']
+
+        # vertex
+        if len(loc) == 1:
+            if pos: # if this is positive constraint 
+                if agent_c == agent: # add for its own agent with positive constraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': True})
+                else: # if there is another positive constraitn for another agent, the this agent should not step onto this loc, a negative constraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
+            else: # if this is a negative, do same as normal 
+                if agent_c == agent:
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
+        # edge 
+        else: 
+            if pos: # if this is a positive constraint
+                if agent_c == agent: # add for its own agent with positive edge contraint
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': True})
+                else: # if there is another positive constraint of other agent, this agent should not have a negative edge, negative constraint with negative edge.
+                    u, v = loc[0], loc[1]
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': [v, u], 'timestep': timestep, 'positive': False})
+                    
+                    # just in case. I'm lost :) 
+                    # table.setdefault(timestep, []).append({'agent': agent, 'loc': [v], 'timestep': timestep, 'positive': False})
+                    # if timestep - 1 >= 0:
+                    #     table.setdefault(timestep, []).append({'agent': agent, 'loc': [u], 'timestep': timestep - 1, 'positive': False})
+
+            else: # if this is a negative, do as normal
+                if agent_c == agent:
+                    table.setdefault(timestep, []).append({'agent': agent, 'loc': loc, 'timestep': timestep, 'positive': False})
     
     return table
-    pass    
-
-
+    pass
 
 def get_location(path, time):
     if time < 0:
@@ -101,29 +138,54 @@ def get_path(goal_node):
     path.reverse()
     return path
 
+# def is_constrained(curr_loc, next_loc, next_time, constraint_table):
+#     ##############################
+#     # Task 1.2/1.3: Check if a move from curr_loc to next_loc at time step next_time violates
+#     #               any given constraint. For efficiency the constraints are indexed in a constraint_table
+#     #               by time step, see build_constraint_table.
+#     # print(constraint_table)
+
+#     for steptime, constraints in constraint_table.items():
+#         if steptime < next_time:
+#             for constraint in constraints:
+#                 if constraint.get('isGoal') == True and constraint['loc'] == [next_loc]:
+#                     return True     
+
+#     if next_time not in constraint_table:
+#         return False
+
+#     for constraint in constraint_table[next_time]:
+#         if constraint['loc'] == [next_loc] or [curr_loc, next_loc] == constraint['loc']:
+#             return True
+        
+#     return False
+
+#     pass
 
 def is_constrained(curr_loc, next_loc, next_time, constraint_table):
-    ##############################
-    # Task 1.2/1.3: Check if a move from curr_loc to next_loc at time step next_time violates
-    #               any given constraint. For efficiency the constraints are indexed in a constraint_table
-    #               by time step, see build_constraint_table.
-    # print(constraint_table)
     for steptime, constraints in constraint_table.items():
         if steptime < next_time:
-            for constraint in constraints:
-                if constraint.get('isGoal') == True and constraint['loc'] == [next_loc]:
-                    return True     
+            for c in constraints:
+                if c.get('isGoal') and len(c['loc']) == 1 and c['loc'][0] == next_loc:
+                    return True
 
-    if next_time not in constraint_table:
-        return False
+    # 1) negative
+    for c in constraint_table.get(next_time, []):
+        if not c.get('positive'):
+            if c['loc'] == [next_loc] or c['loc'] == [curr_loc, next_loc]:
+                return True
 
-    for constraint in constraint_table[next_time]:
-        if constraint['loc'] == [next_loc] or [curr_loc, next_loc] == constraint['loc']:
-            return True
-        
+    # 2) positive
+    pos = [c for c in constraint_table.get(next_time, []) if c.get('positive')]
+    if pos:
+        for c in pos:
+            if (len(c['loc']) == 1 and c['loc'][0] == next_loc) or \
+               (len(c['loc']) == 2 and c['loc'] == [curr_loc, next_loc]):
+                return False 
+        return True
+    
     return False
 
-    pass
 
 
 def push_node(open_list, node):
@@ -140,15 +202,18 @@ def compare_nodes(n1, n2):
     return n1['g_val'] + n1['h_val'] < n2['g_val'] + n2['h_val']
 
 
-def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None):
+def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None, disjoint=False):
     """ my_map      - binary obstacle map
         start_loc   - start position
         goal_loc    - goal position
         agent       - the agent that is being re-planned
         constraints - constraints defining where robot should or cannot go at each timestep
     """
-    table = build_constraint_table(constraints, agent)
-    
+    if disjoint:
+        table = build_constraint_table_disjoint(constraints, agent)
+    else:
+        table = build_constraint_table(constraints, agent)
+        
     ##############################
     # Task 1.1: Extend the A* search to search in the space-time domain
     #           rather than space domain, only.
@@ -161,16 +226,32 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
     push_node(open_list, root)
     closed_list[(root['loc'], root['timestep'])] = root
 
-    goal_block_until = 0
-    for t, cs in table.items():
-        for c in cs:
-            # only vertex constraints on the goal matter once you're waiting there
-            if len(c['loc']) == 1 and c['loc'][0] == goal_loc:
-                goal_block_until = max(goal_block_until, t)
-
-    earliest_goal_timestep = goal_block_until
-
+    def can_wait_forever_from(curr):
+        """
+        True iff, by waiting at curr['loc'] forever, the agent will not violate
+        any FUTURE constraint for this agent.
+        """
+        for timestep, constraints in table.items():
+            if timestep <= curr['timestep']:
+                continue
+            for constraint in constraints:
+                pos = constraint.get('positive', False)
+                loc = constraint['loc']
+                # FUTURE negative vertex ban exactly at this square -> waiting here would violate
+                if not pos and len(loc) == 1 and loc[0] == curr['loc']:
+                    return False
+                # FUTURE positive that cannot be satisfied by waiting here:
+                #  - any positive EDGE
+                #  - or positive VERTEX at a different square
+                if pos and (len(loc) == 2 or (len(loc) == 1 and loc[0] != curr['loc'])):
+                    return False
+        return True
+    
+    # earliest_goal_timestep = goal_block_until
+    # earliest_goal_timestep = 0
     # earliest_goal_timestep = max(table.keys()) if len(table) > 0 else 0
+
+
 
     while len(open_list) > 0:
         curr = pop_node(open_list)
@@ -179,9 +260,12 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
         if maxTimeStep != None:
             if curr['timestep'] >= maxTimeStep:
                 return None
-        if curr['loc'] == goal_loc and curr['timestep'] >= earliest_goal_timestep:
+            
+        earliest_goal_timestep = max(table.keys()) if len(table) > 0 else 1
+        # if curr['loc'] == goal_loc and curr['timestep'] >= earliest_goal_timestep:
+            # return get_path(curr)
+        if curr['loc'] == goal_loc and can_wait_forever_from(curr): 
             return get_path(curr)
-
 
         for dir in range(4):
             child_loc = move(curr['loc'], dir)
