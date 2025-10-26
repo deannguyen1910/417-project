@@ -3,6 +3,25 @@ import heapq
 import random
 from single_agent_planner import compute_heuristics, a_star, get_location, get_sum_of_cost
 
+def paths_violate_constraint(constraint, paths):
+    assert constraint['positive'] is True
+    rst = []
+    for i in range(len(paths)):
+        if i == constraint['agent']:
+            continue
+        curr = get_location(paths[i], constraint['timestep'])
+        prev = get_location(paths[i], constraint['timestep'] - 1)
+        if len(constraint['loc']) == 1:  # vertex constraint
+            if constraint['loc'][0] == curr:
+                rst.append(i)
+        else:  # edge constraint
+            if constraint['loc'][0] == prev or constraint['loc'][1] == curr \
+                    or constraint['loc'] == [curr, prev]:
+                rst.append(i)
+    return rst
+
+
+
 
 def detect_collision(path1, path2):
     ##############################
@@ -92,6 +111,36 @@ def disjoint_splitting(collision):
     #                          specified timestep, and the second constraint prevents the same agent to traverse the
     #                          specified edge at the specified timestep
     #           Choose the agent randomly
+    random.seed(0)
+
+    pos_agent = random.randint(0, 1)
+
+    constraints = []
+    if pos_agent == 0:
+        if len(collision['loc']) == 1: # vertex 
+            constraints = [
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+        else: # edge
+            constraints = [
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a1'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+    else:
+        if len(collision['loc']) == 1: 
+            constraints = [
+                {'agent': collision['a2'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a2'], 'loc': collision['loc'], 'timestep': collision['timestep'], 'positive': True},
+            ]
+        else:  
+            reversed_edge = [collision['loc'][1], collision['loc'][0]]  
+            constraints = [
+                {'agent': collision['a2'], 'loc': reversed_edge, 'timestep': collision['timestep'], 'positive': False},
+                {'agent': collision['a2'], 'loc': reversed_edge, 'timestep': collision['timestep'], 'positive': True},
+            ]
+
+    return constraints
 
     pass
 
@@ -151,7 +200,7 @@ class CBSSolver(object):
                 'collisions': []}
         for i in range(self.num_of_agents):  # Find initial path for each agent
             path = a_star(self.my_map, self.starts[i], self.goals[i], self.heuristics[i],
-                          i, root['constraints'])
+                          i, root['constraints'], disjoint=disjoint)
             if path is None:
                 raise BaseException('No solutions')
             root['paths'].append(path)
@@ -176,22 +225,42 @@ class CBSSolver(object):
         #                standard_splitting function). Add a new child node to your open list for each constraint
         #           Ensure to create a copy of any objects that your child nodes might inherit
         
-        
-        # root['cost'] = get_sum_of_cost(root['paths'])
-        # root['collisions'] = detect_collisions(root['paths'])
-        # self.push_node(root)
         while (len(self.open_list) > 0):
             P = self.pop_node()
-            # if len(P['collisions']) == 0:
-            #     self.print_results(P)
-            #     return P['paths']
 
             if not P['collisions']:
                 self.print_results(P)
                 return P['paths']
 
             collision = P['collisions'][0]
-            constraints = standard_splitting(collision) 
+
+            if disjoint:
+                constraints = disjoint_splitting(collision)
+            else:
+                constraints = standard_splitting(collision) 
+
+            # for constraint in constraints:
+            #     new_constraints = [c.copy() for c in P['constraints']]
+            #     new_constraints.append(constraint.copy())
+
+            #     new_paths = [p[:] for p in P['paths']]
+
+            #     ai = constraint['agent']
+            #     new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
+            #                     self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
+            #     if new_path is None:
+            #         continue
+
+            #     new_paths[ai] = new_path
+
+            #     Q = {
+            #         'cost': get_sum_of_cost(new_paths),
+            #         'constraints': new_constraints,
+            #         'paths': new_paths,
+            #         'collisions': detect_collisions(new_paths)
+            #     }
+            #     self.push_node(Q)
+
 
             for constraint in constraints:
                 new_constraints = [c.copy() for c in P['constraints']]
@@ -199,13 +268,31 @@ class CBSSolver(object):
 
                 new_paths = [p[:] for p in P['paths']]
 
+                # Always replan the agent that received the new constraint
                 ai = constraint['agent']
                 new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
-                                self.heuristics[ai], ai, new_constraints)
+                                  self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
                 if new_path is None:
+                    # no feasible path for the constrained agent -> drop child
                     continue
-
                 new_paths[ai] = new_path
+
+                # If disjoint splitting AND the constraint is positive:
+                # the positive constraint on agent ai implies negative constraints on all others.
+                # Replan ALL agents whose current paths violate this positive constraint.
+                if disjoint and constraint.get('positive', False):
+                    violators = paths_violate_constraint(constraint, new_paths)
+                    infeasible = False
+                    for v in violators:
+                        v_path = a_star(self.my_map, self.starts[v], self.goals[v],
+                                        self.heuristics[v], v, new_constraints, disjoint=disjoint)
+                        if v_path is None:
+                            # any violator infeasible -> drop this child entirely
+                            infeasible = True
+                            break
+                        new_paths[v] = v_path
+                    if infeasible:
+                        continue  # do not add this child
 
                 Q = {
                     'cost': get_sum_of_cost(new_paths),
@@ -213,9 +300,8 @@ class CBSSolver(object):
                     'paths': new_paths,
                     'collisions': detect_collisions(new_paths)
                 }
+                # print (Q['collisions'], Q['constraints'])
                 self.push_node(Q)
-
-
         self.print_results(root)
         return root['paths']
 
