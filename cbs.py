@@ -111,7 +111,7 @@ def disjoint_splitting(collision):
     #                          specified timestep, and the second constraint prevents the same agent to traverse the
     #                          specified edge at the specified timestep
     #           Choose the agent randomly
-    random.seed(0)
+    random.seed(1)
 
     pos_agent = random.randint(0, 1)
 
