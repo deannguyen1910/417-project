@@ -239,28 +239,6 @@ class CBSSolver(object):
             else:
                 constraints = standard_splitting(collision) 
 
-            # for constraint in constraints:
-            #     new_constraints = [c.copy() for c in P['constraints']]
-            #     new_constraints.append(constraint.copy())
-
-            #     new_paths = [p[:] for p in P['paths']]
-
-            #     ai = constraint['agent']
-            #     new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
-            #                     self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
-            #     if new_path is None:
-            #         continue
-
-            #     new_paths[ai] = new_path
-
-            #     Q = {
-            #         'cost': get_sum_of_cost(new_paths),
-            #         'constraints': new_constraints,
-            #         'paths': new_paths,
-            #         'collisions': detect_collisions(new_paths)
-            #     }
-            #     self.push_node(Q)
-
 
             for constraint in constraints:
                 new_constraints = [c.copy() for c in P['constraints']]
@@ -268,18 +246,13 @@ class CBSSolver(object):
 
                 new_paths = [p[:] for p in P['paths']]
 
-                # Always replan the agent that received the new constraint
                 ai = constraint['agent']
                 new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
                                   self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
                 if new_path is None:
-                    # no feasible path for the constrained agent -> drop child
                     continue
                 new_paths[ai] = new_path
 
-                # If disjoint splitting AND the constraint is positive:
-                # the positive constraint on agent ai implies negative constraints on all others.
-                # Replan ALL agents whose current paths violate this positive constraint.
                 if disjoint and constraint.get('positive', False):
                     violators = paths_violate_constraint(constraint, new_paths)
                     infeasible = False
@@ -287,12 +260,11 @@ class CBSSolver(object):
                         v_path = a_star(self.my_map, self.starts[v], self.goals[v],
                                         self.heuristics[v], v, new_constraints, disjoint=disjoint)
                         if v_path is None:
-                            # any violator infeasible -> drop this child entirely
                             infeasible = True
                             break
                         new_paths[v] = v_path
                     if infeasible:
-                        continue  # do not add this child
+                        continue  
 
                 Q = {
                     'cost': get_sum_of_cost(new_paths),

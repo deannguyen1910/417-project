@@ -108,7 +108,7 @@ def build_constraint_table_disjoint(constraints, agent):
                     u, v = loc[0], loc[1]
                     table.setdefault(timestep, []).append({'agent': agent, 'loc': [v, u], 'timestep': timestep, 'positive': False})
                     
-                    # just in case. I'm lost :) 
+                    # just in case. At this point, i'm lost :) 
                     # table.setdefault(timestep, []).append({'agent': agent, 'loc': [v], 'timestep': timestep, 'positive': False})
                     # if timestep - 1 >= 0:
                     #     table.setdefault(timestep, []).append({'agent': agent, 'loc': [u], 'timestep': timestep - 1, 'positive': False})
@@ -169,13 +169,13 @@ def is_constrained(curr_loc, next_loc, next_time, constraint_table):
                 if c.get('isGoal') and len(c['loc']) == 1 and c['loc'][0] == next_loc:
                     return True
 
-    # 1) negative
+    # negative
     for c in constraint_table.get(next_time, []):
         if not c.get('positive'):
             if c['loc'] == [next_loc] or c['loc'] == [curr_loc, next_loc]:
                 return True
 
-    # 2) positive
+    # positive
     pos = [c for c in constraint_table.get(next_time, []) if c.get('positive')]
     if pos:
         for c in pos:
