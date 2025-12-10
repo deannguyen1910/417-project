@@ -1,0 +1,39 @@
+CBS WITHOUT DISJOIN SPLITTING
+
+If CBS chooses to resolve a vertex collision
+    * where agents a and b are both in cell x at time step t
+
+    -> two negative vertex constraints
+        negative vertex constraint ⟨a, x, t⟩   (that prohibits agent a from being in cell x at time step t)
+        negative vertex constraint ⟨b, x, t⟩   (that prohibits agent b from being in cell x at time step t)
+
+
+ If CBS chooses to resolve an edge collision
+    * where agent a moves from cell x to cell y and agent b moves from cell y to cell x at time step t
+
+    -> then it generates two negative edge constraints
+        negative edge constraint ⟨a, x, y, t⟩   (that prohibits agent a from moving from cell x to cell y at time step t)
+        negative edge constraint ⟨b, y, x, t⟩   (that prohibits agent b from moving from cell y to cell x at time step t)
+
+
+
+CBS WITH DISJOIN SPLITTING
+
+If CBSDS chooses to resolve a vertex collision
+    * where agents a and b are both in cell x at time step t
+
+    -> two negative vertex constraints
+        negative vertex constraint ⟨a, x, t⟩   (that prohibits agent a from being in cell x at time step t)
+        positive vertex constraint that requires agent a to be in cell x at time step t
+
+ If CBSDS chooses to resolve an edge collision
+    * where agent a moves from cell x to cell y and agent b moves from cell y to cell x at time step t
+
+    -> then it generates two negative edge constraints
+        negative edge constraint ⟨a, x, y, t⟩   (that prohibits agent a from moving from cell x to cell y at time step t)
+        positive edge constraint that requires agent a to move from cell x to cell y at time step t
+
+
+            if an agent a is required to be in cell x at time step t, then all other
+            agents (including agent b) are automatically prohibited from being in cell x at time step t since
+            they would otherwise collide with agent a.
