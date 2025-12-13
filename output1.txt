@@ -1,0 +1,8427 @@
+***Import an instance***
+Start locations
+3 . @ . . . . . 
+4 0 . @ . . . . 
+. . @ . . . . . 
+. . . . . . . . 
+. . . 2 . . . @ 
+. . . . . @ . . 
+. . . . . . @ . 
+. . . . . . 1 . 
+
+Goal locations
+1 . @ . . . . . 
+. 2 . @ . . . . 
+. . @ . . . . . 
+0 . . . . . . . 
+. . . . . . . @ 
+. . . . 3 @ 4 . 
+. . . . . . @ . 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_1_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 6
+Generate node 9
+Generate node 10
+Expand node 8
+Generate node 11
+Generate node 12
+Expand node 10
+Generate node 13
+Generate node 14
+Expand node 4
+Generate node 15
+Expand node 15
+Generate node 16
+Generate node 17
+Expand node 17
+Generate node 18
+Generate node 19
+Expand node 2
+Generate node 20
+Generate node 21
+Expand node 21
+Generate node 22
+Generate node 23
+Expand node 22
+Generate node 24
+Generate node 25
+Expand node 24
+Generate node 26
+Generate node 27
+Expand node 25
+Generate node 28
+Generate node 29
+Expand node 23
+Generate node 30
+Expand node 30
+Generate node 31
+Generate node 32
+Expand node 20
+Generate node 33
+Expand node 33
+Generate node 34
+Generate node 35
+Expand node 34
+Generate node 36
+Generate node 37
+Expand node 36
+Generate node 38
+Generate node 39
+Expand node 37
+Generate node 40
+Generate node 41
+Expand node 35
+Generate node 42
+Expand node 42
+Generate node 43
+Generate node 44
+Expand node 7
+Generate node 45
+Generate node 46
+Expand node 9
+Generate node 47
+Generate node 48
+Expand node 14
+Generate node 49
+Expand node 16
+Generate node 50
+Generate node 51
+Expand node 26
+Generate node 52
+Generate node 53
+Expand node 28
+Generate node 54
+Generate node 55
+Expand node 29
+Generate node 56
+Expand node 31
+Generate node 57
+Generate node 58
+Expand node 38
+Generate node 59
+Generate node 60
+Expand node 40
+Generate node 61
+Generate node 62
+Expand node 41
+Generate node 63
+Expand node 43
+Generate node 64
+Generate node 65
+Expand node 46
+Generate node 66
+Generate node 67
+Expand node 48
+Generate node 68
+Generate node 69
+Expand node 49
+Generate node 70
+Generate node 71
+Expand node 51
+Generate node 72
+Generate node 73
+Expand node 56
+Generate node 74
+Generate node 75
+Expand node 63
+Generate node 76
+Generate node 77
+Expand node 12
+Generate node 78
+Generate node 79
+Expand node 78
+Generate node 80
+Expand node 79
+Generate node 81
+Expand node 80
+Generate node 82
+Generate node 83
+Expand node 81
+Generate node 84
+Generate node 85
+Expand node 19
+Generate node 86
+Expand node 86
+Generate node 87
+Expand node 87
+Generate node 88
+Generate node 89
+Expand node 27
+Generate node 90
+Generate node 91
+Expand node 90
+Generate node 92
+Expand node 91
+Generate node 93
+Expand node 92
+Generate node 94
+Generate node 95
+Expand node 93
+Generate node 96
+Generate node 97
+Expand node 32
+Generate node 98
+Expand node 98
+Generate node 99
+Expand node 99
+Generate node 100
+Generate node 101
+Expand node 39
+Generate node 102
+Generate node 103
+Expand node 102
+Generate node 104
+Expand node 103
+Generate node 105
+Expand node 104
+Generate node 106
+Generate node 107
+Expand node 105
+Generate node 108
+Generate node 109
+Expand node 44
+Generate node 110
+Expand node 110
+Generate node 111
+Expand node 111
+Generate node 112
+Generate node 113
+Expand node 11
+Generate node 114
+Expand node 114
+Generate node 115
+Generate node 116
+Expand node 116
+Generate node 117
+Expand node 117
+
+ Found a solution! 
+
+CPU time (s):    0.04
+Sum of costs:    41
+Expanded nodes:  70
+Generated nodes: 118
+***Import an instance***
+Start locations
+@ . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. 3 @ . 0 . . . 
+@ @ 2 . . . @ . 
+. 4 . . . . . 1 
+. 5 . . . . . @ 
+. . . . . . . . 
+
+Goal locations
+@ . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+3 . @ . . 0 . . 
+@ @ . . . . @ . 
+. . . . . . . . 
+. . . . 5 . 1 @ 
+2 . . . . . 4 . 
+
+Auto-loaded policy grid: checkpoints/test_10_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 5
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    19
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. @ . . @ 3 . . 
+. . . . . . 6 . 
+. . . . . @ . . 
+. . . . . . . . 
+. . . . . . @ . 
+. 0 . . . @ . . 
+. 5 . 4 . . . . 
+1 @ . . 2 . . . 
+
+Goal locations
+. @ . . @ . . . 
+1 . . 3 . . . . 
+. . . . . @ . . 
+. . . . . . 4 5 
+. . . . . 6 @ . 
+. . 0 . . @ . . 
+. . . . . . . . 
+2 @ . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_11_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 2
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 7
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    35
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+5 . . . . . . @ 
+. . . . . . . 1 
+. . . . . . . . 
+. . @ . . 3 @ . 
+. . . . @ . . . 
+. 4 6 . . . . . 
+. . . . . . @ 0 
+. @ . . . . 2 . 
+
+Goal locations
+. . . . . . . @ 
+. . . . . . . . 
+. 6 . . . . 1 . 
+. . @ . . . @ . 
+. . . . @ . . . 
+. . . . 3 . . . 
+. 5 . 0 . . @ . 
+2 @ . . . 4 . . 
+
+Auto-loaded policy grid: checkpoints/test_12_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 6
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    36
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. . . . 0 2 . . 
+@ @ . . . 5 . . 
+. 3 . @ 1 . . . 
+@ . . . . . . . 
+. @ . 6 . . . . 
+. . 4 . . . . @ 
+. . . . . . . . 
+. . . . . . . . 
+
+Goal locations
+. . . 0 . . . . 
+@ @ 6 . . . . . 
+. . . @ . . . . 
+@ . . . . . . . 
+. @ 5 . . . . . 
+. . . . 1 . . @ 
+2 . 4 . . . 3 . 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_13_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 7
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    36
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+@ . . . . . . . 
+. . . . . @ @ . 
+. @ . 4 @ . . 1 
+0 . . . . . . . 
+. . . 3 . . @ . 
+. . . 2 . . . 6 
+. . . . . . . . 
+. 5 . . . . . . 
+
+Goal locations
+@ . . . . . . . 
+. . . . 4 @ @ . 
+. @ . . @ . . . 
+0 . . . . . . . 
+. . . 5 . . @ . 
+2 . . . . . . 1 
+. . . . . . . . 
+. . 6 . 3 . . . 
+
+Auto-loaded policy grid: checkpoints/test_14_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    24
+Expanded nodes:  2
+Generated nodes: 3
+***Import an instance***
+Start locations
+. . . 0 . 1 . . 
+. . . . . . . . 
+. . . @ . @ 4 6 
+. . . . . . . 5 
+@ 2 . . @ . . . 
+. . . . . @ . . 
+. . . . . . . . 
+. 3 . @ . . . . 
+
+Goal locations
+. . . . . . . . 
+. . . 2 . . . . 
+. . . @ . @ . . 
+. . . . . . . 4 
+@ . . 5 @ . . . 
+. 0 . . . @ . . 
+. . . . . . . . 
+1 . 6 @ . . . 3 
+
+Auto-loaded policy grid: checkpoints/test_15_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 7
+Generate node 9
+Generate node 10
+Expand node 2
+Generate node 11
+Generate node 12
+Expand node 11
+Generate node 13
+Generate node 14
+Expand node 14
+Generate node 15
+Generate node 16
+Expand node 15
+Generate node 17
+Generate node 18
+Expand node 5
+Generate node 19
+Generate node 20
+Expand node 19
+Generate node 21
+Generate node 22
+Expand node 13
+Generate node 23
+Generate node 24
+Expand node 23
+Generate node 25
+Generate node 26
+Expand node 8
+Generate node 27
+Generate node 28
+Expand node 28
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    50
+Expanded nodes:  15
+Generated nodes: 29
+***Import an instance***
+Start locations
+4 . . . . . . . 
+. . . . . . 0 1 
+. . 2 . . 3 . . 
+. . . . @ . @ . 
+. . @ . . . . . 
+5 . . @ . @ . . 
+. . . . . . . @ 
+. . . . 6 . . . 
+
+Goal locations
+. . . 0 . . . . 
+. . . . . . . . 
+. . . . . 6 . . 
+. . . . @ . @ . 
+. . @ . . 3 4 . 
+. . . @ . @ . . 
+. . 2 . . . . @ 
+. 1 . . . 5 . . 
+
+Auto-loaded policy grid: checkpoints/test_16_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 5
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 10
+Generate node 13
+Generate node 14
+Expand node 8
+Generate node 15
+Generate node 16
+Expand node 12
+Generate node 17
+Generate node 18
+Expand node 14
+Generate node 19
+Generate node 20
+Expand node 16
+Generate node 21
+Generate node 22
+Expand node 18
+Generate node 23
+Generate node 24
+Expand node 20
+Generate node 25
+Generate node 26
+Expand node 22
+Generate node 27
+Generate node 28
+Expand node 24
+Generate node 29
+Generate node 30
+Expand node 26
+Generate node 31
+Generate node 32
+Expand node 28
+Generate node 33
+Generate node 34
+Expand node 30
+Generate node 35
+Generate node 36
+Expand node 32
+Generate node 37
+Generate node 38
+Expand node 34
+Generate node 39
+Generate node 40
+Expand node 40
+
+ Found a solution! 
+
+CPU time (s):    0.02
+Sum of costs:    51
+Expanded nodes:  21
+Generated nodes: 41
+***Import an instance***
+Start locations
+. . 4 . @ @ . @ 
+. . . . . . 6 . 
+. . . @ . 3 . . 
+. . . . . . . . 
+1 @ . . . . . . 
+0 . . . . . . . 
+. . . . 5 . . . 
+. 2 . @ . . . . 
+
+Goal locations
+. 3 . . @ @ . @ 
+. . . . . . . . 
+. . . @ . . . . 
+4 . . . . . . . 
+. @ 5 . . 1 . . 
+. . . . 0 . . . 
+. . . . . . . . 
+. . . @ . 2 . 6 
+
+Auto-loaded policy grid: checkpoints/test_17_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    39
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. . . @ . . . . 
+. . . . . . . . 
+. 5 . . . . . . 
+. . . 6 . . . @ 
+@ @ . 3 . . . . 
+. 4 . 2 @ 0 . . 
+1 . . . . . . . 
+. @ . . . . . . 
+
+Goal locations
+. . . @ . . . . 
+. . 4 . 5 . . . 
+6 2 . . . . 0 . 
+. . 3 . . . . @ 
+@ @ . . . . . . 
+. . . . @ 1 . . 
+. . . . . . . . 
+. @ . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_18_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 3
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 8
+Generate node 13
+Generate node 14
+Expand node 14
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    32
+Expanded nodes:  8
+Generated nodes: 15
+***Import an instance***
+Start locations
+. 6 . 3 . @ . . 
+. . . . 2 . @ . 
+. . @ . . . . . 
+. . . . . . @ . 
+. @ . . . 1 . . 
+. . . . . @ . 5 
+. . . . 0 . . . 
+4 . . . . . . . 
+
+Goal locations
+. . 6 . . @ . 4 
+. . . . . 5 @ . 
+0 . @ . . . . . 
+. . . 2 . . @ . 
+. @ . . . . . . 
+. . . . . @ . . 
+. . . . 3 . . . 
+1 . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_19_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    47
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+@ . . @ . . . . 
+. . . . . . . . 
+. . . . 0 . . @ 
+. . . . . . . . 
+. . 1 . . . . . 
+. @ . . . . . . 
+. . . . . 2 . . 
+4 @ @ . 3 . . . 
+
+Goal locations
+@ . . @ . . . . 
+. 1 . . . 2 . . 
+. . . . . . . @ 
+. . . . . . . . 
+. . . . . . . 0 
+. @ . . . . . . 
+. 4 . 3 . . . . 
+. @ @ . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_2_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    18
+Expanded nodes:  1
+Generated nodes: 1
+***Import an instance***
+Start locations
+. . . . . 2 @ . 
+. . . . . . . . 
+. . . 3 . . . . 
+1 . . . @ . . . 
+. . @ . 4 . . . 
+. . 5 . 0 . . . 
+. . . . @ . @ . 
+. @ . . 6 . . . 
+
+Goal locations
+. . . . 4 . @ . 
+1 . . . . . . . 
+. . . . 3 . . 0 
+. . . . @ . . . 
+. . @ . . . . . 
+5 . . . . . . . 
+. . . . @ . @ . 
+. @ . . 2 . . 6 
+
+Auto-loaded policy grid: checkpoints/test_20_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    28
+Expanded nodes:  1
+Generated nodes: 1
+***Import an instance***
+Start locations
+. . . . 6 . . . 
+. @ . . @ . @ 0 
+. . . . . . . . 
+. . . . . . . . 
+@ 7 . . . 3 . . 
+1 . 5 . . . . . 
+. . . . @ 4 . . 
+. @ . . 2 . . . 
+
+Goal locations
+. . . . . . 4 . 
+. @ 7 . @ . @ . 
+. . . . 5 . . . 
+. . . 0 . . . . 
+@ . . . . . . . 
+. . 2 . . . . . 
+. . . . @ . . 3 
+. @ 6 . . 1 . . 
+
+Auto-loaded policy grid: checkpoints/test_21_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 7
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    46
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+. . . 6 . . . . 
+. . . @ . @ . . 
+. . . . @ . 1 . 
+. . . . 0 . 4 . 
+. 7 @ . . . . . 
+. . 3 . . 5 . . 
+. . . . 2 @ . . 
+. . . @ . . . . 
+
+Goal locations
+. . 4 . . . . . 
+. 2 . @ . @ . . 
+. . 5 . @ . . . 
+. . . . . . 0 . 
+. . @ . . . 3 . 
+6 . . . . . . . 
+. . 1 . . @ . . 
+. . . @ . 7 . . 
+
+Auto-loaded policy grid: checkpoints/test_22_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 7
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    51
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+. @ . . . . @ @ 
+. . 3 . . . . . 
+. . 0 4 . 5 . . 
+@ 1 . 7 . . . . 
+. . . . 2 . 6 @ 
+. . . . . . . . 
+. @ . . . . . . 
+. . . . . . . . 
+
+Goal locations
+. @ . . . . @ @ 
+. . . . . . . . 
+. . 1 . 6 . . . 
+@ . . . . . . . 
+. . . 4 0 3 . @ 
+. . 5 . . . 2 . 
+. @ . . . . . . 
+. . . . 7 . . . 
+
+Auto-loaded policy grid: checkpoints/test_23_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 6
+Generate node 9
+Expand node 9
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    32
+Expanded nodes:  6
+Generated nodes: 10
+***Import an instance***
+Start locations
+5 . @ . . . . @ 
+. . . . . . . . 
+. 4 2 . 1 . . . 
+. . . @ . . . . 
+0 . . . . . . 7 
+. . . . @ . . @ 
+@ . . . . . . . 
+. . . 6 3 . . . 
+
+Goal locations
+. . @ . . . . @ 
+3 . . . . . . . 
+. . . . . . . . 
+. 1 . @ 4 . . . 
+. . . . . . . 7 
+. 6 . . @ . . @ 
+@ . 0 . . . 5 . 
+. . . . 2 . . . 
+
+Auto-loaded policy grid: checkpoints/test_24_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 8
+Generate node 9
+Generate node 10
+Expand node 3
+Generate node 11
+Generate node 12
+Expand node 12
+Generate node 13
+Generate node 14
+Expand node 14
+Generate node 15
+Generate node 16
+Expand node 9
+Generate node 17
+Generate node 18
+Expand node 10
+Generate node 19
+Expand node 15
+Generate node 20
+Generate node 21
+Expand node 16
+Generate node 22
+Expand node 5
+Generate node 23
+Generate node 24
+Expand node 24
+Generate node 25
+Generate node 26
+Expand node 26
+Generate node 27
+Generate node 28
+Expand node 11
+Generate node 29
+Generate node 30
+Expand node 30
+Generate node 31
+Generate node 32
+Expand node 32
+Generate node 33
+Generate node 34
+Expand node 29
+Generate node 35
+Generate node 36
+Expand node 36
+Generate node 37
+Generate node 38
+Expand node 2
+Generate node 39
+Generate node 40
+Expand node 40
+Generate node 41
+Generate node 42
+Expand node 42
+Generate node 43
+Expand node 43
+Generate node 44
+Generate node 45
+Expand node 45
+Generate node 46
+Generate node 47
+Expand node 17
+Generate node 48
+Generate node 49
+Expand node 48
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    47
+Expanded nodes:  27
+Generated nodes: 50
+***Import an instance***
+Start locations
+. . . . . . . . 
+3 . @ @ . . . . 
+. . . . . . . 6 
+. 1 . . 4 @ . . 
+. . . . . . . . 
+7 2 @ . . . 5 0 
+. . . . . . @ . 
+. . . . @ . . . 
+
+Goal locations
+. . 4 . . . . . 
+. . @ @ . . . . 
+. . . . . . 3 . 
+. . . . . @ . . 
+. . . . . 5 . . 
+. . @ 1 . 2 . . 
+. . . . 0 7 @ 6 
+. . . . @ . . . 
+
+Auto-loaded policy grid: checkpoints/test_25_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 1
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 5
+Generate node 9
+Generate node 10
+Expand node 8
+Generate node 11
+Generate node 12
+Expand node 9
+Generate node 13
+Generate node 14
+Expand node 10
+Generate node 15
+Generate node 16
+Expand node 16
+Generate node 17
+Generate node 18
+Expand node 17
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    40
+Expanded nodes:  10
+Generated nodes: 19
+***Import an instance***
+Start locations
+. . @ . . . 6 . 
+. . 0 . . @ . . 
+4 . . . . 7 . . 
+. 3 . @ . . . . 
+. . . . . . @ . 
+. . . . . . . . 
+5 2 . . . @ . . 
+. . . . 1 . . @ 
+
+Goal locations
+. . @ . . . . . 
+. 5 . . . @ . . 
+. . . 3 . . . . 
+. . . @ . . . . 
+. . . . . . @ . 
+. 2 7 . . . . 4 
+. . 0 1 . @ . . 
+. . . . 6 . . @ 
+
+Auto-loaded policy grid: checkpoints/test_26_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 8
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 11
+Generate node 13
+Generate node 14
+Expand node 14
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    42
+Expanded nodes:  8
+Generated nodes: 15
+***Import an instance***
+Start locations
+. . . . . . @ . 
+@ . . 4 . . . . 
+. . 0 7 . @ . . 
+. . . @ 3 . . . 
+. . . . . . . . 
+. . . . . 5 . 1 
+. . @ . . 2 . . 
+. . @ . . . 6 . 
+
+Goal locations
+. . . . . . @ . 
+@ . . . . . . . 
+. . . . . @ . . 
+. . 3 @ 0 . . . 
+. . 1 . . . . . 
+6 . . . 4 . . . 
+. . @ 2 . . 5 . 
+. . @ . . . . 7 
+
+Auto-loaded policy grid: checkpoints/test_27_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    40
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. . . . . . . . 
+. 6 . . . . 5 . 
+. @ . . @ . . . 
+. . . @ . . . . 
+4 3 1 7 . . . . 
+. . . . . . . . 
+@ @ 2 . . @ 0 . 
+. . . . . . . . 
+
+Goal locations
+. . . . . . . . 
+. . . . . . . . 
+. @ . . @ . . . 
+. . . @ . 4 . . 
+. . . . . . 0 7 
+6 . . 5 . . 1 . 
+@ @ . . 2 @ . . 
+. . . . . . 3 . 
+
+Auto-loaded policy grid: checkpoints/test_28_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 7
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    41
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+. . . 1 . @ . . 
+. . . . 4 @ . 3 
+2 @ . . . . . 5 
+. 0 . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . @ . 6 . . . 
+. @ @ . 7 . . . 
+
+Goal locations
+. . . . . @ . . 
+5 . . . . @ 4 . 
+. @ 2 . . . . . 
+1 6 . . . . . . 
+. . . . . . . . 
+3 . . . . 7 . . 
+0 . @ . . . . . 
+. @ @ . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_29_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 8
+Generate node 9
+Generate node 10
+Expand node 5
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    48
+Expanded nodes:  6
+Generated nodes: 11
+***Import an instance***
+Start locations
+@ . . . . @ . . 
+. . @ . . . . . 
+. . . . 4 . . . 
+. . . . . . . . 
+. @ . . . . . @ 
+. 0 . . . . . . 
+. 3 . 1 . . . . 
+2 @ . . . . . . 
+
+Goal locations
+@ . . . . @ . 2 
+. . @ . . . . . 
+. . . . . . 4 . 
+. 0 . . . . . . 
+. @ . . . 3 . @ 
+. . . . . . . . 
+. 1 . . . . . . 
+. @ . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_3_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Expand node 5
+Generate node 6
+Generate node 7
+Expand node 6
+Generate node 8
+Generate node 9
+Expand node 8
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    28
+Expanded nodes:  6
+Generated nodes: 10
+***Import an instance***
+Start locations
+@ . . . . . . . 
+. . 7 . . . . . 
+. 5 . @ 1 . . . 
+. . . . 6 @ . . 
+. . . 4 2 . . . 
+. . . . . . . @ 
+. . . . 0 @ . . 
+. . 3 . . . @ . 
+
+Goal locations
+@ . . . . 7 6 . 
+. 2 . . . . . . 
+. . . @ . . . . 
+. . . . . @ . . 
+. 1 . . 3 . 5 . 
+. . . . . 4 . @ 
+. . . . . @ . . 
+0 . . . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_30_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Expand node 4
+Generate node 6
+Generate node 7
+Expand node 6
+Generate node 8
+Expand node 7
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Expand node 11
+Generate node 12
+Expand node 10
+Generate node 13
+Expand node 13
+Generate node 14
+Expand node 1
+Generate node 15
+Generate node 16
+Expand node 16
+Generate node 17
+Generate node 18
+Expand node 18
+Generate node 19
+Expand node 17
+Generate node 20
+Generate node 21
+Expand node 21
+Generate node 22
+Expand node 8
+Generate node 23
+Generate node 24
+Expand node 12
+Generate node 25
+Generate node 26
+Expand node 23
+Generate node 27
+Generate node 28
+Expand node 24
+Generate node 29
+Generate node 30
+Expand node 25
+Generate node 31
+Generate node 32
+Expand node 5
+Generate node 33
+Generate node 34
+Expand node 34
+Generate node 35
+Generate node 36
+Expand node 35
+Generate node 37
+Generate node 38
+Expand node 37
+Generate node 39
+Generate node 40
+Expand node 38
+Generate node 41
+Generate node 42
+Expand node 36
+Generate node 43
+Generate node 44
+Expand node 15
+Generate node 45
+Generate node 46
+Expand node 45
+Generate node 47
+Generate node 48
+Expand node 48
+Generate node 49
+Generate node 50
+Expand node 49
+Generate node 51
+Generate node 52
+Expand node 50
+Generate node 53
+Generate node 54
+Expand node 20
+Generate node 55
+Expand node 46
+Generate node 56
+Generate node 57
+Expand node 56
+Generate node 58
+Generate node 59
+Expand node 59
+Generate node 60
+Generate node 61
+Expand node 60
+Generate node 62
+Generate node 63
+Expand node 61
+Generate node 64
+Generate node 65
+Expand node 62
+Generate node 66
+Generate node 67
+Expand node 64
+Generate node 68
+Generate node 69
+Expand node 63
+Generate node 70
+Generate node 71
+Expand node 70
+Generate node 72
+Generate node 73
+Expand node 58
+Generate node 74
+Generate node 75
+Expand node 74
+Generate node 76
+Generate node 77
+Expand node 75
+Generate node 78
+Generate node 79
+Expand node 76
+Generate node 80
+Generate node 81
+Expand node 78
+Generate node 82
+Generate node 83
+Expand node 77
+Generate node 84
+Generate node 85
+Expand node 84
+Generate node 86
+Generate node 87
+Expand node 27
+
+ Found a solution! 
+
+CPU time (s):    0.02
+Sum of costs:    43
+Expanded nodes:  49
+Generated nodes: 88
+***Import an instance***
+Start locations
+3 . @ . . @ . 2 
+4 . . 0 . @ . . 
+@ @ . . . . . . 
+. 1 . . . . . . 
+. . @ @ . . . @ 
+@ . . . . @ . . 
+. . . . . . . . 
+@ . . . . . @ . 
+
+Goal locations
+. 2 @ 4 . @ . 1 
+. . . . . @ 0 . 
+@ @ . . . . . . 
+. . . . . . . . 
+. . @ @ . . . @ 
+@ . . . . @ . . 
+. 3 . . . . . . 
+@ . . . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_31_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Expand node 6
+Generate node 8
+Generate node 9
+Expand node 7
+Generate node 10
+Generate node 11
+Expand node 11
+Generate node 12
+Generate node 13
+Expand node 12
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    39
+Expanded nodes:  8
+Generated nodes: 14
+***Import an instance***
+Start locations
+. 4 . . . . . @ 
+. @ 1 . @ . . @ 
+. . . . . . . . 
+0 . . . @ @ . . 
+@ @ . . @ . 2 . 
+@ . . . . . . . 
+@ . . . . . 3 . 
+. . @ . . . . . 
+
+Goal locations
+. . . . . . . @ 
+. @ . . @ 2 . @ 
+. . . . . . . . 
+. . . . @ @ . . 
+@ @ . . @ . . . 
+@ . . 0 4 . . . 
+@ . . . . . . 1 
+. . @ . . . 3 . 
+
+Auto-loaded policy grid: checkpoints/test_32_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 1
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 6
+Generate node 9
+Generate node 10
+Expand node 8
+Generate node 11
+Generate node 12
+Expand node 12
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    30
+Expanded nodes:  7
+Generated nodes: 13
+***Import an instance***
+Start locations
+. . . 4 . . @ . 
+@ @ . @ . . @ . 
+. . . . . 2 . . 
+. @ . . . . @ . 
+. @ 0 . . . . . 
+@ . . . . . 1 . 
+. . . @ . . 3 @ 
+. . @ . . . . . 
+
+Goal locations
+. . . . 3 . @ . 
+@ @ . @ . . @ . 
+. . . . 4 . 0 . 
+. @ . 1 . . @ . 
+. @ . . . . . . 
+@ . . 2 . . . . 
+. . . @ . . . @ 
+. . @ . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_33_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 7
+Generate node 9
+Generate node 10
+Expand node 2
+Generate node 11
+Generate node 12
+Expand node 6
+Generate node 13
+Generate node 14
+Expand node 13
+Generate node 15
+Generate node 16
+Expand node 16
+Generate node 17
+Generate node 18
+Expand node 15
+Generate node 19
+Generate node 20
+Expand node 19
+Generate node 21
+Generate node 22
+Expand node 17
+Generate node 23
+Generate node 24
+Expand node 20
+Generate node 25
+Generate node 26
+Expand node 26
+Generate node 27
+Generate node 28
+Expand node 21
+Generate node 29
+Generate node 30
+Expand node 14
+Generate node 31
+Generate node 32
+Expand node 32
+Generate node 33
+Generate node 34
+Expand node 31
+Generate node 35
+Generate node 36
+Expand node 35
+Generate node 37
+Generate node 38
+Expand node 33
+Generate node 39
+Generate node 40
+Expand node 36
+Generate node 41
+Generate node 42
+Expand node 42
+Generate node 43
+Generate node 44
+Expand node 37
+Generate node 45
+Generate node 46
+Expand node 9
+Generate node 47
+Generate node 48
+Expand node 10
+Generate node 49
+Generate node 50
+Expand node 49
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    28
+Expanded nodes:  26
+Generated nodes: 51
+***Import an instance***
+Start locations
+3 . . . . . @ . 
+. @ @ . . . . . 
+. . . . @ . . @ 
+. . . . @ . . . 
+. . 1 @ 4 . . . 
+. @ @ 0 . @ . . 
+. . . . . 2 . . 
+. @ . . . . @ . 
+
+Goal locations
+. . . . . . @ . 
+. @ @ . . . 0 4 
+. . . . @ . . @ 
+. 1 . . @ . . . 
+2 . . @ . . . 3 
+. @ @ . . @ . . 
+. . . . . . . . 
+. @ . . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_34_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    33
+Expanded nodes:  1
+Generated nodes: 1
+***Import an instance***
+Start locations
+@ . . . . . . . 
+@ . . . 3 . @ . 
+@ @ @ . . @ @ . 
+. @ . . 2 . . . 
+. 4 . . . . . . 
+. . . . . . . . 
+@ @ . . . . . @ 
+. . . . . 0 . 1 
+
+Goal locations
+@ . . . . . . 4 
+@ . . . . . @ . 
+@ @ @ . . @ @ . 
+. @ . . . . . . 
+. . . . . . . . 
+. 1 . 0 2 . . . 
+@ @ . . . 3 . @ 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_35_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    30
+Expanded nodes:  3
+Generated nodes: 5
+***Import an instance***
+Start locations
+. . . . . . . . 
+. @ . . . @ . . 
+. . . @ . . . . 
+. . @ . @ . @ . 
+. . @ @ . 0 . . 
+@ . . . . . . . 
+1 . . @ . @ . . 
+3 4 2 . . @ . . 
+
+Goal locations
+. . . . . . . 0 
+. @ . . . @ . . 
+. . . @ . . . . 
+. . @ . @ . @ . 
+. . @ @ . 2 . . 
+@ 1 . . . . . . 
+. . . @ . @ . . 
+3 . . . . @ 4 . 
+
+Auto-loaded policy grid: checkpoints/test_36_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    23
+Expanded nodes:  1
+Generated nodes: 1
+***Import an instance***
+Start locations
+@ . @ . 3 . . . 
+@ @ . 1 @ . . . 
+. @ . . . . . . 
+. . . . . . . . 
+@ . . . . 2 . @ 
+@ . . @ . . . . 
+4 . 0 . . . . . 
+. . . @ . . . @ 
+
+Goal locations
+@ . @ . . . . . 
+@ @ 2 . @ . . 4 
+. @ . . . . . . 
+. . . . . . . . 
+@ . . 0 . . . @ 
+@ . . @ . . . 1 
+. . . . . . 3 . 
+. . . @ . . . @ 
+
+Auto-loaded policy grid: checkpoints/test_37_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 2
+Generate node 7
+Generate node 8
+Expand node 5
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 11
+Generate node 13
+Expand node 8
+Generate node 14
+Generate node 15
+Expand node 14
+Generate node 16
+Generate node 17
+Expand node 16
+Generate node 18
+Expand node 3
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    38
+Expanded nodes:  11
+Generated nodes: 19
+***Import an instance***
+Start locations
+@ . @ @ . . . . 
+. @ 1 . . . . . 
+. . . . . @ . . 
+. @ 3 4 . . . . 
+@ . . . . @ . @ 
+. 2 . @ . . . . 
+. . . . . . @ . 
+. . . . . . @ 0 
+
+Goal locations
+@ . @ @ . 3 . 4 
+. @ . . . . . . 
+2 . . . 1 @ . . 
+. @ . . . . . . 
+@ . . . 0 @ . @ 
+. . . @ . . . . 
+. . . . . . @ . 
+. . . . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_38_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    28
+Expanded nodes:  2
+Generated nodes: 3
+***Import an instance***
+Start locations
+. @ @ . . . . . 
+@ 3 . . . . @ 2 
+. @ 4 @ . . . . 
+. . . . . . @ . 
+. . @ . . . @ . 
+. . 1 . @ . . @ 
+. . . . . . . . 
+. @ 0 . . . . . 
+
+Goal locations
+. @ @ . . . . . 
+@ . . . . . @ . 
+. @ . @ . . . 0 
+. 2 . . . . @ 3 
+. . @ . . . @ . 
+. . . . @ . . @ 
+. . . 4 . . . . 
+1 @ . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_39_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    35
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. @ . . @ . @ . 
+. 4 . . 2 . . . 
+. . . . . . @ . 
+. . . . . . . . 
+0 . . @ . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . 3 1 . . @ 
+
+Goal locations
+. @ . . @ . @ . 
+. . . . . . . . 
+. . . 1 . . @ . 
+. . . 4 . . . . 
+. . . @ . . . 0 
+. . . . . . 3 . 
+. . . 2 . . . . 
+. . . . . . . @ 
+
+Auto-loaded policy grid: checkpoints/test_4_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 2
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 3
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    32
+Expanded nodes:  5
+Generated nodes: 9
+***Import an instance***
+Start locations
+@ 3 @ . @ @ . . 
+@ . @ . @ . . @ 
+@ . . . . . . . 
+@ . . . . . . . 
+. . . . . . . 2 
+@ . . 4 . . . . 
+. . . @ . . . . 
+. . 0 . . . 1 . 
+
+Goal locations
+@ . @ . @ @ . . 
+@ . @ . @ . . @ 
+@ . . . . . . . 
+@ . . . . . . . 
+. . 4 . . 3 . . 
+@ . . . . . . . 
+. . 2 @ . . . 1 
+. . . . . . . 0 
+
+Auto-loaded policy grid: checkpoints/test_40_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    24
+Expanded nodes:  1
+Generated nodes: 1
+***Import an instance***
+Start locations
+. . . @ . . 5 . 
+. . . @ @ . . . 
+3 . . . @ 4 . . 
+. @ 2 @ . . . . 
+. . . . . @ . @ 
+@ . 1 . . @ . . 
+. 0 . . . . . @ 
+. @ . . . . . . 
+
+Goal locations
+. . . @ . . 2 . 
+. . . @ @ . . . 
+. . . . @ . . . 
+. @ . @ . . . . 
+. . . . 3 @ 1 @ 
+@ . . 5 . @ . . 
+. . . 0 . . . @ 
+. @ 4 . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_41_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 8
+Generate node 9
+Generate node 10
+Expand node 7
+Generate node 11
+Generate node 12
+Expand node 9
+Generate node 13
+Generate node 14
+Expand node 14
+Generate node 15
+Generate node 16
+Expand node 4
+Generate node 17
+Generate node 18
+Expand node 10
+Generate node 19
+Generate node 20
+Expand node 20
+Generate node 21
+Generate node 22
+Expand node 15
+Generate node 23
+Generate node 24
+Expand node 16
+Generate node 25
+Generate node 26
+Expand node 11
+Generate node 27
+Generate node 28
+Expand node 28
+Generate node 29
+Generate node 30
+Expand node 13
+Generate node 31
+Generate node 32
+Expand node 31
+Generate node 33
+Generate node 34
+Expand node 32
+Generate node 35
+Generate node 36
+Expand node 21
+Generate node 37
+Generate node 38
+Expand node 12
+Generate node 39
+Generate node 40
+Expand node 40
+Generate node 41
+Generate node 42
+Expand node 22
+Generate node 43
+Generate node 44
+Expand node 44
+Generate node 45
+Expand node 45
+Generate node 46
+Generate node 47
+Expand node 17
+Generate node 48
+Generate node 49
+Expand node 6
+Generate node 50
+Generate node 51
+Expand node 51
+Generate node 52
+Generate node 53
+Expand node 18
+Generate node 54
+Generate node 55
+Expand node 55
+Generate node 56
+Generate node 57
+Expand node 24
+Generate node 58
+Expand node 25
+Generate node 59
+Generate node 60
+Expand node 26
+Generate node 61
+Expand node 29
+Generate node 62
+Generate node 63
+Expand node 30
+Generate node 64
+Generate node 65
+Expand node 34
+Generate node 66
+Expand node 36
+Generate node 67
+Expand node 61
+Generate node 68
+Generate node 69
+Expand node 69
+Generate node 70
+Generate node 71
+Expand node 23
+Generate node 72
+Generate node 73
+Expand node 27
+Generate node 74
+Generate node 75
+Expand node 74
+Generate node 76
+Generate node 77
+Expand node 75
+Generate node 78
+Generate node 79
+Expand node 33
+Generate node 80
+Generate node 81
+Expand node 35
+Generate node 82
+Generate node 83
+Expand node 46
+Generate node 84
+Generate node 85
+Expand node 84
+Generate node 86
+Generate node 87
+Expand node 37
+Generate node 88
+Generate node 89
+Expand node 89
+Generate node 90
+Generate node 91
+Expand node 88
+Generate node 92
+Generate node 93
+Expand node 41
+Generate node 94
+Generate node 95
+Expand node 38
+Generate node 96
+Generate node 97
+Expand node 97
+Generate node 98
+Generate node 99
+Expand node 99
+Generate node 100
+Generate node 101
+Expand node 42
+Generate node 102
+Generate node 103
+Expand node 103
+Generate node 104
+Expand node 104
+Generate node 105
+Generate node 106
+Expand node 48
+Generate node 107
+Generate node 108
+Expand node 108
+Generate node 109
+Generate node 110
+Expand node 107
+Generate node 111
+Generate node 112
+Expand node 111
+Generate node 113
+Generate node 114
+Expand node 114
+Generate node 115
+Generate node 116
+Expand node 116
+Generate node 117
+Generate node 118
+Expand node 49
+Generate node 119
+Generate node 120
+Expand node 120
+Generate node 121
+Generate node 122
+Expand node 47
+Generate node 123
+Generate node 124
+Expand node 124
+Generate node 125
+Generate node 126
+Expand node 52
+Generate node 127
+Generate node 128
+Expand node 53
+Generate node 129
+Generate node 130
+Expand node 130
+Generate node 131
+Expand node 131
+Generate node 132
+Generate node 133
+Expand node 56
+Generate node 134
+Generate node 135
+Expand node 57
+Generate node 136
+Generate node 137
+Expand node 137
+Generate node 138
+Expand node 138
+Generate node 139
+Generate node 140
+Expand node 70
+Generate node 141
+Generate node 142
+Expand node 58
+Generate node 143
+Generate node 144
+Expand node 60
+Generate node 145
+Generate node 146
+Expand node 63
+Generate node 147
+Expand node 64
+Generate node 148
+Generate node 149
+Expand node 65
+Generate node 150
+Expand node 66
+Generate node 151
+Generate node 152
+Expand node 67
+Generate node 153
+Generate node 154
+Expand node 71
+Generate node 155
+Generate node 156
+Expand node 155
+Generate node 157
+Generate node 158
+Expand node 156
+Generate node 159
+Generate node 160
+Expand node 77
+Generate node 161
+Expand node 79
+Generate node 162
+Expand node 86
+Generate node 163
+Generate node 164
+Expand node 87
+Generate node 165
+Expand node 91
+Generate node 166
+Expand node 100
+Generate node 167
+Expand node 144
+Generate node 168
+Generate node 169
+Expand node 169
+Generate node 170
+Generate node 171
+Expand node 146
+Generate node 172
+Generate node 173
+Expand node 173
+Generate node 174
+Generate node 175
+Expand node 150
+Generate node 176
+Generate node 177
+Expand node 177
+Generate node 178
+Generate node 179
+Expand node 152
+Generate node 180
+Generate node 181
+Expand node 181
+Generate node 182
+Generate node 183
+Expand node 154
+Generate node 184
+Generate node 185
+Expand node 185
+Generate node 186
+Generate node 187
+Expand node 158
+Generate node 188
+Generate node 189
+Expand node 189
+Generate node 190
+Expand node 160
+Generate node 191
+Generate node 192
+Expand node 192
+Generate node 193
+Expand node 59
+Generate node 194
+Expand node 62
+Generate node 195
+Generate node 196
+Expand node 72
+Generate node 197
+Generate node 198
+Expand node 76
+Generate node 199
+Generate node 200
+Expand node 78
+Generate node 201
+Generate node 202
+Expand node 80
+Generate node 203
+Generate node 204
+Expand node 82
+Generate node 205
+Generate node 206
+Expand node 85
+Generate node 207
+Generate node 208
+Expand node 90
+Generate node 209
+Generate node 210
+Expand node 93
+Generate node 211
+Expand node 105
+Generate node 212
+Generate node 213
+Expand node 212
+Generate node 214
+Generate node 215
+Expand node 110
+Generate node 216
+Expand node 115
+Generate node 217
+Generate node 218
+Expand node 122
+Generate node 219
+Generate node 220
+Expand node 126
+Generate node 221
+Generate node 222
+Expand node 133
+Generate node 223
+Expand node 140
+Generate node 224
+Expand node 197
+Generate node 225
+Generate node 226
+Expand node 225
+Generate node 227
+Generate node 228
+Expand node 205
+Generate node 229
+Generate node 230
+Expand node 217
+Generate node 231
+Generate node 232
+Expand node 218
+Generate node 233
+Generate node 234
+Expand node 92
+Generate node 235
+Generate node 236
+Expand node 94
+Generate node 237
+Generate node 238
+Expand node 238
+Generate node 239
+Generate node 240
+Expand node 237
+Generate node 241
+Generate node 242
+Expand node 98
+Generate node 243
+Generate node 244
+Expand node 244
+Generate node 245
+Generate node 246
+Expand node 109
+Generate node 247
+Generate node 248
+Expand node 112
+Generate node 249
+Expand node 117
+Generate node 250
+Generate node 251
+Expand node 121
+Generate node 252
+Generate node 253
+Expand node 132
+Generate node 254
+Generate node 255
+Expand node 139
+Generate node 256
+Generate node 257
+Expand node 203
+Generate node 258
+Generate node 259
+Expand node 229
+Generate node 260
+Generate node 261
+Expand node 258
+Generate node 262
+Generate node 263
+Expand node 262
+Generate node 264
+Generate node 265
+Expand node 95
+Generate node 266
+Generate node 267
+Expand node 267
+Generate node 268
+Generate node 269
+Expand node 269
+Generate node 270
+Generate node 271
+Expand node 118
+Generate node 272
+Generate node 273
+Expand node 273
+Generate node 274
+Expand node 125
+Generate node 275
+Generate node 276
+Expand node 250
+Generate node 277
+Generate node 278
+Expand node 277
+Generate node 279
+Generate node 280
+Expand node 280
+Generate node 281
+Generate node 282
+Expand node 282
+Generate node 283
+Generate node 284
+Expand node 101
+Generate node 285
+Generate node 286
+Expand node 286
+Generate node 287
+Expand node 106
+Generate node 288
+Generate node 289
+Expand node 289
+Generate node 290
+Generate node 291
+Expand node 119
+Generate node 292
+Generate node 293
+Expand node 293
+Generate node 294
+Generate node 295
+Expand node 127
+Generate node 296
+Generate node 297
+Expand node 296
+Generate node 298
+Generate node 299
+Expand node 298
+Generate node 300
+Generate node 301
+Expand node 134
+Generate node 302
+Generate node 303
+Expand node 302
+Generate node 304
+Generate node 305
+Expand node 304
+Generate node 306
+Generate node 307
+Expand node 141
+Generate node 308
+Expand node 170
+Generate node 309
+Generate node 310
+Expand node 174
+Generate node 311
+Generate node 312
+Expand node 178
+Generate node 313
+Generate node 314
+Expand node 182
+Generate node 315
+Generate node 316
+Expand node 186
+Generate node 317
+Generate node 318
+Expand node 190
+Generate node 319
+Generate node 320
+Expand node 193
+Generate node 321
+Generate node 322
+Expand node 309
+Generate node 323
+Expand node 317
+Generate node 324
+Generate node 325
+Expand node 324
+Generate node 326
+Generate node 327
+Expand node 325
+Generate node 328
+Generate node 329
+Expand node 329
+
+ Found a solution! 
+
+CPU time (s):    0.13
+Sum of costs:    45
+Expanded nodes:  179
+Generated nodes: 330
+***Import an instance***
+Start locations
+. @ . . . . . . 
+. 2 . . @ . . . 
+. @ . . @ . . . 
+. . . . 0 . . . 
+@ . . . . . . . 
+@ . . . @ @ @ @ 
+. . @ . . @ 5 . 
+1 . . . . 4 3 . 
+
+Goal locations
+. @ . . . . . . 
+. 1 . . @ . . . 
+. @ . . @ . . 5 
+. . . . . . . . 
+@ . . 3 . . . 4 
+@ . 2 . @ @ @ @ 
+. . @ . . @ 0 . 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_42_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 2
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Expand node 6
+Generate node 8
+Expand node 3
+Generate node 9
+Generate node 10
+Expand node 4
+Generate node 11
+Expand node 7
+Generate node 12
+Generate node 13
+Expand node 8
+Generate node 14
+Generate node 15
+Expand node 9
+Generate node 16
+Generate node 17
+Expand node 10
+Generate node 18
+Generate node 19
+Expand node 12
+Generate node 20
+Generate node 21
+Expand node 16
+Generate node 22
+Generate node 23
+Expand node 13
+Generate node 24
+Generate node 25
+Expand node 22
+Generate node 26
+Generate node 27
+Expand node 14
+Generate node 28
+Expand node 28
+Generate node 29
+Generate node 30
+Expand node 21
+Generate node 31
+Generate node 32
+Expand node 31
+Generate node 33
+Generate node 34
+Expand node 11
+Generate node 35
+Generate node 36
+Expand node 35
+Generate node 37
+Expand node 36
+Generate node 38
+Expand node 17
+Generate node 39
+Expand node 18
+Generate node 40
+Generate node 41
+Expand node 23
+Generate node 42
+Generate node 43
+Expand node 42
+Generate node 44
+Generate node 45
+Expand node 20
+Generate node 46
+Generate node 47
+Expand node 24
+Generate node 48
+Generate node 49
+Expand node 27
+Generate node 50
+Generate node 51
+Expand node 29
+Generate node 52
+Generate node 53
+Expand node 30
+Generate node 54
+Generate node 55
+Expand node 32
+Generate node 56
+Expand node 34
+Generate node 57
+Generate node 58
+Expand node 57
+Generate node 59
+Generate node 60
+Expand node 33
+Generate node 61
+Generate node 62
+Expand node 62
+Generate node 63
+Generate node 64
+Expand node 52
+Generate node 65
+Generate node 66
+Expand node 53
+Generate node 67
+Generate node 68
+Expand node 56
+Generate node 69
+Expand node 58
+Generate node 70
+Expand node 59
+Generate node 71
+Expand node 60
+Generate node 72
+Expand node 61
+Generate node 73
+Generate node 74
+Expand node 74
+Generate node 75
+Generate node 76
+Expand node 63
+Generate node 77
+Expand node 64
+Generate node 78
+Expand node 76
+Generate node 79
+Expand node 25
+Generate node 80
+Generate node 81
+Expand node 44
+Generate node 82
+Generate node 83
+Expand node 45
+Generate node 84
+Generate node 85
+Expand node 73
+Generate node 86
+Expand node 80
+Generate node 87
+Expand node 81
+Generate node 88
+Generate node 89
+Expand node 87
+Generate node 90
+Generate node 91
+Expand node 19
+Generate node 92
+Expand node 40
+Generate node 93
+Generate node 94
+Expand node 93
+Generate node 95
+Generate node 96
+Expand node 43
+Generate node 97
+Generate node 98
+Expand node 15
+Generate node 99
+Expand node 99
+Generate node 100
+Generate node 101
+Expand node 46
+Generate node 102
+Generate node 103
+Expand node 48
+Generate node 104
+Generate node 105
+Expand node 71
+
+ Found a solution! 
+
+CPU time (s):    0.05
+Sum of costs:    57
+Expanded nodes:  63
+Generated nodes: 106
+***Import an instance***
+Start locations
+@ @ 1 . . . . . 
+. . @ . 5 . . @ 
+. . . . . . . . 
+. 4 . @ . 3 . . 
+. @ @ . . . . . 
+. . @ @ . . @ . 
+. . @ . . 0 . . 
+. . . 2 . @ . . 
+
+Goal locations
+@ @ . . . . . . 
+. . @ . . . . @ 
+0 . 5 . . . 2 1 
+. . . @ . . . . 
+. @ @ . . . . . 
+. . @ @ . . @ . 
+. 4 @ . . . . . 
+3 . . . . @ . . 
+
+Auto-loaded policy grid: checkpoints/test_43_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 1
+Generate node 5
+Generate node 6
+Expand node 3
+Generate node 7
+Generate node 8
+Expand node 5
+Generate node 9
+Generate node 10
+Expand node 7
+Generate node 11
+Generate node 12
+Expand node 9
+Generate node 13
+Generate node 14
+Expand node 13
+Generate node 15
+Generate node 16
+Expand node 15
+Generate node 17
+Generate node 18
+Expand node 17
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    43
+Expanded nodes:  10
+Generated nodes: 19
+***Import an instance***
+Start locations
+2 . . . . . @ 1 
+. . . . @ @ . . 
+. . . . 5 @ . . 
+. . . . . . . . 
+@ . @ 4 . 3 . . 
+. . . . . @ @ . 
+. . . 0 . . . @ 
+. @ . . . @ . @ 
+
+Goal locations
+. . . . . . @ . 
+. . . . @ @ . . 
+. . . . . @ . . 
+. 3 . . . . 0 . 
+@ 2 @ . . . . . 
+. 4 . 1 . @ @ . 
+. . . . 5 . . @ 
+. @ . . . @ . @ 
+
+Auto-loaded policy grid: checkpoints/test_44_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 2
+Generate node 7
+Generate node 8
+Expand node 7
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Expand node 4
+Generate node 12
+Generate node 13
+Expand node 5
+Generate node 14
+Generate node 15
+Expand node 15
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    33
+Expanded nodes:  9
+Generated nodes: 16
+***Import an instance***
+Start locations
+. . . @ @ @ . . 
+. . . @ @ . . @ 
+. . @ . . . 4 . 
+. . 5 1 . @ . . 
+@ . . . . . . . 
+. . . . . . . . 
+. . 3 . . . . @ 
+. . 2 . @ 0 . @ 
+
+Goal locations
+. 2 . @ @ @ . . 
+. . . @ @ . . @ 
+. . @ . . . . . 
+. . . 1 . @ . . 
+@ . . . . . . . 
+. . . . 3 . . . 
+. . . 4 . . . @ 
+. 5 . . @ . 0 @ 
+
+Auto-loaded policy grid: checkpoints/test_45_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    24
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. . 6 . . . . . 
+. 3 . . . @ @ . 
+. . @ . . . . . 
+@ . . . . . . . 
+. . @ . . . @ . 
+. @ . . . 2 @ . 
+@ @ 5 . @ . . 1 
+4 0 . . @ . . . 
+
+Goal locations
+. . . . 4 . . . 
+. . . . . @ @ . 
+. . @ . . . . . 
+@ . 1 . . . 2 3 
+0 . @ . . 6 @ 5 
+. @ . . . . @ . 
+@ @ . . @ . . . 
+. . . . @ . . . 
+
+Auto-loaded policy grid: checkpoints/test_46_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 2
+Generate node 9
+Generate node 10
+Expand node 10
+Generate node 11
+Generate node 12
+Expand node 12
+Generate node 13
+Generate node 14
+Expand node 14
+Generate node 15
+Generate node 16
+Expand node 8
+Generate node 17
+Generate node 18
+Expand node 18
+
+ Found a solution! 
+
+CPU time (s):    0.01
+Sum of costs:    57
+Expanded nodes:  10
+Generated nodes: 19
+***Import an instance***
+Start locations
+. . . 5 2 . . @ 
+@ . @ . . 0 . . 
+@ @ . . . @ . . 
+3 @ . . . . @ . 
+1 . @ . . . . . 
+. . . . . . . . 
+6 @ @ @ 4 . . . 
+. . . . . . . . 
+
+Goal locations
+. . . . . 6 . @ 
+@ . @ . . . . . 
+@ @ 1 . . @ . . 
+. @ . . 4 . @ . 
+5 . @ 2 . . . . 
+. . . . . . . . 
+. @ @ @ . . . . 
+0 . . . . . 3 . 
+
+Auto-loaded policy grid: checkpoints/test_47_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 6
+Generate node 7
+Generate node 8
+Expand node 3
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 11
+Generate node 13
+Generate node 14
+Expand node 5
+Generate node 15
+Generate node 16
+Expand node 15
+Generate node 17
+Generate node 18
+Expand node 17
+Generate node 19
+Generate node 20
+Expand node 2
+Generate node 21
+Generate node 22
+Expand node 8
+Generate node 23
+Generate node 24
+Expand node 7
+Generate node 25
+Generate node 26
+Expand node 25
+Generate node 27
+Generate node 28
+Expand node 27
+Generate node 29
+Generate node 30
+Expand node 10
+Generate node 31
+Expand node 13
+Generate node 32
+Generate node 33
+Expand node 32
+Generate node 34
+Generate node 35
+Expand node 34
+Generate node 36
+Generate node 37
+Expand node 16
+Generate node 38
+Expand node 19
+Generate node 39
+Generate node 40
+Expand node 39
+Generate node 41
+Generate node 42
+Expand node 41
+Generate node 43
+Generate node 44
+Expand node 43
+Generate node 45
+Generate node 46
+Expand node 12
+Generate node 47
+Expand node 14
+Generate node 48
+Generate node 49
+Expand node 18
+Generate node 50
+Expand node 20
+Generate node 51
+Generate node 52
+Expand node 21
+Generate node 53
+Generate node 54
+Expand node 22
+Generate node 55
+Expand node 55
+Generate node 56
+Expand node 56
+Generate node 57
+Generate node 58
+Expand node 58
+Generate node 59
+Generate node 60
+Expand node 59
+Generate node 61
+Generate node 62
+Expand node 57
+Generate node 63
+Generate node 64
+Expand node 63
+Generate node 65
+Expand node 64
+Generate node 66
+Expand node 23
+Generate node 67
+Generate node 68
+Expand node 24
+Generate node 69
+Generate node 70
+Expand node 30
+Generate node 71
+Generate node 72
+Expand node 42
+Generate node 73
+Generate node 74
+Expand node 73
+Generate node 75
+Generate node 76
+Expand node 26
+Generate node 77
+Expand node 29
+Generate node 78
+Generate node 79
+Expand node 78
+Generate node 80
+Generate node 81
+Expand node 80
+Generate node 82
+Generate node 83
+Expand node 82
+Generate node 84
+Generate node 85
+Expand node 84
+Generate node 86
+Generate node 87
+Expand node 33
+Generate node 88
+Generate node 89
+Expand node 36
+Generate node 90
+Generate node 91
+Expand node 90
+Generate node 92
+Generate node 93
+Expand node 92
+Generate node 94
+Generate node 95
+Expand node 91
+Generate node 96
+Generate node 97
+Expand node 40
+Generate node 98
+Generate node 99
+Expand node 45
+Generate node 100
+Generate node 101
+Expand node 100
+Generate node 102
+Generate node 103
+Expand node 102
+Generate node 104
+Generate node 105
+Expand node 101
+Generate node 106
+Generate node 107
+Expand node 66
+Generate node 108
+Generate node 109
+Expand node 108
+Generate node 110
+Generate node 111
+Expand node 65
+Generate node 112
+Expand node 61
+Generate node 113
+Generate node 114
+Expand node 114
+Generate node 115
+Generate node 116
+Expand node 115
+Generate node 117
+Generate node 118
+Expand node 86
+Generate node 119
+Generate node 120
+Expand node 87
+Generate node 121
+Generate node 122
+Expand node 121
+Generate node 123
+Generate node 124
+Expand node 124
+Generate node 125
+Expand node 28
+Generate node 126
+Expand node 48
+Generate node 127
+Generate node 128
+Expand node 49
+Generate node 129
+Generate node 130
+Expand node 51
+Generate node 131
+Generate node 132
+Expand node 52
+Generate node 133
+Generate node 134
+Expand node 53
+Generate node 135
+Generate node 136
+Expand node 94
+Generate node 137
+Generate node 138
+Expand node 104
+Generate node 139
+Generate node 140
+Expand node 135
+Generate node 141
+Expand node 137
+Generate node 142
+Generate node 143
+Expand node 142
+Generate node 144
+Generate node 145
+Expand node 139
+Generate node 146
+Generate node 147
+Expand node 141
+Generate node 148
+Generate node 149
+Expand node 149
+Generate node 150
+Generate node 151
+Expand node 150
+Generate node 152
+Generate node 153
+Expand node 69
+Generate node 154
+Generate node 155
+Expand node 70
+Generate node 156
+Generate node 157
+Expand node 157
+Generate node 158
+Expand node 71
+Generate node 159
+Generate node 160
+Expand node 72
+Generate node 161
+Generate node 162
+Expand node 81
+Generate node 163
+Generate node 164
+Expand node 163
+Generate node 165
+Generate node 166
+Expand node 96
+Generate node 167
+Generate node 168
+Expand node 106
+Generate node 169
+Generate node 170
+Expand node 148
+Generate node 171
+Generate node 172
+Expand node 154
+Generate node 173
+Generate node 174
+Expand node 171
+Generate node 175
+Generate node 176
+Expand node 175
+Generate node 177
+Expand node 172
+Generate node 178
+Generate node 179
+Expand node 178
+Generate node 180
+Expand node 67
+Generate node 181
+Generate node 182
+Expand node 182
+Generate node 183
+Expand node 75
+Generate node 184
+Generate node 185
+Expand node 184
+Generate node 186
+Generate node 187
+Expand node 187
+Generate node 188
+Generate node 189
+Expand node 188
+Generate node 190
+Generate node 191
+Expand node 186
+Generate node 192
+Generate node 193
+Expand node 185
+Generate node 194
+Generate node 195
+Expand node 195
+Generate node 196
+Generate node 197
+Expand node 192
+Generate node 198
+Generate node 199
+Expand node 194
+Generate node 200
+Generate node 201
+Expand node 198
+Generate node 202
+Generate node 203
+Expand node 199
+Generate node 204
+Generate node 205
+Expand node 200
+Generate node 206
+Generate node 207
+Expand node 203
+Generate node 208
+Generate node 209
+Expand node 206
+Generate node 210
+Generate node 211
+Expand node 79
+Generate node 212
+Generate node 213
+Expand node 88
+Generate node 214
+Generate node 215
+Expand node 89
+Generate node 216
+Expand node 98
+Generate node 217
+Generate node 218
+Expand node 99
+Generate node 219
+Expand node 181
+Generate node 220
+Generate node 221
+Expand node 201
+Generate node 222
+Generate node 223
+Expand node 207
+Generate node 224
+Generate node 225
+Expand node 221
+Generate node 226
+Generate node 227
+Expand node 226
+Generate node 228
+Expand node 60
+Generate node 229
+Generate node 230
+Expand node 230
+Generate node 231
+Generate node 232
+Expand node 231
+Generate node 233
+Expand node 117
+Generate node 234
+Generate node 235
+Expand node 234
+Generate node 236
+Generate node 237
+Expand node 123
+Generate node 238
+Generate node 239
+Expand node 145
+Generate node 240
+Generate node 241
+Expand node 241
+Generate node 242
+Expand node 37
+Generate node 243
+Generate node 244
+Expand node 46
+Generate node 245
+Generate node 246
+Expand node 85
+Generate node 247
+Generate node 248
+Expand node 110
+Generate node 249
+Generate node 250
+Expand node 250
+Generate node 251
+Generate node 252
+Expand node 251
+Generate node 253
+Generate node 254
+Expand node 112
+Generate node 255
+Generate node 256
+Expand node 113
+Generate node 257
+Generate node 258
+Expand node 258
+Generate node 259
+Generate node 260
+Expand node 259
+Generate node 261
+Generate node 262
+Expand node 119
+Generate node 263
+Generate node 264
+Expand node 122
+Generate node 265
+Generate node 266
+Expand node 144
+Generate node 267
+Generate node 268
+Expand node 153
+Generate node 269
+Generate node 270
+Expand node 180
+Generate node 271
+Generate node 272
+Expand node 190
+Generate node 273
+Generate node 274
+Expand node 255
+Generate node 275
+Generate node 276
+Expand node 263
+Generate node 277
+Generate node 278
+Expand node 277
+Generate node 279
+Generate node 280
+Expand node 266
+Generate node 281
+Expand node 35
+Generate node 282
+Expand node 44
+Generate node 283
+Expand node 47
+Generate node 284
+Generate node 285
+Expand node 285
+Generate node 286
+Generate node 287
+Expand node 50
+Generate node 288
+Generate node 289
+Expand node 289
+Generate node 290
+Generate node 291
+Expand node 291
+Generate node 292
+Expand node 54
+Generate node 293
+Generate node 294
+Expand node 294
+Generate node 295
+Expand node 295
+Generate node 296
+Generate node 297
+Expand node 297
+Generate node 298
+Generate node 299
+Expand node 298
+Generate node 300
+Generate node 301
+Expand node 296
+Generate node 302
+Generate node 303
+Expand node 302
+Generate node 304
+Expand node 303
+Generate node 305
+Expand node 74
+Generate node 306
+Expand node 127
+Generate node 307
+Generate node 308
+Expand node 130
+Generate node 309
+Generate node 310
+Expand node 131
+Generate node 311
+Generate node 312
+Expand node 134
+Generate node 313
+Generate node 314
+Expand node 136
+Generate node 315
+Expand node 146
+Generate node 316
+Generate node 317
+Expand node 152
+Generate node 318
+Generate node 319
+Expand node 155
+Generate node 320
+Generate node 321
+Expand node 177
+Generate node 322
+Expand node 196
+Generate node 323
+Generate node 324
+Expand node 202
+Generate node 325
+Generate node 326
+Expand node 287
+Generate node 327
+Generate node 328
+Expand node 307
+Generate node 329
+Generate node 330
+Expand node 310
+Generate node 331
+Expand node 311
+Generate node 332
+Generate node 333
+Expand node 316
+Generate node 334
+Generate node 335
+Expand node 321
+Generate node 336
+Expand node 328
+Generate node 337
+Expand node 337
+Generate node 338
+Expand node 336
+Generate node 339
+Expand node 31
+Generate node 340
+Generate node 341
+Expand node 341
+Generate node 342
+Generate node 343
+Expand node 343
+Generate node 344
+Generate node 345
+Expand node 344
+Generate node 346
+Expand node 345
+Generate node 347
+Generate node 348
+Expand node 348
+Generate node 349
+Generate node 350
+Expand node 349
+Generate node 351
+Generate node 352
+Expand node 347
+Generate node 353
+Expand node 38
+Generate node 354
+Generate node 355
+Expand node 355
+Generate node 356
+Generate node 357
+Expand node 356
+Generate node 358
+Generate node 359
+Expand node 357
+Generate node 360
+Expand node 360
+Generate node 361
+Generate node 362
+Expand node 361
+Generate node 363
+Generate node 364
+Expand node 359
+Generate node 365
+Generate node 366
+Expand node 365
+Generate node 367
+Expand node 366
+Generate node 368
+Generate node 369
+Expand node 369
+Generate node 370
+Generate node 371
+Expand node 370
+Generate node 372
+Generate node 373
+Expand node 368
+Generate node 374
+Expand node 68
+Generate node 375
+Generate node 376
+Expand node 126
+Generate node 377
+Generate node 378
+Expand node 378
+Generate node 379
+Generate node 380
+Expand node 380
+Generate node 381
+Expand node 156
+Generate node 382
+Generate node 383
+Expand node 159
+Generate node 384
+Generate node 385
+Expand node 162
+Generate node 386
+Generate node 387
+Expand node 167
+Generate node 388
+Generate node 389
+Expand node 169
+Generate node 390
+Generate node 391
+Expand node 174
+Generate node 392
+Generate node 393
+Expand node 393
+Generate node 394
+Expand node 204
+Generate node 395
+Generate node 396
+Expand node 210
+Generate node 397
+Generate node 398
+Expand node 220
+Generate node 399
+Generate node 400
+Expand node 325
+Generate node 401
+Generate node 402
+Expand node 401
+Generate node 403
+Generate node 404
+Expand node 384
+Generate node 405
+Generate node 406
+Expand node 388
+Generate node 407
+Generate node 408
+Expand node 390
+Generate node 409
+Generate node 410
+Expand node 395
+Generate node 411
+Generate node 412
+Expand node 399
+Generate node 413
+Generate node 414
+Expand node 402
+Generate node 415
+Generate node 416
+Expand node 413
+Generate node 417
+Generate node 418
+Expand node 417
+Generate node 419
+Generate node 420
+Expand node 129
+Generate node 421
+Generate node 422
+Expand node 421
+Generate node 423
+Generate node 424
+Expand node 423
+Generate node 425
+Generate node 426
+Expand node 133
+Generate node 427
+Generate node 428
+Expand node 427
+Generate node 429
+Generate node 430
+Expand node 429
+Generate node 431
+Generate node 432
+Expand node 165
+Generate node 433
+Generate node 434
+Expand node 433
+Generate node 435
+Generate node 436
+Expand node 436
+Generate node 437
+Generate node 438
+Expand node 437
+Generate node 439
+Generate node 440
+Expand node 435
+Generate node 441
+Generate node 442
+Expand node 434
+Generate node 443
+Generate node 444
+Expand node 444
+Generate node 445
+Generate node 446
+Expand node 443
+Generate node 447
+Expand node 173
+Generate node 448
+Generate node 449
+Expand node 448
+Generate node 450
+Generate node 451
+Expand node 450
+Generate node 452
+Generate node 453
+Expand node 453
+Generate node 454
+Expand node 183
+Generate node 455
+Generate node 456
+Expand node 212
+Generate node 457
+Generate node 458
+Expand node 213
+Generate node 459
+Expand node 214
+Generate node 460
+Generate node 461
+Expand node 460
+Generate node 462
+Generate node 463
+Expand node 461
+Generate node 464
+Generate node 465
+Expand node 215
+Generate node 466
+Generate node 467
+Expand node 217
+Generate node 468
+Generate node 469
+Expand node 468
+Generate node 470
+Generate node 471
+Expand node 469
+Generate node 472
+Generate node 473
+Expand node 470
+Generate node 474
+Generate node 475
+Expand node 472
+Generate node 476
+Generate node 477
+Expand node 218
+Generate node 478
+Generate node 479
+Expand node 222
+Generate node 480
+Generate node 481
+Expand node 224
+Generate node 482
+Generate node 483
+Expand node 342
+Generate node 484
+Expand node 484
+Generate node 485
+Expand node 358
+Generate node 486
+Expand node 486
+Generate node 487
+Expand node 376
+Generate node 488
+Generate node 489
+Expand node 489
+Generate node 490
+Expand node 447
+Generate node 491
+Generate node 492
+Expand node 456
+Generate node 493
+Expand node 462
+Generate node 494
+Generate node 495
+Expand node 467
+Generate node 496
+Expand node 474
+Generate node 497
+Generate node 498
+Expand node 479
+Generate node 499
+Generate node 500
+Expand node 488
+Generate node 501
+Generate node 502
+Expand node 499
+Generate node 503
+Expand node 161
+Generate node 504
+Generate node 505
+Expand node 504
+Generate node 506
+Generate node 507
+Expand node 506
+Generate node 508
+Generate node 509
+Expand node 208
+Generate node 510
+Generate node 511
+Expand node 510
+Generate node 512
+Generate node 513
+Expand node 512
+Generate node 514
+Generate node 515
+Expand node 511
+Generate node 516
+Generate node 517
+Expand node 228
+Generate node 518
+Generate node 519
+Expand node 502
+Generate node 520
+Expand node 520
+Generate node 521
+Expand node 518
+Generate node 522
+Generate node 523
+Expand node 109
+Generate node 524
+Generate node 525
+Expand node 525
+Generate node 526
+Generate node 527
+Expand node 526
+Generate node 528
+Expand node 229
+Generate node 529
+Generate node 530
+Expand node 232
+Generate node 531
+Generate node 532
+Expand node 233
+Generate node 533
+Generate node 534
+Expand node 299
+Generate node 535
+Generate node 536
+Expand node 305
+Generate node 537
+Generate node 538
+Expand node 537
+Generate node 539
+Generate node 540
+Expand node 125
+Generate node 541
+Generate node 542
+Expand node 236
+Generate node 543
+Generate node 544
+Expand node 543
+Generate node 545
+Generate node 546
+Expand node 238
+Generate node 547
+Generate node 548
+Expand node 239
+Generate node 549
+Generate node 550
+Expand node 240
+Generate node 551
+Generate node 552
+Expand node 253
+Generate node 553
+Generate node 554
+Expand node 553
+Generate node 555
+Generate node 556
+Expand node 304
+Generate node 557
+Expand node 531
+Generate node 558
+Generate node 559
+Expand node 533
+Generate node 560
+Generate node 561
+Expand node 541
+Generate node 562
+Expand node 547
+Generate node 563
+Generate node 564
+Expand node 120
+Generate node 565
+Generate node 566
+Expand node 151
+Generate node 567
+Expand node 158
+Generate node 568
+Generate node 569
+Expand node 243
+Generate node 570
+Generate node 571
+Expand node 245
+Generate node 572
+Generate node 573
+Expand node 247
+Generate node 574
+Generate node 575
+Expand node 249
+Generate node 576
+Generate node 577
+Expand node 577
+Generate node 578
+Generate node 579
+Expand node 578
+Generate node 580
+Generate node 581
+Expand node 261
+Generate node 582
+Generate node 583
+Expand node 583
+Generate node 584
+Generate node 585
+Expand node 584
+Generate node 586
+Generate node 587
+Expand node 265
+Generate node 588
+Generate node 589
+Expand node 267
+Generate node 590
+Generate node 591
+Expand node 590
+Generate node 592
+Generate node 593
+Expand node 269
+Generate node 594
+Generate node 595
+Expand node 270
+Generate node 596
+Generate node 597
+Expand node 272
+Generate node 598
+Generate node 599
+Expand node 273
+Generate node 600
+Generate node 601
+Expand node 278
+Generate node 602
+Generate node 603
+Expand node 279
+Generate node 604
+Generate node 605
+Expand node 604
+Generate node 606
+Generate node 607
+Expand node 300
+Generate node 608
+Expand node 608
+Generate node 609
+Generate node 610
+Expand node 609
+Generate node 611
+Generate node 612
+Expand node 350
+Generate node 613
+Generate node 614
+Expand node 362
+Generate node 615
+Generate node 616
+Expand node 371
+Generate node 617
+Generate node 618
+Expand node 439
+Generate node 619
+Generate node 620
+Expand node 550
+Generate node 621
+Expand node 566
+Generate node 622
+Expand node 568
+Generate node 623
+Expand node 569
+Generate node 624
+Generate node 625
+Expand node 600
+Generate node 626
+Generate node 627
+Expand node 622
+Generate node 628
+Generate node 629
+Expand node 628
+Generate node 630
+Expand node 623
+Generate node 631
+Generate node 632
+Expand node 83
+Generate node 633
+Generate node 634
+Expand node 633
+Generate node 635
+Generate node 636
+Expand node 636
+Generate node 637
+Expand node 128
+Generate node 638
+Generate node 639
+Expand node 132
+Generate node 640
+Generate node 641
+Expand node 164
+Generate node 642
+Expand node 176
+Generate node 643
+Expand node 179
+Generate node 644
+Expand node 244
+Generate node 645
+Generate node 646
+Expand node 246
+Generate node 647
+Generate node 648
+Expand node 248
+Generate node 649
+Generate node 650
+Expand node 257
+Generate node 651
+Generate node 652
+Expand node 651
+Generate node 653
+Generate node 654
+Expand node 653
+Generate node 655
+Generate node 656
+Expand node 652
+Generate node 657
+Expand node 271
+Generate node 658
+Generate node 659
+Expand node 293
+Generate node 660
+Generate node 661
+Expand node 309
+Generate node 662
+Generate node 663
+Expand node 313
+Generate node 664
+Generate node 665
+Expand node 314
+Generate node 666
+Expand node 666
+Generate node 667
+Expand node 318
+Generate node 668
+Generate node 669
+Expand node 668
+Generate node 670
+Expand node 669
+Generate node 671
+Expand node 319
+Generate node 672
+Generate node 673
+Expand node 673
+Generate node 674
+Expand node 674
+Generate node 675
+Expand node 323
+Generate node 676
+Generate node 677
+Expand node 327
+Generate node 678
+Generate node 679
+Expand node 331
+Generate node 680
+Expand node 680
+Generate node 681
+Expand node 334
+Generate node 682
+Generate node 683
+Expand node 351
+Generate node 684
+Expand node 684
+Generate node 685
+Generate node 686
+Expand node 685
+Generate node 687
+Generate node 688
+Expand node 363
+Generate node 689
+Expand node 689
+Generate node 690
+Generate node 691
+Expand node 690
+Generate node 692
+Generate node 693
+Expand node 372
+Generate node 694
+Expand node 694
+Generate node 695
+Generate node 696
+Expand node 695
+Generate node 697
+Generate node 698
+Expand node 403
+Generate node 699
+Generate node 700
+Expand node 426
+Generate node 701
+Generate node 702
+Expand node 432
+Generate node 703
+Generate node 704
+Expand node 441
+Generate node 705
+Generate node 706
+Expand node 445
+Generate node 707
+Generate node 708
+Expand node 452
+Generate node 709
+Generate node 710
+Expand node 471
+Generate node 711
+Generate node 712
+Expand node 473
+Generate node 713
+Generate node 714
+Expand node 500
+Generate node 715
+Generate node 716
+Expand node 536
+Generate node 717
+Expand node 717
+Generate node 718
+Expand node 602
+Generate node 719
+Generate node 720
+Expand node 616
+Generate node 721
+Expand node 639
+Generate node 722
+Expand node 722
+Generate node 723
+Expand node 641
+Generate node 724
+Expand node 724
+Generate node 725
+Expand node 670
+Generate node 726
+Generate node 727
+Expand node 671
+Generate node 728
+Generate node 729
+Expand node 676
+Generate node 730
+Generate node 731
+Expand node 682
+Generate node 732
+Generate node 733
+Expand node 732
+Generate node 734
+Generate node 735
+Expand node 699
+Generate node 736
+Generate node 737
+Expand node 702
+Generate node 738
+Generate node 739
+Expand node 711
+Generate node 740
+Generate node 741
+Expand node 713
+Generate node 742
+Generate node 743
+Expand node 715
+Generate node 744
+Generate node 745
+Expand node 738
+Generate node 746
+Expand node 740
+Generate node 747
+Generate node 748
+Expand node 742
+Generate node 749
+Generate node 750
+Expand node 744
+Generate node 751
+Generate node 752
+Expand node 747
+Generate node 753
+Generate node 754
+Expand node 749
+Generate node 755
+Generate node 756
+Expand node 751
+Generate node 757
+Expand node 76
+Generate node 758
+Generate node 759
+Expand node 77
+Generate node 760
+Generate node 761
+Expand node 761
+Generate node 762
+Generate node 763
+Expand node 763
+Generate node 764
+Expand node 764
+Generate node 765
+Generate node 766
+Expand node 765
+Generate node 767
+Generate node 768
+Expand node 160
+Generate node 769
+Generate node 770
+Expand node 166
+Generate node 771
+Expand node 275
+Generate node 772
+Generate node 773
+Expand node 773
+Generate node 774
+Generate node 775
+Expand node 774
+Generate node 776
+Generate node 777
+Expand node 322
+Generate node 778
+Generate node 779
+Expand node 330
+Generate node 780
+Generate node 781
+Expand node 333
+Generate node 782
+Generate node 783
+Expand node 340
+Generate node 784
+Generate node 785
+Expand node 354
+Generate node 786
+Generate node 787
+Expand node 375
+Generate node 788
+Generate node 789
+Expand node 386
+Generate node 790
+Generate node 791
+Expand node 387
+Generate node 792
+Expand node 792
+Generate node 793
+Expand node 392
+Generate node 794
+Generate node 795
+Expand node 394
+Generate node 796
+Expand node 796
+Generate node 797
+Expand node 397
+Generate node 798
+Generate node 799
+Expand node 407
+Generate node 800
+Generate node 801
+Expand node 409
+Generate node 802
+Generate node 803
+Expand node 411
+Generate node 804
+Generate node 805
+Expand node 451
+Generate node 806
+Generate node 807
+Expand node 807
+Generate node 808
+Generate node 809
+Expand node 464
+Generate node 810
+Generate node 811
+Expand node 476
+Generate node 812
+Generate node 813
+Expand node 494
+Generate node 814
+Generate node 815
+Expand node 497
+Generate node 816
+Generate node 817
+Expand node 501
+Generate node 818
+Expand node 818
+Generate node 819
+Expand node 509
+Generate node 820
+Generate node 821
+Expand node 514
+Generate node 822
+Generate node 823
+Expand node 614
+Generate node 824
+Expand node 824
+Generate node 825
+Generate node 826
+Expand node 825
+Generate node 827
+Expand node 826
+Generate node 828
+Expand node 618
+Generate node 829
+Expand node 829
+Generate node 830
+Generate node 831
+Expand node 830
+Generate node 832
+Expand node 705
+Generate node 833
+Generate node 834
+Expand node 721
+Generate node 835
+Expand node 726
+Generate node 836
+Generate node 837
+Expand node 741
+Generate node 838
+Generate node 839
+Expand node 743
+Generate node 840
+Generate node 841
+Expand node 745
+Generate node 842
+Expand node 748
+Generate node 843
+Generate node 844
+Expand node 750
+Generate node 845
+Generate node 846
+Expand node 752
+Generate node 847
+Expand node 753
+Generate node 848
+Generate node 849
+Expand node 758
+Generate node 850
+Expand node 850
+Generate node 851
+Generate node 852
+Expand node 852
+Generate node 853
+Expand node 759
+Generate node 854
+Generate node 855
+Expand node 762
+Generate node 856
+Generate node 857
+Expand node 857
+Generate node 858
+Expand node 770
+Generate node 859
+Expand node 859
+Generate node 860
+Expand node 771
+Generate node 861
+Generate node 862
+Expand node 862
+Generate node 863
+Expand node 780
+Generate node 864
+Generate node 865
+Expand node 781
+Generate node 866
+Expand node 782
+Generate node 867
+Generate node 868
+Expand node 783
+Generate node 869
+Expand node 798
+Generate node 870
+Generate node 871
+Expand node 800
+Generate node 872
+Generate node 873
+Expand node 802
+Generate node 874
+Generate node 875
+Expand node 804
+Generate node 876
+Generate node 877
+Expand node 808
+Generate node 878
+Generate node 879
+Expand node 878
+Generate node 880
+Expand node 822
+Generate node 881
+Generate node 882
+Expand node 831
+Generate node 883
+Generate node 884
+Expand node 883
+Generate node 885
+Expand node 884
+Generate node 886
+Expand node 834
+Generate node 887
+Generate node 888
+Expand node 854
+Generate node 889
+Expand node 889
+Generate node 890
+Generate node 891
+Expand node 855
+Generate node 892
+Generate node 893
+Expand node 893
+Generate node 894
+Expand node 329
+Generate node 895
+Generate node 896
+Expand node 895
+Generate node 897
+Generate node 898
+Expand node 332
+Generate node 899
+Generate node 900
+Expand node 899
+Generate node 901
+Generate node 902
+Expand node 382
+Generate node 903
+Generate node 904
+Expand node 904
+Generate node 905
+Generate node 906
+Expand node 905
+Generate node 907
+Generate node 908
+Expand node 383
+Generate node 909
+Generate node 910
+Expand node 406
+Generate node 911
+Generate node 912
+Expand node 414
+Generate node 913
+Generate node 914
+Expand node 419
+Generate node 915
+Generate node 916
+Expand node 420
+Generate node 917
+Generate node 918
+Expand node 422
+Generate node 919
+Generate node 920
+Expand node 425
+Generate node 921
+Generate node 922
+Expand node 921
+Generate node 923
+Generate node 924
+Expand node 924
+Generate node 925
+Generate node 926
+Expand node 925
+Generate node 927
+Expand node 927
+Generate node 928
+Generate node 929
+Expand node 922
+Generate node 930
+Generate node 931
+Expand node 930
+Generate node 932
+Generate node 933
+Expand node 931
+Generate node 934
+Generate node 935
+Expand node 923
+Generate node 936
+Generate node 937
+Expand node 936
+Generate node 938
+Generate node 939
+Expand node 938
+Generate node 940
+Generate node 941
+Expand node 941
+Generate node 942
+Generate node 943
+Expand node 942
+Generate node 944
+Expand node 428
+Generate node 945
+Generate node 946
+Expand node 431
+Generate node 947
+Generate node 948
+Expand node 947
+Generate node 949
+Generate node 950
+Expand node 948
+Generate node 951
+Generate node 952
+Expand node 951
+Generate node 953
+Generate node 954
+Expand node 949
+Generate node 955
+Generate node 956
+Expand node 955
+Generate node 957
+Generate node 958
+Expand node 957
+Generate node 959
+Generate node 960
+Expand node 455
+Generate node 961
+Generate node 962
+Expand node 457
+Generate node 963
+Generate node 964
+Expand node 963
+Generate node 965
+Generate node 966
+Expand node 964
+Generate node 967
+Generate node 968
+Expand node 965
+Generate node 969
+Generate node 970
+Expand node 967
+Generate node 971
+Generate node 972
+Expand node 458
+Generate node 973
+Generate node 974
+Expand node 466
+Generate node 975
+Generate node 976
+Expand node 478
+Generate node 977
+Generate node 978
+Expand node 480
+Generate node 979
+Generate node 980
+Expand node 482
+Generate node 981
+Generate node 982
+Expand node 491
+Generate node 983
+Generate node 984
+Expand node 493
+Generate node 985
+Expand node 516
+Generate node 986
+Generate node 987
+Expand node 712
+Generate node 988
+Generate node 989
+Expand node 714
+Generate node 990
+Generate node 991
+Expand node 838
+Generate node 992
+Generate node 993
+Expand node 843
+Generate node 994
+Generate node 995
+Expand node 856
+Generate node 996
+Expand node 996
+Generate node 997
+Expand node 903
+Generate node 998
+Generate node 999
+Expand node 909
+Generate node 1000
+Generate node 1001
+Expand node 911
+Generate node 1002
+Generate node 1003
+Expand node 912
+Generate node 1004
+Expand node 913
+Generate node 1005
+Generate node 1006
+Expand node 914
+Generate node 1007
+Expand node 917
+Generate node 1008
+Generate node 1009
+Expand node 918
+Generate node 1010
+Expand node 962
+Generate node 1011
+Expand node 969
+Generate node 1012
+Generate node 1013
+Expand node 974
+Generate node 1014
+Generate node 1015
+Expand node 976
+Generate node 1016
+Generate node 1017
+Expand node 978
+Generate node 1018
+Generate node 1019
+Expand node 979
+Generate node 1020
+Generate node 1021
+Expand node 981
+Generate node 1022
+Generate node 1023
+Expand node 1014
+Generate node 1024
+Expand node 1018
+Generate node 1025
+Generate node 1026
+Expand node 405
+Generate node 1027
+Generate node 1028
+Expand node 1027
+Generate node 1029
+Generate node 1030
+Expand node 415
+Generate node 1031
+Generate node 1032
+Expand node 1031
+Generate node 1033
+Generate node 1034
+Expand node 1033
+Generate node 1035
+Generate node 1036
+Expand node 1032
+Generate node 1037
+Generate node 1038
+Expand node 505
+Generate node 1039
+Generate node 1040
+Expand node 508
+Generate node 1041
+Generate node 1042
+Expand node 1041
+Generate node 1043
+Generate node 1044
+Expand node 1042
+Generate node 1045
+Generate node 1046
+Expand node 1045
+Generate node 1047
+Generate node 1048
+Expand node 1043
+Generate node 1049
+Generate node 1050
+Expand node 1049
+Generate node 1051
+Generate node 1052
+Expand node 1051
+Generate node 1053
+Generate node 1054
+Expand node 522
+Generate node 1055
+Generate node 1056
+Expand node 716
+Generate node 1057
+Expand node 865
+Generate node 1058
+Expand node 868
+Generate node 1059
+Expand node 915
+Generate node 1060
+Generate node 1061
+Expand node 1060
+Generate node 1062
+Generate node 1063
+Expand node 988
+Generate node 1064
+Generate node 1065
+Expand node 999
+Generate node 1066
+Generate node 1067
+Expand node 1001
+Generate node 1068
+Generate node 1069
+Expand node 1069
+Generate node 1070
+Expand node 1006
+Generate node 1071
+Generate node 1072
+Expand node 1055
+Generate node 1073
+Generate node 1074
+Expand node 1066
+Generate node 1075
+Generate node 1076
+Expand node 1071
+Generate node 1077
+Generate node 1078
+Expand node 1073
+Generate node 1079
+Generate node 1080
+Expand node 1079
+Generate node 1081
+Generate node 1082
+Expand node 1081
+Generate node 1083
+Generate node 1084
+Expand node 1083
+Generate node 1085
+Generate node 1086
+Expand node 1086
+Generate node 1087
+Generate node 1088
+Expand node 1085
+Generate node 1089
+Generate node 1090
+Expand node 1089
+Generate node 1091
+Generate node 1092
+Expand node 1090
+Generate node 1093
+Generate node 1094
+Expand node 1003
+Generate node 1095
+Expand node 1009
+Generate node 1096
+Expand node 532
+Generate node 1097
+Generate node 1098
+Expand node 534
+Generate node 1099
+Generate node 1100
+Expand node 558
+Generate node 1101
+Generate node 1102
+Expand node 560
+Generate node 1103
+Generate node 1104
+Expand node 524
+Generate node 1105
+Generate node 1106
+Expand node 527
+Generate node 1107
+Generate node 1108
+Expand node 528
+Generate node 1109
+Generate node 1110
+Expand node 529
+Generate node 1111
+Generate node 1112
+Expand node 530
+Generate node 1113
+Generate node 1114
+Expand node 1114
+Generate node 1115
+Generate node 1116
+Expand node 1115
+Generate node 1117
+Expand node 535
+Generate node 1118
+Generate node 1119
+Expand node 538
+Generate node 1120
+Generate node 1121
+Expand node 586
+Generate node 1122
+Generate node 1123
+Expand node 891
+Generate node 1124
+Expand node 1111
+Generate node 1125
+Generate node 1126
+Expand node 1122
+Generate node 1127
+Generate node 1128
+Expand node 116
+Generate node 1129
+Generate node 1130
+Expand node 242
+Generate node 1131
+Generate node 1132
+Expand node 315
+Generate node 1133
+Expand node 454
+Generate node 1134
+Generate node 1135
+Expand node 485
+Generate node 1136
+Generate node 1137
+Expand node 487
+Generate node 1138
+Generate node 1139
+Expand node 490
+Generate node 1140
+Generate node 1141
+Expand node 545
+Generate node 1142
+Generate node 1143
+Expand node 1142
+Generate node 1144
+Generate node 1145
+Expand node 549
+Generate node 1146
+Generate node 1147
+Expand node 551
+Generate node 1148
+Generate node 1149
+Expand node 552
+Generate node 1150
+Generate node 1151
+Expand node 555
+Generate node 1152
+Generate node 1153
+Expand node 1152
+Generate node 1154
+Generate node 1155
+Expand node 563
+Generate node 1156
+Generate node 1157
+Expand node 597
+Generate node 1158
+Generate node 1159
+Expand node 661
+Generate node 1160
+Expand node 735
+Generate node 1161
+Generate node 1162
+Expand node 853
+Generate node 1163
+Expand node 863
+Generate node 1164
+Expand node 890
+Generate node 1165
+Generate node 1166
+Expand node 894
+Generate node 1167
+Expand node 1107
+Generate node 1168
+Generate node 1169
+Expand node 1109
+Generate node 1170
+Generate node 1171
+Expand node 1130
+Generate node 1172
+Generate node 1173
+Expand node 1172
+Generate node 1174
+Generate node 1175
+Expand node 1174
+Generate node 1176
+Generate node 1177
+Expand node 1176
+Generate node 1178
+Expand node 1131
+Generate node 1179
+Expand node 1133
+Generate node 1180
+Generate node 1181
+Expand node 1134
+Generate node 1182
+Expand node 1136
+Generate node 1183
+Generate node 1184
+Expand node 1138
+Generate node 1185
+Generate node 1186
+Expand node 1140
+Generate node 1187
+Generate node 1188
+Expand node 1187
+Generate node 1189
+Generate node 1190
+Expand node 1189
+Generate node 1191
+Generate node 1192
+Expand node 1190
+Generate node 1193
+Expand node 1193
+Generate node 1194
+Generate node 1195
+Expand node 1194
+Generate node 1196
+Generate node 1197
+Expand node 1191
+Generate node 1198
+Generate node 1199
+Expand node 1148
+Generate node 1200
+Generate node 1201
+Expand node 1156
+Generate node 1202
+Generate node 1203
+Expand node 1160
+Generate node 1204
+Generate node 1205
+Expand node 1205
+Generate node 1206
+Generate node 1207
+Expand node 1162
+Generate node 1208
+Expand node 1173
+Generate node 1209
+Generate node 1210
+Expand node 1209
+Generate node 1211
+Generate node 1212
+Expand node 1211
+Generate node 1213
+Generate node 1214
+Expand node 1213
+Generate node 1215
+Expand node 1181
+Generate node 1216
+Generate node 1217
+Expand node 1195
+Generate node 1218
+Expand node 1217
+Generate node 1219
+Expand node 189
+Generate node 1220
+Generate node 1221
+Expand node 256
+Generate node 1222
+Generate node 1223
+Expand node 1223
+Generate node 1224
+Generate node 1225
+Expand node 1224
+Generate node 1226
+Expand node 268
+Generate node 1227
+Generate node 1228
+Expand node 281
+Generate node 1229
+Generate node 1230
+Expand node 539
+Generate node 1231
+Expand node 1231
+Generate node 1232
+Generate node 1233
+Expand node 1232
+Generate node 1234
+Generate node 1235
+Expand node 542
+Generate node 1236
+Generate node 1237
+Expand node 557
+Generate node 1238
+Generate node 1239
+Expand node 562
+Generate node 1240
+Generate node 1241
+Expand node 565
+Generate node 1242
+Generate node 1243
+Expand node 567
+Generate node 1244
+Generate node 1245
+Expand node 1245
+Generate node 1246
+Generate node 1247
+Expand node 570
+Generate node 1248
+Generate node 1249
+Expand node 572
+Generate node 1250
+Generate node 1251
+Expand node 574
+Generate node 1252
+Generate node 1253
+Expand node 580
+Generate node 1254
+Generate node 1255
+Expand node 1255
+Generate node 1256
+Generate node 1257
+Expand node 1256
+Generate node 1258
+Generate node 1259
+Expand node 582
+Generate node 1260
+Generate node 1261
+Expand node 1261
+Generate node 1262
+Generate node 1263
+Expand node 1262
+Generate node 1264
+Generate node 1265
+Expand node 588
+Generate node 1266
+Generate node 1267
+Expand node 589
+Generate node 1268
+Generate node 1269
+Expand node 592
+Generate node 1270
+Generate node 1271
+Expand node 1270
+Generate node 1272
+Generate node 1273
+Expand node 594
+Generate node 1274
+Generate node 1275
+Expand node 598
+Generate node 1276
+Generate node 1277
+Expand node 599
+Generate node 1278
+Generate node 1279
+Expand node 611
+Generate node 1280
+Generate node 1281
+Expand node 1281
+Generate node 1282
+Generate node 1283
+Expand node 1282
+Generate node 1284
+Generate node 1285
+Expand node 613
+Generate node 1286
+Generate node 1287
+Expand node 615
+Generate node 1288
+Generate node 1289
+Expand node 617
+Generate node 1290
+Generate node 1291
+Expand node 619
+Generate node 1292
+Generate node 1293
+Expand node 626
+Generate node 1294
+Generate node 1295
+Expand node 629
+Generate node 1296
+Expand node 1296
+Generate node 1297
+Expand node 635
+Generate node 1298
+Generate node 1299
+Expand node 637
+Generate node 1300
+Generate node 1301
+Expand node 644
+Generate node 1302
+Expand node 655
+Generate node 1303
+Generate node 1304
+Expand node 1304
+Generate node 1305
+Generate node 1306
+Expand node 1305
+Generate node 1307
+Generate node 1308
+Expand node 1303
+Generate node 1309
+Generate node 1310
+Expand node 1309
+Generate node 1311
+Generate node 1312
+Expand node 718
+Generate node 1313
+Expand node 1313
+Generate node 1314
+Generate node 1315
+Expand node 1314
+Generate node 1316
+Expand node 734
+Generate node 1317
+Generate node 1318
+Expand node 746
+Generate node 1319
+Expand node 766
+Generate node 1320
+Generate node 1321
+Expand node 827
+Generate node 1322
+Expand node 828
+Generate node 1323
+Expand node 835
+Generate node 1324
+Generate node 1325
+Expand node 885
+Generate node 1326
+Expand node 886
+Generate node 1327
+Expand node 928
+Generate node 1328
+Generate node 1329
+Expand node 940
+Generate node 1330
+Generate node 1331
+Expand node 943
+Generate node 1332
+Expand node 959
+Generate node 1333
+Generate node 1334
+Expand node 960
+Generate node 1335
+Expand node 997
+Generate node 1336
+Generate node 1337
+Expand node 1151
+Generate node 1338
+Expand node 1180
+Generate node 1339
+Generate node 1340
+Expand node 1204
+Generate node 1341
+Generate node 1342
+Expand node 1341
+Generate node 1343
+Expand node 1342
+Generate node 1344
+Expand node 1210
+Generate node 1345
+Generate node 1346
+Expand node 1345
+Generate node 1347
+Generate node 1348
+Expand node 1347
+Generate node 1349
+Expand node 1216
+Generate node 1350
+Expand node 1219
+Generate node 1351
+Generate node 1352
+Expand node 1352
+Generate node 1353
+Generate node 1354
+Expand node 1220
+Generate node 1355
+Expand node 1221
+Generate node 1356
+Generate node 1357
+Expand node 1228
+Generate node 1358
+Expand node 1358
+Generate node 1359
+Expand node 1229
+Generate node 1360
+Expand node 1230
+Generate node 1361
+Generate node 1362
+Expand node 1238
+Generate node 1363
+Generate node 1364
+Expand node 1248
+Generate node 1365
+Generate node 1366
+Expand node 1250
+Generate node 1367
+Generate node 1368
+Expand node 1252
+Generate node 1369
+Generate node 1370
+Expand node 1292
+Generate node 1371
+Generate node 1372
+Expand node 1294
+Generate node 1373
+Generate node 1374
+Expand node 1299
+Generate node 1375
+Generate node 1376
+Expand node 1301
+Generate node 1377
+Expand node 1315
+Generate node 1378
+Generate node 1379
+Expand node 1316
+Generate node 1380
+Generate node 1381
+Expand node 1322
+Generate node 1382
+Expand node 1324
+Generate node 1383
+Expand node 1383
+Generate node 1384
+Generate node 1385
+Expand node 1384
+Generate node 1386
+Expand node 1332
+Generate node 1387
+Expand node 1335
+Generate node 1388
+Expand node 1336
+Generate node 1389
+Generate node 1390
+Expand node 1339
+Generate node 1391
+Generate node 1392
+Expand node 1340
+Generate node 1393
+Generate node 1394
+Expand node 1356
+Generate node 1395
+Expand node 1357
+Generate node 1396
+Generate node 1397
+Expand node 1360
+Generate node 1398
+Generate node 1399
+Expand node 1378
+Generate node 1400
+Generate node 1401
+Expand node 1380
+Generate node 1402
+Generate node 1403
+Expand node 1382
+Generate node 1404
+Generate node 1405
+Expand node 1385
+Generate node 1406
+Generate node 1407
+Expand node 1386
+Generate node 1408
+Generate node 1409
+Expand node 1392
+Generate node 1410
+Expand node 1394
+Generate node 1411
+Expand node 1397
+Generate node 1412
+Generate node 1413
+Expand node 1404
+Generate node 1414
+Expand node 1405
+Generate node 1415
+Generate node 1416
+Expand node 1406
+Generate node 1417
+Generate node 1418
+Expand node 1408
+Generate node 1419
+Generate node 1420
+Expand node 1413
+Generate node 1421
+Generate node 1422
+Expand node 1414
+Generate node 1423
+Generate node 1424
+Expand node 1417
+Generate node 1425
+Generate node 1426
+Expand node 1419
+Generate node 1427
+Generate node 1428
+Expand node 1421
+Generate node 1429
+Generate node 1430
+Expand node 1422
+Generate node 1431
+Generate node 1432
+Expand node 1432
+Generate node 1433
+Expand node 1429
+Generate node 1434
+Expand node 1431
+Generate node 1435
+Expand node 93
+Generate node 1436
+Generate node 1437
+Expand node 103
+Generate node 1438
+Generate node 1439
+Expand node 193
+Generate node 1440
+Generate node 1441
+Expand node 197
+Generate node 1442
+Expand node 286
+Generate node 1443
+Generate node 1444
+Expand node 290
+Generate node 1445
+Generate node 1446
+Expand node 292
+Generate node 1447
+Expand node 353
+Generate node 1448
+Expand node 1448
+Generate node 1449
+Generate node 1450
+Expand node 1449
+Generate node 1451
+Generate node 1452
+Expand node 374
+Generate node 1453
+Expand node 1453
+Generate node 1454
+Generate node 1455
+Expand node 1454
+Generate node 1456
+Generate node 1457
+Expand node 418
+Generate node 1458
+Generate node 1459
+Expand node 424
+Generate node 1460
+Expand node 430
+Generate node 1461
+Expand node 576
+Generate node 1462
+Generate node 1463
+Expand node 1462
+Generate node 1464
+Generate node 1465
+Expand node 1464
+Generate node 1466
+Generate node 1467
+Expand node 1463
+Generate node 1468
+Expand node 596
+Generate node 1469
+Generate node 1470
+Expand node 1469
+Generate node 1471
+Generate node 1472
+Expand node 606
+Generate node 1473
+Generate node 1474
+Expand node 1474
+Generate node 1475
+Generate node 1476
+Expand node 1475
+Generate node 1477
+Generate node 1478
+Expand node 1473
+Generate node 1479
+Generate node 1480
+Expand node 1479
+Generate node 1481
+Generate node 1482
+Expand node 624
+Generate node 1483
+Expand node 1483
+Generate node 1484
+Generate node 1485
+Expand node 1484
+Generate node 1486
+Generate node 1487
+Expand node 1485
+Generate node 1488
+Expand node 1488
+Generate node 1489
+Generate node 1490
+Expand node 625
+Generate node 1491
+Expand node 1491
+Generate node 1492
+Generate node 1493
+Expand node 1493
+Generate node 1494
+Generate node 1495
+Expand node 1495
+Generate node 1496
+Generate node 1497
+Expand node 1496
+Generate node 1498
+Generate node 1499
+Expand node 1499
+Generate node 1500
+Generate node 1501
+Expand node 1500
+Generate node 1502
+Generate node 1503
+Expand node 631
+Generate node 1504
+Expand node 1504
+Generate node 1505
+Generate node 1506
+Expand node 1505
+Generate node 1507
+Generate node 1508
+Expand node 1506
+Generate node 1509
+Expand node 1509
+Generate node 1510
+Generate node 1511
+Expand node 632
+Generate node 1512
+Expand node 1512
+Generate node 1513
+Generate node 1514
+Expand node 1514
+Generate node 1515
+Generate node 1516
+Expand node 1516
+Generate node 1517
+Generate node 1518
+Expand node 1517
+Generate node 1519
+Generate node 1520
+Expand node 1520
+Generate node 1521
+Generate node 1522
+Expand node 1521
+Generate node 1523
+Generate node 1524
+Expand node 638
+Generate node 1525
+Generate node 1526
+Expand node 640
+Generate node 1527
+Generate node 1528
+Expand node 643
+Generate node 1529
+Expand node 646
+Generate node 1530
+Generate node 1531
+Expand node 1531
+Generate node 1532
+Expand node 648
+Generate node 1533
+Generate node 1534
+Expand node 650
+Generate node 1535
+Generate node 1536
+Expand node 658
+Generate node 1537
+Generate node 1538
+Expand node 1537
+Generate node 1539
+Expand node 1538
+Generate node 1540
+Expand node 659
+Generate node 1541
+Generate node 1542
+Expand node 1542
+Generate node 1543
+Expand node 1543
+Generate node 1544
+Expand node 660
+Generate node 1545
+Generate node 1546
+Expand node 1546
+Generate node 1547
+Expand node 1547
+Generate node 1548
+Generate node 1549
+Expand node 1549
+Generate node 1550
+Expand node 1545
+Generate node 1551
+Expand node 1548
+Generate node 1552
+Generate node 1553
+Expand node 1551
+Generate node 1554
+Generate node 1555
+Expand node 1552
+Generate node 1556
+Expand node 1553
+Generate node 1557
+Expand node 1555
+Generate node 1558
+Generate node 1559
+Expand node 1558
+Generate node 1560
+Generate node 1561
+Expand node 1560
+Generate node 1562
+Generate node 1563
+Expand node 662
+Generate node 1564
+Generate node 1565
+Expand node 663
+Generate node 1566
+Expand node 664
+Generate node 1567
+Generate node 1568
+Expand node 665
+Generate node 1569
+Expand node 672
+Generate node 1570
+Generate node 1571
+Expand node 1571
+Generate node 1572
+Expand node 1572
+Generate node 1573
+Generate node 1574
+Expand node 678
+Generate node 1575
+Generate node 1576
+Expand node 1575
+Generate node 1577
+Expand node 679
+Generate node 1578
+Generate node 1579
+Expand node 1579
+Generate node 1580
+Generate node 1581
+Expand node 1580
+Generate node 1582
+Expand node 1581
+Generate node 1583
+Expand node 687
+Generate node 1584
+Generate node 1585
+Expand node 1585
+Generate node 1586
+Generate node 1587
+Expand node 1586
+Generate node 1588
+Generate node 1589
+Expand node 692
+Generate node 1590
+Generate node 1591
+Expand node 1591
+Generate node 1592
+Generate node 1593
+Expand node 1592
+Generate node 1594
+Generate node 1595
+Expand node 697
+Generate node 1596
+Generate node 1597
+Expand node 1597
+Generate node 1598
+Generate node 1599
+Expand node 1598
+Generate node 1600
+Generate node 1601
+Expand node 701
+Generate node 1602
+Generate node 1603
+Expand node 703
+Generate node 1604
+Generate node 1605
+Expand node 704
+Generate node 1606
+Expand node 707
+Generate node 1607
+Generate node 1608
+Expand node 709
+Generate node 1609
+Generate node 1610
+Expand node 710
+Generate node 1611
+Generate node 1612
+Expand node 1612
+Generate node 1613
+Expand node 720
+Generate node 1614
+Generate node 1615
+Expand node 1614
+Generate node 1616
+Generate node 1617
+Expand node 728
+Generate node 1618
+Generate node 1619
+Expand node 730
+Generate node 1620
+Generate node 1621
+Expand node 736
+Generate node 1622
+Generate node 1623
+Expand node 739
+Generate node 1624
+Expand node 1624
+Generate node 1625
+Expand node 755
+Generate node 1626
+Generate node 1627
+Expand node 767
+Generate node 1628
+Expand node 1628
+Generate node 1629
+Generate node 1630
+Expand node 1629
+Generate node 1631
+Generate node 1632
+Expand node 776
+Generate node 1633
+Generate node 1634
+Expand node 1633
+Generate node 1635
+Generate node 1636
+Expand node 785
+Generate node 1637
+Generate node 1638
+Expand node 787
+Generate node 1639
+Generate node 1640
+Expand node 832
+Generate node 1641
+Generate node 1642
+Expand node 1642
+Generate node 1643
+Generate node 1644
+Expand node 1643
+Generate node 1645
+Expand node 1641
+Generate node 1646
+Expand node 1646
+Generate node 1647
+Generate node 1648
+Expand node 1647
+Generate node 1649
+Expand node 1644
+Generate node 1650
+Generate node 1651
+Expand node 1645
+Generate node 1652
+Generate node 1653
+Expand node 1648
+Generate node 1654
+Generate node 1655
+Expand node 1649
+Generate node 1656
+Generate node 1657
+Expand node 833
+Generate node 1658
+Generate node 1659
+Expand node 836
+Generate node 1660
+Generate node 1661
+Expand node 848
+Generate node 1662
+Generate node 1663
+Expand node 851
+Generate node 1664
+Generate node 1665
+Expand node 864
+Generate node 1666
+Generate node 1667
+Expand node 867
+Generate node 1668
+Generate node 1669
+Expand node 898
+Generate node 1670
+Generate node 1671
+Expand node 902
+Generate node 1672
+Generate node 1673
+Expand node 932
+Generate node 1674
+Generate node 1675
+Expand node 934
+Generate node 1676
+Generate node 1677
+Expand node 953
+Generate node 1678
+Generate node 1679
+Expand node 966
+Generate node 1680
+Generate node 1681
+Expand node 968
+Generate node 1682
+Generate node 1683
+Expand node 1015
+Generate node 1684
+Generate node 1685
+Expand node 1019
+Generate node 1686
+Generate node 1687
+Expand node 1053
+Generate node 1688
+Generate node 1689
+Expand node 1054
+Generate node 1690
+Expand node 1121
+Generate node 1691
+Expand node 1691
+Generate node 1692
+Expand node 1247
+Generate node 1693
+Generate node 1694
+Expand node 1694
+Generate node 1695
+Expand node 1274
+Generate node 1696
+Generate node 1697
+Expand node 1321
+Generate node 1698
+Expand node 1376
+Generate node 1699
+Generate node 1700
+Expand node 1700
+Generate node 1701
+Expand node 1701
+Generate node 1702
+Expand node 1391
+Generate node 1703
+Expand node 1393
+Generate node 1704
+Expand node 1410
+Generate node 1705
+Generate node 1706
+Expand node 1706
+Generate node 1707
+Expand node 1411
+Generate node 1708
+Generate node 1709
+Expand node 1709
+Generate node 1710
+Expand node 1415
+Generate node 1711
+Generate node 1712
+Expand node 1711
+Generate node 1713
+Generate node 1714
+Expand node 1712
+Generate node 1715
+Generate node 1716
+Expand node 1713
+Generate node 1717
+Generate node 1718
+Expand node 1717
+Generate node 1719
+Generate node 1720
+Expand node 1423
+Generate node 1721
+Generate node 1722
+Expand node 1721
+Generate node 1723
+Generate node 1724
+Expand node 1722
+Generate node 1725
+Generate node 1726
+Expand node 1723
+Generate node 1727
+Generate node 1728
+Expand node 1727
+Generate node 1729
+Generate node 1730
+Expand node 1436
+Generate node 1731
+Expand node 1437
+Generate node 1732
+Generate node 1733
+Expand node 1438
+Generate node 1734
+Expand node 1439
+Generate node 1735
+Generate node 1736
+Expand node 1441
+Generate node 1737
+Generate node 1738
+Expand node 1442
+Generate node 1739
+Expand node 1444
+Generate node 1740
+Expand node 1446
+Generate node 1741
+Expand node 1534
+Generate node 1742
+Generate node 1743
+Expand node 1536
+Generate node 1744
+Generate node 1745
+Expand node 1744
+Generate node 1746
+Expand node 1539
+Generate node 1747
+Generate node 1748
+Expand node 1540
+Generate node 1749
+Generate node 1750
+Expand node 1554
+Generate node 1751
+Generate node 1752
+Expand node 1564
+Generate node 1753
+Generate node 1754
+Expand node 1567
+Generate node 1755
+Generate node 1756
+Expand node 1607
+Generate node 1757
+Generate node 1758
+Expand node 1609
+Generate node 1759
+Generate node 1760
+Expand node 1615
+Generate node 1761
+Expand node 1761
+Generate node 1762
+Generate node 1763
+Expand node 1762
+Generate node 1764
+Generate node 1765
+Expand node 1616
+Generate node 1766
+Expand node 1766
+Generate node 1767
+Generate node 1768
+Expand node 1620
+Generate node 1769
+Generate node 1770
+Expand node 1622
+Generate node 1771
+Generate node 1772
+Expand node 1638
+Generate node 1773
+Generate node 1774
+Expand node 1639
+Generate node 1775
+Generate node 1776
+Expand node 1640
+Generate node 1777
+Expand node 1777
+Generate node 1778
+Generate node 1779
+Expand node 1650
+Generate node 1780
+Expand node 1780
+Generate node 1781
+Generate node 1782
+Expand node 1652
+Generate node 1783
+Expand node 1783
+Generate node 1784
+Generate node 1785
+Expand node 1654
+Generate node 1786
+Generate node 1787
+Expand node 1786
+Generate node 1788
+Generate node 1789
+Expand node 1787
+Generate node 1790
+Generate node 1791
+Expand node 1788
+Generate node 1792
+Generate node 1793
+Expand node 1790
+Generate node 1794
+Generate node 1795
+Expand node 1656
+Generate node 1796
+Generate node 1797
+Expand node 1796
+Generate node 1798
+Generate node 1799
+Expand node 1797
+Generate node 1800
+Generate node 1801
+Expand node 1798
+Generate node 1802
+Generate node 1803
+Expand node 1800
+Generate node 1804
+Generate node 1805
+Expand node 1658
+Generate node 1806
+Generate node 1807
+Expand node 1680
+Generate node 1808
+Generate node 1809
+Expand node 1682
+Generate node 1810
+Generate node 1811
+Expand node 1684
+Generate node 1812
+Generate node 1813
+Expand node 1686
+Generate node 1814
+Generate node 1815
+Expand node 1690
+Generate node 1816
+Expand node 1715
+Generate node 1817
+Expand node 1725
+Generate node 1818
+Expand node 1732
+Generate node 1819
+Expand node 1733
+Generate node 1820
+Generate node 1821
+Expand node 1821
+Generate node 1822
+Generate node 1823
+Expand node 1823
+Generate node 1824
+Generate node 1825
+Expand node 1824
+Generate node 1826
+Generate node 1827
+Expand node 1827
+Generate node 1828
+Generate node 1829
+Expand node 1828
+Generate node 1830
+Generate node 1831
+Expand node 1829
+Generate node 1832
+Generate node 1833
+Expand node 1833
+Generate node 1834
+Expand node 1830
+Generate node 1835
+Expand node 1832
+Generate node 1836
+Expand node 1825
+Generate node 1837
+Expand node 1837
+Generate node 1838
+Expand node 1838
+Generate node 1839
+Generate node 1840
+Expand node 1840
+Generate node 1841
+Generate node 1842
+Expand node 1842
+Generate node 1843
+Generate node 1844
+Expand node 1843
+Generate node 1845
+Expand node 1844
+Generate node 1846
+Expand node 1846
+Generate node 1847
+Expand node 1839
+Generate node 1848
+Expand node 1735
+Generate node 1849
+Expand node 1736
+Generate node 1850
+Generate node 1851
+Expand node 1851
+Generate node 1852
+Generate node 1853
+Expand node 1853
+Generate node 1854
+Generate node 1855
+Expand node 1854
+Generate node 1856
+Generate node 1857
+Expand node 1857
+Generate node 1858
+Generate node 1859
+Expand node 1858
+Generate node 1860
+Generate node 1861
+Expand node 1859
+Generate node 1862
+Generate node 1863
+Expand node 1863
+Generate node 1864
+Expand node 1860
+Generate node 1865
+Expand node 1862
+Generate node 1866
+Expand node 1855
+Generate node 1867
+Expand node 1867
+Generate node 1868
+Expand node 1868
+Generate node 1869
+Generate node 1870
+Expand node 1870
+Generate node 1871
+Generate node 1872
+Expand node 1872
+Generate node 1873
+Generate node 1874
+Expand node 1873
+Generate node 1875
+Expand node 1874
+Generate node 1876
+Expand node 1876
+Generate node 1877
+Expand node 1869
+Generate node 1878
+Expand node 1738
+Generate node 1879
+Generate node 1880
+Expand node 1880
+Generate node 1881
+Generate node 1882
+Expand node 1882
+Generate node 1883
+Generate node 1884
+Expand node 1883
+Generate node 1885
+Generate node 1886
+Expand node 1884
+Generate node 1887
+Generate node 1888
+Expand node 1888
+Generate node 1889
+Expand node 1739
+Generate node 1890
+Generate node 1891
+Expand node 1891
+Generate node 1892
+Generate node 1893
+Expand node 1892
+Generate node 1894
+Generate node 1895
+Expand node 1742
+Generate node 1896
+Generate node 1897
+Expand node 1896
+Generate node 1898
+Expand node 1751
+Generate node 1899
+Generate node 1900
+Expand node 1899
+Generate node 1901
+Expand node 1752
+Generate node 1902
+Generate node 1903
+Expand node 1902
+Generate node 1904
+Expand node 1773
+Generate node 1905
+Expand node 1774
+Generate node 1906
+Generate node 1907
+Expand node 1907
+Generate node 1908
+Generate node 1909
+Expand node 1776
+Generate node 1910
+Generate node 1911
+Expand node 1808
+Generate node 1912
+Generate node 1913
+Expand node 1810
+Generate node 1914
+Generate node 1915
+Expand node 1812
+Generate node 1916
+Expand node 1814
+Generate node 1917
+Generate node 1918
+Expand node 1817
+Generate node 1919
+Expand node 1919
+Generate node 1920
+Generate node 1921
+Expand node 1818
+Generate node 1922
+Expand node 1922
+Generate node 1923
+Generate node 1924
+Expand node 1885
+Generate node 1925
+Generate node 1926
+Expand node 1887
+Generate node 1927
+Generate node 1928
+Expand node 1894
+Generate node 1929
+Expand node 1906
+Generate node 1930
+Expand node 1910
+Generate node 1931
+Expand node 1911
+Generate node 1932
+Generate node 1933
+Expand node 1933
+Generate node 1934
+Generate node 1935
+Expand node 1917
+Generate node 1936
+Generate node 1937
+Expand node 1925
+Generate node 1938
+Expand node 1926
+Generate node 1939
+Expand node 1927
+Generate node 1940
+Expand node 1928
+Generate node 1941
+Expand node 1932
+Generate node 1942
+Expand node 1938
+Generate node 1943
+Expand node 1940
+Generate node 1944
+Expand node 97
+Generate node 1945
+Expand node 107
+Generate node 1946
+Expand node 211
+Generate node 1947
+Expand node 284
+Generate node 1948
+Generate node 1949
+Expand node 1949
+Generate node 1950
+Generate node 1951
+Expand node 1950
+Generate node 1952
+Generate node 1953
+Expand node 288
+Generate node 1954
+Generate node 1955
+Expand node 1955
+Generate node 1956
+Generate node 1957
+Expand node 1956
+Generate node 1958
+Generate node 1959
+Expand node 320
+Generate node 1960
+Generate node 1961
+Expand node 346
+Generate node 1962
+Expand node 1962
+Generate node 1963
+Generate node 1964
+Expand node 1963
+Generate node 1965
+Generate node 1966
+Expand node 367
+Generate node 1967
+Expand node 1967
+Generate node 1968
+Generate node 1969
+Expand node 1968
+Generate node 1970
+Generate node 1971
+Expand node 379
+Generate node 1972
+Generate node 1973
+Expand node 381
+Generate node 1974
+Expand node 449
+Generate node 1975
+Generate node 1976
+Expand node 507
+Generate node 1977
+Expand node 645
+Generate node 1978
+Generate node 1979
+Expand node 647
+Generate node 1980
+Generate node 1981
+Expand node 649
+Generate node 1982
+Generate node 1983
+Expand node 719
+Generate node 1984
+Generate node 1985
+Expand node 760
+Generate node 1986
+Generate node 1987
+Expand node 769
+Generate node 1988
+Generate node 1989
+Expand node 772
+Generate node 1990
+Generate node 1991
+Expand node 1991
+Generate node 1992
+Generate node 1993
+Expand node 1992
+Generate node 1994
+Generate node 1995
+Expand node 779
+Generate node 1996
+Generate node 1997
+Expand node 784
+Generate node 1998
+Generate node 1999
+Expand node 1998
+Generate node 2000
+Generate node 2001
+Expand node 1999
+Generate node 2002
+Generate node 2003
+Expand node 786
+Generate node 2004
+Generate node 2005
+Expand node 2004
+Generate node 2006
+Generate node 2007
+Expand node 2005
+Generate node 2008
+Generate node 2009
+Expand node 2006
+Generate node 2010
+Generate node 2011
+Expand node 2007
+Generate node 2012
+Expand node 2008
+Generate node 2013
+Generate node 2014
+Expand node 2009
+Generate node 2015
+Expand node 2012
+Generate node 2016
+Generate node 2017
+Expand node 2016
+Generate node 2018
+Generate node 2019
+Expand node 2018
+Generate node 2020
+Generate node 2021
+Expand node 2015
+Generate node 2022
+Expand node 788
+Generate node 2023
+Generate node 2024
+Expand node 789
+Generate node 2025
+Generate node 2026
+Expand node 790
+Generate node 2027
+Generate node 2028
+Expand node 791
+Generate node 2029
+Expand node 794
+Generate node 2030
+Generate node 2031
+Expand node 795
+Generate node 2032
+Expand node 806
+Generate node 2033
+Generate node 2034
+Expand node 809
+Generate node 2035
+Expand node 810
+Generate node 2036
+Generate node 2037
+Expand node 812
+Generate node 2038
+Generate node 2039
+Expand node 814
+Generate node 2040
+Generate node 2041
+Expand node 816
+Generate node 2042
+Generate node 2043
+Expand node 820
+Generate node 2044
+Generate node 2045
+Expand node 821
+Generate node 2046
+Expand node 840
+Generate node 2047
+Generate node 2048
+Expand node 845
+Generate node 2049
+Generate node 2050
+Expand node 861
+Generate node 2051
+Generate node 2052
+Expand node 866
+Generate node 2053
+Generate node 2054
+Expand node 869
+Generate node 2055
+Generate node 2056
+Expand node 870
+Generate node 2057
+Generate node 2058
+Expand node 872
+Generate node 2059
+Generate node 2060
+Expand node 874
+Generate node 2061
+Generate node 2062
+Expand node 876
+Generate node 2063
+Generate node 2064
+Expand node 881
+Generate node 2065
+Generate node 2066
+Expand node 892
+Generate node 2067
+Generate node 2068
+Expand node 907
+Generate node 2069
+Generate node 2070
+Expand node 950
+Generate node 2071
+Generate node 2072
+Expand node 952
+Generate node 2073
+Expand node 971
+Generate node 2074
+Generate node 2075
+Expand node 992
+Generate node 2076
+Generate node 2077
+Expand node 994
+Generate node 2078
+Generate node 2079
+Expand node 998
+Generate node 2080
+Generate node 2081
+Expand node 1002
+Generate node 2082
+Generate node 2083
+Expand node 1005
+Generate node 2084
+Generate node 2085
+Expand node 1008
+Generate node 2086
+Generate node 2087
+Expand node 1012
+Generate node 2088
+Generate node 2089
+Expand node 1030
+Generate node 2090
+Generate node 2091
+Expand node 1035
+Generate node 2092
+Generate node 2093
+Expand node 1047
+Generate node 2094
+Generate node 2095
+Expand node 1058
+Generate node 2096
+Generate node 2097
+Expand node 1059
+Generate node 2098
+Generate node 2099
+Expand node 1062
+Generate node 2100
+Generate node 2101
+Expand node 2100
+Generate node 2102
+Generate node 2103
+Expand node 1440
+Generate node 2104
+Generate node 2105
+Expand node 1550
+Generate node 2106
+Expand node 1666
+Generate node 2107
+Expand node 1668
+Generate node 2108
+Expand node 1670
+Generate node 2109
+Generate node 2110
+Expand node 1672
+Generate node 2111
+Generate node 2112
+Expand node 1698
+Generate node 2113
+Expand node 1737
+Generate node 2114
+Generate node 2115
+Expand node 1747
+Generate node 2116
+Generate node 2117
+Expand node 1809
+Generate node 2118
+Generate node 2119
+Expand node 1811
+Generate node 2120
+Generate node 2121
+Expand node 1813
+Generate node 2122
+Expand node 1815
+Generate node 2123
+Generate node 2124
+Expand node 1893
+Generate node 2125
+Expand node 1912
+Generate node 2126
+Generate node 2127
+Expand node 1918
+Generate node 2128
+Generate node 2129
+Expand node 1945
+Generate node 2130
+Expand node 1946
+Generate node 2131
+Expand node 1947
+Generate node 2132
+Expand node 1961
+Generate node 2133
+Expand node 1973
+Generate node 2134
+Expand node 1978
+Generate node 2135
+Generate node 2136
+Expand node 1980
+Generate node 2137
+Generate node 2138
+Expand node 1982
+Generate node 2139
+Generate node 2140
+Expand node 2001
+Generate node 2141
+Generate node 2142
+Expand node 2141
+Generate node 2143
+Generate node 2144
+Expand node 2144
+Generate node 2145
+Generate node 2146
+Expand node 2145
+Generate node 2147
+Expand node 2146
+Generate node 2148
+Generate node 2149
+Expand node 2149
+Generate node 2150
+Generate node 2151
+Expand node 2150
+Generate node 2152
+Generate node 2153
+Expand node 2148
+Generate node 2154
+Expand node 2143
+Generate node 2155
+Generate node 2156
+Expand node 2155
+Generate node 2157
+Generate node 2158
+Expand node 2158
+Generate node 2159
+Generate node 2160
+Expand node 2156
+Generate node 2161
+Generate node 2162
+Expand node 2161
+Generate node 2163
+Expand node 2162
+Generate node 2164
+Generate node 2165
+Expand node 2165
+Generate node 2166
+Generate node 2167
+Expand node 2164
+Generate node 2168
+Expand node 2011
+Generate node 2169
+Generate node 2170
+Expand node 2169
+Generate node 2171
+Generate node 2172
+Expand node 2172
+Generate node 2173
+Generate node 2174
+Expand node 2173
+Generate node 2175
+Expand node 2174
+Generate node 2176
+Generate node 2177
+Expand node 2177
+Generate node 2178
+Generate node 2179
+Expand node 2178
+Generate node 2180
+Generate node 2181
+Expand node 2176
+Generate node 2182
+Expand node 2171
+Generate node 2183
+Generate node 2184
+Expand node 2183
+Generate node 2185
+Generate node 2186
+Expand node 2186
+Generate node 2187
+Generate node 2188
+Expand node 2184
+Generate node 2189
+Generate node 2190
+Expand node 2189
+Generate node 2191
+Expand node 2190
+Generate node 2192
+Generate node 2193
+Expand node 2193
+Generate node 2194
+Generate node 2195
+Expand node 2192
+Generate node 2196
+Expand node 2023
+Generate node 2197
+Generate node 2198
+Expand node 2027
+Generate node 2199
+Generate node 2200
+Expand node 2030
+Generate node 2201
+Generate node 2202
+Expand node 2036
+Generate node 2203
+Generate node 2204
+Expand node 2038
+Generate node 2205
+Generate node 2206
+Expand node 2040
+Generate node 2207
+Generate node 2208
+Expand node 2042
+Generate node 2209
+Generate node 2210
+Expand node 2054
+Generate node 2211
+Expand node 2211
+Generate node 2212
+Generate node 2213
+Expand node 2212
+Generate node 2214
+Generate node 2215
+Expand node 2056
+Generate node 2216
+Expand node 2216
+Generate node 2217
+Generate node 2218
+Expand node 2217
+Generate node 2219
+Generate node 2220
+Expand node 2057
+Generate node 2221
+Generate node 2222
+Expand node 2059
+Generate node 2223
+Generate node 2224
+Expand node 2061
+Generate node 2225
+Generate node 2226
+Expand node 2063
+Generate node 2227
+Generate node 2228
+Expand node 2065
+Generate node 2229
+Generate node 2230
+Expand node 2069
+Generate node 2231
+Generate node 2232
+Expand node 2071
+Generate node 2233
+Expand node 2233
+Generate node 2234
+Generate node 2235
+Expand node 2073
+Generate node 2236
+Generate node 2237
+Expand node 2080
+Generate node 2238
+Generate node 2239
+Expand node 2084
+Generate node 2240
+Generate node 2241
+Expand node 2092
+Generate node 2242
+Generate node 2243
+Expand node 2104
+Generate node 2244
+Expand node 2105
+Generate node 2245
+Expand node 2114
+Generate node 2246
+Expand node 2115
+Generate node 2247
+Expand node 2125
+Generate node 2248
+Generate node 2249
+Expand node 2249
+Generate node 2250
+Generate node 2251
+Expand node 2251
+Generate node 2252
+Expand node 2130
+Generate node 2253
+Generate node 2254
+Expand node 2254
+Generate node 2255
+Generate node 2256
+Expand node 2255
+Generate node 2257
+Generate node 2258
+Expand node 2256
+Generate node 2259
+Expand node 2257
+Generate node 2260
+Generate node 2261
+Expand node 2259
+Generate node 2262
+Expand node 2262
+Generate node 2263
+Generate node 2264
+Expand node 2263
+Generate node 2265
+Generate node 2266
+Expand node 2258
+Generate node 2267
+Generate node 2268
+Expand node 2268
+Generate node 2269
+Generate node 2270
+Expand node 2270
+Generate node 2271
+Generate node 2272
+Expand node 2272
+Generate node 2273
+Generate node 2274
+Expand node 2274
+Generate node 2275
+Expand node 2273
+Generate node 2276
+Generate node 2277
+Expand node 2276
+Generate node 2278
+Expand node 2277
+Generate node 2279
+Expand node 2260
+Generate node 2280
+Expand node 2264
+Generate node 2281
+Generate node 2282
+Expand node 2282
+Generate node 2283
+Generate node 2284
+Expand node 2284
+Generate node 2285
+Generate node 2286
+Expand node 2286
+Generate node 2287
+Expand node 2265
+Generate node 2288
+Expand node 2131
+Generate node 2289
+Generate node 2290
+Expand node 2290
+Generate node 2291
+Generate node 2292
+Expand node 2291
+Generate node 2293
+Generate node 2294
+Expand node 2292
+Generate node 2295
+Expand node 2293
+Generate node 2296
+Generate node 2297
+Expand node 2295
+Generate node 2298
+Expand node 2298
+Generate node 2299
+Generate node 2300
+Expand node 2299
+Generate node 2301
+Generate node 2302
+Expand node 2294
+Generate node 2303
+Generate node 2304
+Expand node 2304
+Generate node 2305
+Generate node 2306
+Expand node 2306
+Generate node 2307
+Generate node 2308
+Expand node 2308
+Generate node 2309
+Generate node 2310
+Expand node 2310
+Generate node 2311
+Expand node 2309
+Generate node 2312
+Generate node 2313
+Expand node 2312
+Generate node 2314
+Expand node 2313
+Generate node 2315
+Expand node 2296
+Generate node 2316
+Expand node 2300
+Generate node 2317
+Generate node 2318
+Expand node 2318
+Generate node 2319
+Generate node 2320
+Expand node 2320
+Generate node 2321
+Generate node 2322
+Expand node 2322
+Generate node 2323
+Expand node 2301
+Generate node 2324
+Expand node 2132
+Generate node 2325
+Generate node 2326
+Expand node 2326
+Generate node 2327
+Generate node 2328
+Expand node 2327
+Generate node 2329
+Generate node 2330
+Expand node 2328
+Generate node 2331
+Generate node 2332
+Expand node 2332
+Generate node 2333
+Generate node 2334
+Expand node 2334
+Generate node 2335
+Generate node 2336
+Expand node 2335
+Generate node 2337
+Generate node 2338
+Expand node 2336
+Generate node 2339
+Generate node 2340
+Expand node 2337
+Generate node 2341
+Generate node 2342
+Expand node 2341
+Generate node 2343
+Expand node 2342
+Generate node 2344
+Expand node 2338
+Generate node 2345
+Generate node 2346
+Expand node 2339
+Generate node 2347
+Generate node 2348
+Expand node 2347
+Generate node 2349
+Expand node 2348
+Generate node 2350
+Expand node 2340
+Generate node 2351
+Expand node 2345
+Generate node 2352
+Generate node 2353
+Expand node 2352
+Generate node 2354
+Expand node 2353
+Generate node 2355
+Expand node 2346
+Generate node 2356
+Expand node 2351
+Generate node 2357
+Expand node 2356
+Generate node 2358
+Expand node 2244
+Generate node 2359
+Expand node 2246
+Generate node 2360
+Expand node 2329
+Generate node 2361
+Expand node 2361
+Generate node 2362
+Expand node 95
+Generate node 2363
+Generate node 2364
+Expand node 2363
+Generate node 2365
+Generate node 2366
+Expand node 105
+Generate node 2367
+Generate node 2368
+Expand node 2367
+Generate node 2369
+Generate node 2370
+Expand node 216
+Generate node 2371
+Generate node 2372
+Expand node 2372
+Generate node 2373
+Generate node 2374
+Expand node 2373
+Generate node 2375
+Generate node 2376
+Expand node 2374
+Generate node 2377
+Expand node 2375
+Generate node 2378
+Expand node 2376
+Generate node 2379
+Generate node 2380
+Expand node 2380
+Generate node 2381
+Generate node 2382
+Expand node 2377
+Generate node 2383
+Expand node 2383
+Generate node 2384
+Generate node 2385
+Expand node 2379
+Generate node 2386
+Expand node 219
+Generate node 2387
+Generate node 2388
+Expand node 2388
+Generate node 2389
+Generate node 2390
+Expand node 2389
+Generate node 2391
+Generate node 2392
+Expand node 2391
+Generate node 2393
+Generate node 2394
+Expand node 2393
+Generate node 2395
+Generate node 2396
+Expand node 2396
+Generate node 2397
+Generate node 2398
+Expand node 2392
+Generate node 2399
+Generate node 2400
+Expand node 2394
+Generate node 2401
+Generate node 2402
+Expand node 2400
+Generate node 2403
+Expand node 2403
+Generate node 2404
+Expand node 2404
+Generate node 2405
+Generate node 2406
+Expand node 2402
+Generate node 2407
+Expand node 2407
+Generate node 2408
+Expand node 2408
+Generate node 2409
+Generate node 2410
+Expand node 223
+Generate node 2411
+Expand node 225
+Generate node 2412
+Expand node 377
+Generate node 2413
+Generate node 2414
+Expand node 2414
+Generate node 2415
+Generate node 2416
+Expand node 2415
+Generate node 2417
+Generate node 2418
+Expand node 523
+Generate node 2419
+Expand node 778
+Generate node 2420
+Generate node 2421
+Expand node 858
+Generate node 2422
+Expand node 2422
+Generate node 2423
+Generate node 2424
+Expand node 2423
+Generate node 2425
+Generate node 2426
+Expand node 879
+Generate node 2427
+Expand node 897
+Generate node 2428
+Generate node 2429
+Expand node 2428
+Generate node 2430
+Generate node 2431
+Expand node 2430
+Generate node 2432
+Generate node 2433
+Expand node 901
+Generate node 2434
+Generate node 2435
+Expand node 2434
+Generate node 2436
+Generate node 2437
+Expand node 2436
+Generate node 2438
+Generate node 2439
+Expand node 910
+Generate node 2440
+Expand node 2440
+Generate node 2441
+Generate node 2442
+Expand node 2442
+Generate node 2443
+Expand node 919
+Generate node 2444
+Generate node 2445
+Expand node 920
+Generate node 2446
+Expand node 945
+Generate node 2447
+Generate node 2448
+Expand node 946
+Generate node 2449
+Expand node 973
+Generate node 2450
+Generate node 2451
+Expand node 975
+Generate node 2452
+Generate node 2453
+Expand node 2452
+Generate node 2454
+Generate node 2455
+Expand node 2453
+Generate node 2456
+Generate node 2457
+Expand node 2454
+Generate node 2458
+Generate node 2459
+Expand node 977
+Generate node 2460
+Generate node 2461
+Expand node 2460
+Generate node 2462
+Generate node 2463
+Expand node 2461
+Generate node 2464
+Generate node 2465
+Expand node 2462
+Generate node 2466
+Generate node 2467
+Expand node 2464
+Generate node 2468
+Generate node 2469
+Expand node 2466
+Generate node 2470
+Generate node 2471
+Expand node 983
+Generate node 2472
+Generate node 2473
+Expand node 985
+Generate node 2474
+Generate node 2475
+Expand node 986
+Generate node 2476
+Generate node 2477
+Expand node 990
+Generate node 2478
+Generate node 2479
+Expand node 1000
+Generate node 2480
+Generate node 2481
+Expand node 1004
+Generate node 2482
+Generate node 2483
+Expand node 1007
+Generate node 2484
+Generate node 2485
+Expand node 1010
+Generate node 2486
+Generate node 2487
+Expand node 1011
+Generate node 2488
+Generate node 2489
+Expand node 1016
+Generate node 2490
+Generate node 2491
+Expand node 1020
+Generate node 2492
+Generate node 2493
+Expand node 1022
+Generate node 2494
+Generate node 2495
+Expand node 1025
+Generate node 2496
+Generate node 2497
+Expand node 1037
+Generate node 2498
+Generate node 2499
+Expand node 1044
+Generate node 2500
+Generate node 2501
+Expand node 1046
+Generate node 2502
+Expand node 1064
+Generate node 2503
+Generate node 2504
+Expand node 1074
+Generate node 2505
+Expand node 1080
+Generate node 2506
+Expand node 1082
+Generate node 2507
+Expand node 1084
+Generate node 2508
+Expand node 1087
+Generate node 2509
+Generate node 2510
+Expand node 1091
+Generate node 2511
+Generate node 2512
+Expand node 1093
+Generate node 2513
+Generate node 2514
+Expand node 1095
+Generate node 2515
+Generate node 2516
+Expand node 1096
+Generate node 2517
+Generate node 2518
+Expand node 1556
+Generate node 2519
+Expand node 1557
+Generate node 2520
+Expand node 1637
+Generate node 2521
+Expand node 2521
+Generate node 2522
+Expand node 1681
+Generate node 2523
+Generate node 2524
+Expand node 1683
+Generate node 2525
+Generate node 2526
+Expand node 1775
+Generate node 2527
+Expand node 2527
+Generate node 2528
+Expand node 2000
+Generate node 2529
+Generate node 2530
+Expand node 2529
+Generate node 2531
+Expand node 2003
+Generate node 2532
+Expand node 2010
+Generate node 2533
+Generate node 2534
+Expand node 2533
+Generate node 2535
+Expand node 2014
+Generate node 2536
+Expand node 2026
+Generate node 2537
+Generate node 2538
+Expand node 2538
+Generate node 2539
+Expand node 2082
+Generate node 2540
+Expand node 2086
+Generate node 2541
+Expand node 2090
+Generate node 2542
+Generate node 2543
+Expand node 2097
+Generate node 2544
+Generate node 2545
+Expand node 2099
+Generate node 2546
+Generate node 2547
+Expand node 2118
+Generate node 2548
+Generate node 2549
+Expand node 2364
+Generate node 2550
+Generate node 2551
+Expand node 2550
+Generate node 2552
+Generate node 2553
+Expand node 2368
+Generate node 2554
+Generate node 2555
+Expand node 2554
+Generate node 2556
+Generate node 2557
+Expand node 2387
+Generate node 2558
+Generate node 2559
+Expand node 2559
+Generate node 2560
+Generate node 2561
+Expand node 2560
+Generate node 2562
+Generate node 2563
+Expand node 2561
+Generate node 2564
+Expand node 2562
+Generate node 2565
+Expand node 2563
+Generate node 2566
+Generate node 2567
+Expand node 2567
+Generate node 2568
+Generate node 2569
+Expand node 2564
+Generate node 2570
+Expand node 2570
+Generate node 2571
+Generate node 2572
+Expand node 2566
+Generate node 2573
+Expand node 2411
+Generate node 2574
+Expand node 2412
+Generate node 2575
+Expand node 2419
+Generate node 2576
+Generate node 2577
+Expand node 2451
+Generate node 2578
+Generate node 2579
+Expand node 2472
+Generate node 2580
+Generate node 2581
+Expand node 2476
+Generate node 2582
+Generate node 2583
+Expand node 2480
+Generate node 2584
+Generate node 2585
+Expand node 2483
+Generate node 2586
+Expand node 2586
+Generate node 2587
+Generate node 2588
+Expand node 2587
+Generate node 2589
+Generate node 2590
+Expand node 2485
+Generate node 2591
+Expand node 2487
+Generate node 2592
+Expand node 2592
+Generate node 2593
+Generate node 2594
+Expand node 2593
+Generate node 2595
+Generate node 2596
+Expand node 2492
+Generate node 2597
+Generate node 2598
+Expand node 2494
+Generate node 2599
+Generate node 2600
+Expand node 2498
+Generate node 2601
+Generate node 2602
+Expand node 2500
+Generate node 2603
+Expand node 2603
+Generate node 2604
+Generate node 2605
+Expand node 2502
+Generate node 2606
+Generate node 2607
+Expand node 2509
+Generate node 2608
+Generate node 2609
+Expand node 2511
+Generate node 2610
+Generate node 2611
+Expand node 2513
+Generate node 2612
+Generate node 2613
+Expand node 2537
+Generate node 2614
+Generate node 2615
+Expand node 2551
+Generate node 2616
+Generate node 2617
+Expand node 2555
+Generate node 2618
+Generate node 2619
+Expand node 2574
+Generate node 2620
+Generate node 2621
+Expand node 2621
+Generate node 2622
+Expand node 2622
+Generate node 2623
+Generate node 2624
+Expand node 2624
+Generate node 2625
+Generate node 2626
+Expand node 2626
+Generate node 2627
+Expand node 2627
+Generate node 2628
+Expand node 2575
+Generate node 2629
+Generate node 2630
+Expand node 2630
+Generate node 2631
+Generate node 2632
+Expand node 2631
+Generate node 2633
+Generate node 2634
+Expand node 2632
+Generate node 2635
+Generate node 2636
+Expand node 2636
+Generate node 2637
+Generate node 2638
+Expand node 2638
+Generate node 2639
+Generate node 2640
+Expand node 2639
+Generate node 2641
+Generate node 2642
+Expand node 2641
+Generate node 2643
+Generate node 2644
+Expand node 2643
+Generate node 2645
+Expand node 2644
+Generate node 2646
+Expand node 2640
+Generate node 2647
+Expand node 2642
+Generate node 2648
+Expand node 2647
+Generate node 2649
+Expand node 2648
+Generate node 2650
+Expand node 2633
+Generate node 2651
+Expand node 2578
+Generate node 2652
+Generate node 2653
+Expand node 227
+Generate node 2654
+Generate node 2655
+Expand node 887
+Generate node 2656
+Generate node 2657
+Expand node 2656
+Generate node 2658
+Generate node 2659
+Expand node 2658
+Generate node 2660
+Generate node 2661
+Expand node 2657
+Generate node 2662
+Generate node 2663
+Expand node 916
+Generate node 2664
+Generate node 2665
+Expand node 2664
+Generate node 2666
+Generate node 2667
+Expand node 2665
+Generate node 2668
+Expand node 2666
+Generate node 2669
+Generate node 2670
+Expand node 961
+Generate node 2671
+Generate node 2672
+Expand node 2671
+Generate node 2673
+Generate node 2674
+Expand node 2673
+Generate node 2675
+Expand node 1029
+Generate node 2676
+Generate node 2677
+Expand node 2676
+Generate node 2678
+Generate node 2679
+Expand node 2678
+Generate node 2680
+Generate node 2681
+Expand node 1039
+Generate node 2682
+Generate node 2683
+Expand node 1040
+Generate node 2684
+Expand node 1068
+Generate node 2685
+Generate node 2686
+Expand node 1075
+Generate node 2687
+Generate node 2688
+Expand node 1077
+Generate node 2689
+Generate node 2690
+Expand node 1685
+Generate node 2691
+Expand node 1687
+Generate node 2692
+Generate node 2693
+Expand node 1975
+Generate node 2694
+Expand node 2002
+Generate node 2695
+Expand node 2695
+Generate node 2696
+Expand node 2696
+Generate node 2697
+Expand node 2013
+Generate node 2698
+Expand node 2698
+Generate node 2699
+Expand node 2699
+Generate node 2700
+Expand node 2022
+Generate node 2701
+Expand node 2390
+Generate node 2702
+Generate node 2703
+Expand node 2703
+Generate node 2704
+Generate node 2705
+Expand node 2505
+Generate node 2706
+Expand node 2506
+Generate node 2707
+Generate node 2708
+Expand node 2507
+Generate node 2709
+Expand node 2508
+Generate node 2710
+Generate node 2711
+Expand node 2516
+Generate node 2712
+Generate node 2713
+Expand node 2518
+Generate node 2714
+Generate node 2715
+Expand node 2523
+Generate node 2716
+Generate node 2717
+Expand node 2585
+Generate node 2718
+Generate node 2719
+Expand node 2719
+Generate node 2720
+Expand node 2615
+Generate node 2721
+Expand node 2721
+Generate node 2722
+Expand node 2655
+Generate node 2723
+Generate node 2724
+Expand node 2723
+Expand node 2672
+Generate node 2725
+Expand node 2687
+Generate node 2726
+Generate node 2727
+Expand node 2689
+Generate node 2728
+Generate node 2729
+Expand node 2724
+Generate node 2730
+Generate node 2731
+Expand node 2730
+Expand node 2731
+Generate node 2732
+Generate node 2733
+Expand node 2732
+Generate node 2734
+Generate node 2735
+Expand node 2734
+Generate node 2736
+Generate node 2737
+Expand node 2736
+Generate node 2738
+Generate node 2739
+Expand node 2738
+Generate node 2740
+Generate node 2741
+Expand node 2740
+Generate node 2742
+Generate node 2743
+Expand node 2743
+Generate node 2744
+Expand node 2742
+Generate node 2745
+Generate node 2746
+Expand node 2745
+Generate node 2747
+Generate node 2748
+Expand node 2746
+Generate node 2749
+Expand node 2747
+Expand node 2728
+Generate node 2750
+Generate node 2751
+Expand node 2750
+Generate node 2752
+Generate node 2753
+Expand node 2752
+Generate node 2754
+Generate node 2755
+Expand node 2754
+Generate node 2756
+Generate node 2757
+Expand node 2757
+Generate node 2758
+Generate node 2759
+Expand node 2756
+Generate node 2760
+Generate node 2761
+Expand node 2760
+Generate node 2762
+Generate node 2763
+Expand node 2761
+Generate node 2764
+Generate node 2765
+Expand node 1108
+Generate node 2766
+Generate node 2767
+Expand node 1110
+Generate node 2768
+Generate node 2769
+Expand node 1197
+Generate node 2770
+Generate node 2771
+Expand node 2771
+
+ Found a solution! 
+
+CPU time (s):    1.75
+Sum of costs:    65
+Expanded nodes:  1607
+Generated nodes: 2772
+***Import an instance***
+Start locations
+. 4 . . . 5 @ . 
+. 3 . . . . 0 . 
+@ . @ . . @ . . 
+. . . @ . . . 1 
+. . @ . . . @ . 
+. . @ . 2 . . @ 
+. . . 6 . @ . . 
+. @ . @ . . . . 
+
+Goal locations
+. 4 0 . . 1 @ . 
+. . . . . . . . 
+@ . @ . . @ . . 
+. . . @ . . 6 . 
+. . @ . . 3 @ . 
+2 . @ . . 5 . @ 
+. . . . . @ . . 
+. @ . @ . . . . 
+
+Auto-loaded policy grid: checkpoints/test_48_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    36
+Expanded nodes:  4
+Generated nodes: 7
+***Import an instance***
+Start locations
+. . . . @ . . . 
+. . @ . . . @ . 
+. . . . 0 . . . 
+@ @ . . 3 . . @ 
+6 . 4 @ @ . . 1 
+. @ . @ . @ 2 . 
+. . . . . . . . 
+. @ . 5 . . . . 
+
+Goal locations
+3 6 . . @ . . . 
+. . @ . . . @ . 
+. . . . . . . 2 
+@ @ . . . . . @ 
+. 0 . @ @ . . . 
+. @ . @ . @ . . 
+. . 1 . . . . . 
+5 @ . . 4 . . . 
+
+Auto-loaded policy grid: checkpoints/test_49_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 1
+Generate node 3
+Generate node 4
+Expand node 2
+Generate node 5
+Expand node 4
+Generate node 6
+Generate node 7
+Expand node 5
+Generate node 8
+Generate node 9
+Expand node 3
+Generate node 10
+Generate node 11
+Expand node 10
+Generate node 12
+Generate node 13
+Expand node 11
+Generate node 14
+Generate node 15
+Expand node 13
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    42
+Expanded nodes:  9
+Generated nodes: 16
+***Import an instance***
+Start locations
+. . . 0 1 . 2 3 
+4 . . . @ . . . 
+. @ . . . . . . 
+. . . . . . . . 
+. . . @ . . . . 
+. . @ . . . . . 
+. . . @ . . @ . 
+. . . . . . . . 
+
+Goal locations
+4 . . . . . . . 
+. . 0 . @ . . . 
+. @ . . . . . . 
+. . . 3 . . . . 
+. . . @ . 1 . . 
+. 2 @ . . . . . 
+. . . @ . . @ . 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_5_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+Generate node 5
+Generate node 6
+Expand node 1
+Generate node 7
+Generate node 8
+Expand node 3
+Generate node 9
+Generate node 10
+Expand node 5
+Generate node 11
+Generate node 12
+Expand node 6
+Generate node 13
+Generate node 14
+Expand node 8
+Generate node 15
+Generate node 16
+Expand node 10
+Generate node 17
+Generate node 18
+Expand node 12
+Generate node 19
+Generate node 20
+Expand node 20
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    26
+Expanded nodes:  11
+Generated nodes: 21
+***Import an instance***
+Start locations
+. . . . . . . . 
+. . . . 2 @ . . 
+. 1 . . @ @ . 0 
+. @ . @ @ . . . 
+. . @ @ . . . . 
+. . . . . 6 . . 
+@ @ @ @ . . . 5 
+4 . . . . . 3 . 
+
+Goal locations
+. . . . . . . . 
+. 2 5 . . @ 0 . 
+. . . . @ @ . . 
+. @ . @ @ 4 . . 
+. . @ @ . . . . 
+. . . . 3 . 6 . 
+@ @ @ @ . . . . 
+. . . . . . 1 . 
+
+Auto-loaded policy grid: checkpoints/test_50_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 5
+Generate node 7
+Generate node 8
+Expand node 7
+Generate node 9
+Generate node 10
+Expand node 10
+Generate node 11
+Generate node 12
+Expand node 12
+Generate node 13
+Generate node 14
+Expand node 13
+Generate node 15
+Generate node 16
+Expand node 15
+Generate node 17
+Generate node 18
+Expand node 17
+Generate node 19
+Generate node 20
+Expand node 20
+Generate node 21
+Generate node 22
+Expand node 4
+Generate node 23
+Expand node 16
+Generate node 24
+Generate node 25
+Expand node 18
+Generate node 26
+Generate node 27
+Expand node 21
+Generate node 28
+Generate node 29
+Expand node 23
+Generate node 30
+Expand node 30
+Generate node 31
+Expand node 31
+Generate node 32
+Expand node 32
+Generate node 33
+Generate node 34
+Expand node 33
+Generate node 35
+Generate node 36
+Expand node 35
+Generate node 37
+Generate node 38
+Expand node 37
+
+ Found a solution! 
+
+CPU time (s):    0.03
+Sum of costs:    48
+Expanded nodes:  22
+Generated nodes: 39
+***Import an instance***
+Start locations
+. . . . 1 . . . 
+. . @ . . . . . 
+@ . . 5 . . @ . 
+. . . . . . . . 
+. . 4 . . . @ . 
+. . . . 2 . . . 
+. . . . . @ @ . 
+. . . 0 . . 3 . 
+
+Goal locations
+. . . . . . . . 
+. . @ . 2 1 . . 
+@ . 0 . . . @ . 
+. . . . . . . . 
+4 . . 3 . . @ . 
+. . . . 5 . . . 
+. . . . . @ @ . 
+. . . . . . . . 
+
+Auto-loaded policy grid: checkpoints/test_6_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    24
+Expanded nodes:  3
+Generated nodes: 5
+***Import an instance***
+Start locations
+. . 3 . . @ @ 5 
+@ . . . . . . 4 
+. . . . . . . . 
+. . @ . . @ . . 
+. . . . . . . . 
+0 2 . . . . . . 
+. . . . . @ . . 
+. . . . 1 . . . 
+
+Goal locations
+. . . . . @ @ . 
+@ . . . . . . . 
+. . . . 3 . . . 
+. . @ 4 . @ . 2 
+. . . . . . . . 
+. . . . . . . 1 
+. . . . . @ . . 
+0 . . . . 5 . . 
+
+Auto-loaded policy grid: checkpoints/test_7_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    34
+Expanded nodes:  3
+Generated nodes: 5
+***Import an instance***
+Start locations
+. . . . . . 4 . 
+. @ . 5 . . . . 
+. . . @ . 1 . . 
+0 . . . . @ . . 
+. . . . . . @ . 
+. 3 . . . . . . 
+. . . . . . . . 
+. @ . 2 . . @ . 
+
+Goal locations
+. . . . . . . . 
+. @ 5 . . 3 . . 
+. . . @ . 2 . . 
+. . . . . @ . . 
+. 1 . . . . @ . 
+. . . 0 . . . . 
+. . . . 4 . . . 
+. @ . . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_8_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 3
+Generate node 5
+Generate node 6
+Expand node 4
+Generate node 7
+Generate node 8
+Expand node 6
+Generate node 9
+Generate node 10
+Expand node 9
+Generate node 11
+Generate node 12
+Expand node 1
+Generate node 13
+Generate node 14
+Expand node 13
+Generate node 15
+Generate node 16
+Expand node 14
+Generate node 17
+Generate node 18
+Expand node 10
+Generate node 19
+Generate node 20
+Expand node 20
+Generate node 21
+Generate node 22
+Expand node 15
+Generate node 23
+Generate node 24
+Expand node 23
+Generate node 25
+Generate node 26
+Expand node 26
+Generate node 27
+Generate node 28
+Expand node 27
+Generate node 29
+Generate node 30
+Expand node 16
+Generate node 31
+Generate node 32
+Expand node 31
+Generate node 33
+Generate node 34
+Expand node 32
+Generate node 35
+Generate node 36
+Expand node 35
+Generate node 37
+Generate node 38
+Expand node 36
+Generate node 39
+Generate node 40
+Expand node 28
+Generate node 41
+Generate node 42
+Expand node 42
+Generate node 43
+Generate node 44
+Expand node 11
+Generate node 45
+Generate node 46
+Expand node 21
+Generate node 47
+Generate node 48
+Expand node 5
+Generate node 49
+Generate node 50
+Expand node 7
+Generate node 51
+Generate node 52
+Expand node 12
+Generate node 53
+Generate node 54
+Expand node 17
+Generate node 55
+Generate node 56
+Expand node 22
+Generate node 57
+Generate node 58
+Expand node 24
+Generate node 59
+Generate node 60
+Expand node 25
+Generate node 61
+Generate node 62
+Expand node 61
+Generate node 63
+Generate node 64
+Expand node 29
+Generate node 65
+Generate node 66
+Expand node 65
+Generate node 67
+Generate node 68
+Expand node 30
+Generate node 69
+Generate node 70
+Expand node 33
+Generate node 71
+Generate node 72
+Expand node 37
+Generate node 73
+Generate node 74
+Expand node 38
+Generate node 75
+Generate node 76
+Expand node 39
+Generate node 77
+Generate node 78
+Expand node 40
+Generate node 79
+Generate node 80
+Expand node 43
+Generate node 81
+Generate node 82
+Expand node 81
+Generate node 83
+Generate node 84
+Expand node 44
+Generate node 85
+Generate node 86
+Expand node 47
+Generate node 87
+Expand node 55
+Generate node 88
+Generate node 89
+Expand node 63
+Generate node 90
+Generate node 91
+Expand node 90
+Generate node 92
+Generate node 93
+Expand node 91
+Generate node 94
+Generate node 95
+Expand node 83
+Generate node 96
+Expand node 88
+Generate node 97
+Expand node 89
+Generate node 98
+Generate node 99
+Expand node 98
+Generate node 100
+Generate node 101
+Expand node 99
+Generate node 102
+Generate node 103
+Expand node 103
+Generate node 104
+Generate node 105
+Expand node 100
+Generate node 106
+Generate node 107
+Expand node 102
+Generate node 108
+Expand node 104
+Generate node 109
+Expand node 106
+Generate node 110
+Expand node 107
+Generate node 111
+Expand node 8
+Generate node 112
+Generate node 113
+Expand node 112
+Generate node 114
+Generate node 115
+Expand node 113
+Generate node 116
+Generate node 117
+Expand node 18
+Generate node 118
+Generate node 119
+Expand node 118
+Generate node 120
+Generate node 121
+Expand node 119
+Generate node 122
+Generate node 123
+Expand node 19
+Generate node 124
+Generate node 125
+Expand node 125
+Generate node 126
+Generate node 127
+Expand node 34
+Generate node 128
+Generate node 129
+Expand node 128
+Generate node 130
+Generate node 131
+Expand node 129
+Generate node 132
+Generate node 133
+Expand node 41
+Generate node 134
+Generate node 135
+Expand node 135
+Generate node 136
+Generate node 137
+Expand node 45
+Generate node 138
+Generate node 139
+Expand node 139
+Generate node 140
+Expand node 59
+Generate node 141
+Expand node 67
+Generate node 142
+Generate node 143
+Expand node 143
+Generate node 144
+Expand node 87
+Generate node 145
+Generate node 146
+Expand node 126
+Generate node 147
+Generate node 148
+Expand node 136
+Generate node 149
+Generate node 150
+Expand node 140
+Generate node 151
+Generate node 152
+Expand node 49
+Generate node 153
+Generate node 154
+Expand node 50
+Generate node 155
+Expand node 51
+Generate node 156
+Generate node 157
+Expand node 156
+Generate node 158
+Generate node 159
+Expand node 52
+Generate node 160
+Expand node 53
+Generate node 161
+Generate node 162
+Expand node 54
+Generate node 163
+Expand node 163
+Generate node 164
+Generate node 165
+Expand node 56
+Generate node 166
+Expand node 57
+Generate node 167
+Generate node 168
+Expand node 58
+Generate node 169
+Expand node 169
+Generate node 170
+Generate node 171
+Expand node 60
+Generate node 172
+Expand node 62
+Generate node 173
+Expand node 64
+Generate node 174
+Generate node 175
+Expand node 66
+Generate node 176
+Expand node 69
+Generate node 177
+Generate node 178
+Expand node 70
+Generate node 179
+Expand node 179
+Generate node 180
+Generate node 181
+Expand node 71
+Generate node 182
+Generate node 183
+Expand node 182
+Generate node 184
+Generate node 185
+Expand node 72
+Generate node 186
+Expand node 73
+Generate node 187
+Generate node 188
+Expand node 187
+Generate node 189
+Generate node 190
+Expand node 189
+Generate node 191
+Generate node 192
+Expand node 74
+Generate node 193
+Expand node 75
+Generate node 194
+Generate node 195
+Expand node 76
+Generate node 196
+Expand node 196
+Generate node 197
+Generate node 198
+Expand node 77
+Generate node 199
+Generate node 200
+Expand node 199
+Generate node 201
+Generate node 202
+Expand node 201
+Generate node 203
+Generate node 204
+Expand node 78
+Generate node 205
+Expand node 79
+Generate node 206
+Generate node 207
+Expand node 80
+Generate node 208
+Expand node 208
+Generate node 209
+Generate node 210
+Expand node 82
+Generate node 211
+Expand node 85
+Generate node 212
+Generate node 213
+Expand node 86
+Generate node 214
+Expand node 214
+Generate node 215
+Generate node 216
+Expand node 92
+Generate node 217
+Generate node 218
+Expand node 218
+Generate node 219
+Generate node 220
+Expand node 94
+Generate node 221
+Generate node 222
+Expand node 222
+Generate node 223
+Generate node 224
+Expand node 97
+Generate node 225
+Generate node 226
+Expand node 225
+Generate node 227
+Generate node 228
+Expand node 114
+Generate node 229
+Generate node 230
+Expand node 115
+Generate node 231
+Expand node 231
+Generate node 232
+Generate node 233
+Expand node 116
+Generate node 234
+Generate node 235
+Expand node 117
+Generate node 236
+Expand node 236
+Generate node 237
+Generate node 238
+Expand node 120
+Generate node 239
+Generate node 240
+Expand node 121
+Generate node 241
+Expand node 241
+Generate node 242
+Generate node 243
+Expand node 122
+Generate node 244
+Generate node 245
+Expand node 123
+Generate node 246
+Expand node 246
+Generate node 247
+Generate node 248
+Expand node 127
+Generate node 249
+Generate node 250
+Expand node 130
+Generate node 251
+Generate node 252
+Expand node 131
+Generate node 253
+Expand node 253
+Generate node 254
+Generate node 255
+Expand node 132
+Generate node 256
+Generate node 257
+Expand node 133
+Generate node 258
+Expand node 258
+Generate node 259
+Generate node 260
+Expand node 137
+Generate node 261
+Generate node 262
+Expand node 138
+Generate node 263
+Generate node 264
+Expand node 141
+Generate node 265
+Generate node 266
+Expand node 142
+Generate node 267
+Generate node 268
+Expand node 267
+Generate node 269
+Generate node 270
+Expand node 145
+Generate node 271
+Expand node 151
+Generate node 272
+Expand node 153
+Generate node 273
+Generate node 274
+Expand node 274
+Generate node 275
+Generate node 276
+Expand node 158
+Generate node 277
+Generate node 278
+Expand node 277
+Generate node 279
+Generate node 280
+Expand node 278
+Generate node 281
+Generate node 282
+Expand node 184
+Generate node 283
+Generate node 284
+Expand node 283
+Generate node 285
+Generate node 286
+Expand node 284
+Generate node 287
+Generate node 288
+Expand node 227
+Generate node 289
+Generate node 290
+Expand node 289
+Generate node 291
+Generate node 292
+Expand node 290
+Generate node 293
+Generate node 294
+Expand node 271
+Generate node 295
+Generate node 296
+Expand node 272
+Generate node 297
+Generate node 298
+Expand node 275
+Generate node 299
+Generate node 300
+Expand node 299
+Generate node 301
+Generate node 302
+Expand node 300
+Generate node 303
+Generate node 304
+Expand node 96
+Generate node 305
+Generate node 306
+Expand node 306
+Generate node 307
+Generate node 308
+Expand node 305
+Generate node 309
+Generate node 310
+Expand node 310
+Generate node 311
+Generate node 312
+Expand node 307
+Generate node 313
+Expand node 313
+Generate node 314
+Generate node 315
+Expand node 108
+Generate node 316
+Generate node 317
+Expand node 317
+Generate node 318
+Generate node 319
+Expand node 318
+Generate node 320
+Generate node 321
+Expand node 320
+Generate node 322
+Generate node 323
+Expand node 110
+Generate node 324
+Generate node 325
+Expand node 325
+Generate node 326
+Generate node 327
+Expand node 326
+Generate node 328
+Generate node 329
+Expand node 134
+Generate node 330
+Generate node 331
+Expand node 331
+Generate node 332
+Generate node 333
+Expand node 332
+Generate node 334
+Generate node 335
+Expand node 144
+Generate node 336
+Generate node 337
+Expand node 337
+Generate node 338
+Generate node 339
+Expand node 336
+Generate node 340
+Generate node 341
+Expand node 341
+Generate node 342
+Generate node 343
+Expand node 338
+Generate node 344
+Expand node 344
+Generate node 345
+Generate node 346
+Expand node 147
+Generate node 347
+Generate node 348
+Expand node 149
+Generate node 349
+Generate node 350
+Expand node 264
+Generate node 351
+Generate node 352
+Expand node 265
+Generate node 353
+Generate node 354
+Expand node 354
+Generate node 355
+Generate node 356
+Expand node 355
+Generate node 357
+Generate node 358
+Expand node 357
+Generate node 359
+Generate node 360
+Expand node 358
+Generate node 361
+Generate node 362
+Expand node 268
+Generate node 363
+Generate node 364
+Expand node 330
+Generate node 365
+Generate node 366
+Expand node 366
+Generate node 367
+Generate node 368
+Expand node 367
+Generate node 369
+Generate node 370
+Expand node 369
+Generate node 371
+Generate node 372
+Expand node 371
+Generate node 373
+Expand node 109
+Generate node 374
+Generate node 375
+Expand node 375
+Generate node 376
+Generate node 377
+Expand node 376
+Generate node 378
+Generate node 379
+Expand node 379
+Generate node 380
+Generate node 381
+Expand node 374
+Generate node 382
+Expand node 382
+Generate node 383
+Generate node 384
+Expand node 383
+Generate node 385
+Generate node 386
+Expand node 386
+Generate node 387
+Generate node 388
+Expand node 111
+Generate node 389
+Generate node 390
+Expand node 390
+Generate node 391
+Generate node 392
+Expand node 391
+Generate node 393
+Generate node 394
+Expand node 394
+Generate node 395
+Generate node 396
+Expand node 389
+Generate node 397
+Expand node 397
+Generate node 398
+Generate node 399
+Expand node 398
+Generate node 400
+Generate node 401
+Expand node 401
+Generate node 402
+Generate node 403
+Expand node 159
+Generate node 404
+Generate node 405
+Expand node 164
+Generate node 406
+Expand node 170
+Generate node 407
+Expand node 180
+Generate node 408
+Expand node 185
+Generate node 409
+Generate node 410
+Expand node 192
+Generate node 411
+Generate node 412
+Expand node 197
+Generate node 413
+Generate node 414
+Expand node 202
+Generate node 415
+Generate node 416
+Expand node 209
+Generate node 417
+Generate node 418
+Expand node 215
+Generate node 419
+Expand node 219
+Generate node 420
+Generate node 421
+Expand node 223
+Generate node 422
+Generate node 423
+Expand node 228
+Generate node 424
+Generate node 425
+Expand node 232
+Generate node 426
+Generate node 427
+Expand node 427
+
+ Found a solution! 
+
+CPU time (s):    0.15
+Sum of costs:    38
+Expanded nodes:  236
+Generated nodes: 428
+***Import an instance***
+Start locations
+. . . . 0 . . . 
+. . . . . . . . 
+. . @ . . . . . 
+. . . 3 . . . @ 
+. 5 . 1 . . . . 
+. . . @ . @ . . 
+. . 2 . . . . . 
+. . @ . . 4 @ . 
+
+Goal locations
+. . . 5 . . . . 
+. . . . . 4 . . 
+. . @ 0 . . . . 
+. 1 . . . 3 . @ 
+. . . . . . . . 
+. 2 . @ . @ . . 
+. . . . . . . . 
+. . @ . . . @ . 
+
+Auto-loaded policy grid: checkpoints/test_9_policy_grid.csv
+***Run CBS***
+Generate node 0
+Expand node 0
+Generate node 1
+Generate node 2
+Expand node 2
+Generate node 3
+Generate node 4
+Expand node 4
+
+ Found a solution! 
+
+CPU time (s):    0.00
+Sum of costs:    24
+Expanded nodes:  3
+Generated nodes: 5
