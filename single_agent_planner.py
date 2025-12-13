@@ -188,8 +188,13 @@ def is_constrained(curr_loc, next_loc, next_time, constraint_table):
 
 
 
+def _priority(node):
+    # Use policy-aware f if present, else standard g + h.
+    return node.get('f_val', node['g_val'] + node['h_val'])
+
+
 def push_node(open_list, node):
-    heapq.heappush(open_list, (node['g_val'] + node['h_val'], node['h_val'], node['loc'], node))
+    heapq.heappush(open_list, (_priority(node), node['h_val'], node['loc'], node))
 
 
 def pop_node(open_list):
@@ -199,10 +204,11 @@ def pop_node(open_list):
 
 def compare_nodes(n1, n2):
     """Return true is n1 is better than n2."""
-    return n1['g_val'] + n1['h_val'] < n2['g_val'] + n2['h_val']
+    return _priority(n1) < _priority(n2)
 
 
-def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None, disjoint=False):
+def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeStep = None, disjoint=False,
+           policy_guidance=None, policy_grid=None, policy_weight: float = 0.0, policy_apply_to_h: bool = False):
     """ my_map      - binary obstacle map
         start_loc   - start position
         goal_loc    - goal position
@@ -221,8 +227,11 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
     open_list = []
     closed_list = dict()
     earliest_goal_timestep = 0
-    h_value = h_values[start_loc]
+    h_value = h_values.get(start_loc)
+    if h_value is None:
+        return None
     root = {'loc': start_loc, 'g_val': 0, 'h_val': h_value, 'parent': None, 'timestep': 0}
+    root['f_val'] = _priority(root)
     push_node(open_list, root)
     closed_list[(root['loc'], root['timestep'])] = root
 
@@ -267,17 +276,46 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
         if curr['loc'] == goal_loc and can_wait_forever_from(curr): 
             return get_path(curr)
 
+        # Collect successors (4 moves + wait)
+        candidates = []
         for dir in range(4):
             child_loc = move(curr['loc'], dir)
-            if (child_loc[0] < 0 or child_loc[0] >= len(my_map) or child_loc[1] < 0 or child_loc[1] >= len(my_map[0])):
+            in_bounds = not (child_loc[0] < 0 or child_loc[0] >= len(my_map) or child_loc[1] < 0 or child_loc[1] >= len(my_map[0]))
+            blocked = (not in_bounds) or my_map[child_loc[0]][child_loc[1]] if in_bounds else True
+            candidates.append({'loc': child_loc, 'blocked': blocked, 'timestep': curr['timestep'] + 1})
+        candidates.append({'loc': curr['loc'], 'blocked': False, 'timestep': curr['timestep'] + 1})  # wait
+
+        order = list(range(len(candidates)))
+        scores = None
+        if policy_guidance is not None:
+            succs = [c['loc'] for c in candidates]
+            blocked = [c['blocked'] for c in candidates]
+            scores = policy_guidance.score_successors(curr['loc'], goal_loc, curr['timestep'], succs, blocked)
+            order = sorted(order, key=lambda i: scores[i], reverse=True)
+
+        for idx in order:
+            cand = candidates[idx]
+            if cand['blocked']:
                 continue
-            if my_map[child_loc[0]][child_loc[1]]:
+            policy_bonus = 0.0
+            if policy_grid is not None and 0 <= cand['loc'][0] < len(policy_grid) and 0 <= cand['loc'][1] < len(policy_grid[0]):
+                policy_bonus = policy_grid[cand['loc'][0]][cand['loc'][1]]
+            h_val = h_values.get(cand['loc'])
+            if h_val is None:
                 continue
-            child = {'loc': child_loc,
+            policy_score = 0.0
+            if scores is not None:
+                policy_score = scores[idx]
+            total_bonus = policy_bonus + policy_score
+            if policy_apply_to_h and policy_weight != 0.0:
+                h_val = max(0.0, h_val - policy_weight * total_bonus)
+            f_val = curr['g_val'] + 1 + h_val - (policy_weight * total_bonus)
+            child = {'loc': cand['loc'],
                     'g_val': curr['g_val'] + 1,
-                    'h_val': h_values[child_loc],
+                    'h_val': h_val,
                     'parent': curr, 
-                    'timestep': curr['timestep'] + 1}
+                    'timestep': cand['timestep'],
+                    'f_val': f_val}
 
             if is_constrained(curr['loc'], child['loc'], child['timestep'], table):
                 continue
@@ -290,20 +328,5 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
             else:
                 closed_list[(child['loc'], child['timestep'])] = child
                 push_node(open_list, child)
-        waiting = {'loc': curr['loc'],
-                    'g_val': curr['g_val'] + 1,
-                    'h_val': h_values[curr['loc']],
-                    'parent': curr, 
-                    'timestep': curr['timestep'] + 1}
-        if is_constrained(curr['loc'], waiting['loc'], waiting['timestep'], table):
-            continue
-        if (waiting['loc'], waiting['timestep']) in closed_list:
-            existing_node = closed_list[(waiting['loc'], waiting['timestep'])]
-            if compare_nodes(waiting, existing_node):
-                closed_list[(waiting['loc'], waiting['timestep'])] = waiting
-                push_node(open_list, waiting)
-        else:
-            closed_list[(waiting['loc'], waiting['timestep'])] = waiting
-            push_node(open_list, waiting)
 
     return None  # Failed to find solutions

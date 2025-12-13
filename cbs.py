@@ -148,7 +148,8 @@ def disjoint_splitting(collision):
 class CBSSolver(object):
     """The high-level search of CBS."""
 
-    def __init__(self, my_map, starts, goals):
+    def __init__(self, my_map, starts, goals, policy_guidance=None, policy_grid=None,
+                 policy_weight: float = 0.0, policy_apply_to_h: bool = False):
         """my_map   - list of lists specifying obstacle positions
         starts      - [(x1, y1), (x2, y2), ...] list of start locations
         goals       - [(x1, y1), (x2, y2), ...] list of goal locations
@@ -164,6 +165,10 @@ class CBSSolver(object):
         self.CPU_time = 0
 
         self.open_list = []
+        self.policy_guidance = policy_guidance
+        self.policy_grid = policy_grid
+        self.policy_weight = policy_weight
+        self.policy_apply_to_h = policy_apply_to_h
 
         # compute heuristics for the low-level search
         self.heuristics = []
@@ -200,7 +205,9 @@ class CBSSolver(object):
                 'collisions': []}
         for i in range(self.num_of_agents):  # Find initial path for each agent
             path = a_star(self.my_map, self.starts[i], self.goals[i], self.heuristics[i],
-                          i, root['constraints'], disjoint=disjoint)
+                          i, root['constraints'], disjoint=disjoint, policy_guidance=self.policy_guidance,
+                          policy_grid=self.policy_grid, policy_weight=self.policy_weight,
+                          policy_apply_to_h=self.policy_apply_to_h)
             if path is None:
                 raise BaseException('No solutions')
             root['paths'].append(path)
@@ -248,7 +255,9 @@ class CBSSolver(object):
 
                 ai = constraint['agent']
                 new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
-                                  self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
+                                  self.heuristics[ai], ai, new_constraints, disjoint=disjoint, policy_guidance=self.policy_guidance,
+                                  policy_grid=self.policy_grid, policy_weight=self.policy_weight,
+                                  policy_apply_to_h=self.policy_apply_to_h)
                 if new_path is None:
                     continue
                 new_paths[ai] = new_path
@@ -258,7 +267,9 @@ class CBSSolver(object):
                     infeasible = False
                     for v in violators:
                         v_path = a_star(self.my_map, self.starts[v], self.goals[v],
-                                        self.heuristics[v], v, new_constraints, disjoint=disjoint)
+                                        self.heuristics[v], v, new_constraints, disjoint=disjoint, policy_guidance=self.policy_guidance,
+                                        policy_grid=self.policy_grid, policy_weight=self.policy_weight,
+                                        policy_apply_to_h=self.policy_apply_to_h)
                         if v_path is None:
                             infeasible = True
                             break

@@ -7,6 +7,9 @@ from independent import IndependentSolver
 from prioritized import PrioritizedPlanningSolver
 from visualize import Animation
 from single_agent_planner import get_sum_of_cost
+from policy_guidance import load_policy
+from policy_grid import load_policy_grid
+import os
 
 SOLVER = "CBS"
 
@@ -79,6 +82,16 @@ if __name__ == '__main__':
                         help='Use the disjoint splitting')
     parser.add_argument('--solver', type=str, default=SOLVER,
                         help='The solver to use (one of: {CBS,Independent,Prioritized}), defaults to ' + str(SOLVER))
+    parser.add_argument('--policy-checkpoint', type=str, default=None,
+                        help='Path to a trained policy checkpoint to guide CBS successor ordering')
+    parser.add_argument('--policy-grid', type=str, default=None,
+                        help='Path to a grid of per-cell policy scores (CSV or space-separated) to bias heuristics')
+    parser.add_argument('--policy-grid-weight', type=float, default=0.0,
+                        help='Weight applied to the policy grid when augmenting the heuristic (higher favors high-scored cells)')
+    parser.add_argument('--policy-grid-apply-to-h', action='store_true', default=False,
+                        help='If set, subtract policy_weight * grid[x][y] from the heuristic (clamped at 0). If false, grid does not change h.')
+    parser.add_argument('--auto-policy-grid', action='store_true', default=False,
+                        help='If set, automatically look for checkpoints/<instance_basename>_policy_grid.csv per instance.')
 
     args = parser.parse_args()
 
@@ -91,9 +104,39 @@ if __name__ == '__main__':
         my_map, starts, goals = import_mapf_instance(file)
         print_mapf_instance(my_map, starts, goals)
 
+        policy_guidance = None
+        policy_grid = None
+        policy_weight = args.policy_grid_weight if args.policy_grid_weight is not None else 0.0
+        policy_apply_to_h = args.policy_grid_apply_to_h
+
+        # Auto-pick policy grid if requested
+        if args.auto_policy_grid and args.policy_grid is None:
+            base = os.path.basename(file)
+            base_no_ext = os.path.splitext(base)[0]
+            candidate = os.path.join("checkpoints", f"{base_no_ext}_policy_grid.csv")
+            if os.path.isfile(candidate):
+                policy_grid = load_policy_grid(candidate)
+                print(f"Auto-loaded policy grid: {candidate}")
+            else:
+                print(f"No auto policy grid found for {file}, expected at {candidate}")
+        if args.policy_checkpoint is not None and args.solver == "CBS":
+            try:
+                policy_guidance = load_policy(args.policy_checkpoint, my_map)
+                print(f"Loaded policy checkpoint: {args.policy_checkpoint}")
+            except Exception as e:
+                print(f"Warning: failed to load policy checkpoint '{args.policy_checkpoint}': {e}")
+        if args.policy_grid is not None and args.solver == "CBS":
+            try:
+                policy_grid = load_policy_grid(args.policy_grid)
+                print(f"Loaded policy grid: {args.policy_grid}")
+            except Exception as e:
+                print(f"Warning: failed to load policy grid '{args.policy_grid}': {e}")
+
         if args.solver == "CBS":
             print("***Run CBS***")
-            cbs = CBSSolver(my_map, starts, goals)
+            cbs = CBSSolver(my_map, starts, goals, policy_guidance=policy_guidance,
+                            policy_grid=policy_grid, policy_weight=policy_weight,
+                            policy_apply_to_h=policy_apply_to_h)
             paths = cbs.find_solution(args.disjoint)
         elif args.solver == "Independent":
             print("***Run Independent***")
