@@ -7,6 +7,7 @@ from independent import IndependentSolver
 from prioritized import PrioritizedPlanningSolver
 from visualize import Animation
 from single_agent_planner import get_sum_of_cost
+import time as timer
 
 SOLVER = "CBS"
 
@@ -79,11 +80,14 @@ if __name__ == '__main__':
                         help='Use the disjoint splitting')
     parser.add_argument('--solver', type=str, default=SOLVER,
                         help='The solver to use (one of: {CBS,Independent,Prioritized}), defaults to ' + str(SOLVER))
+    parser.add_argument('--sma', action='store_true', help='Use SMA* for low-level search')
+    parser.add_argument('--memory_limit', type=int, default=None, help='Maximum nodes for SMA* open list')
 
     args = parser.parse_args()
 
 
     result_file = open("results.csv", "w", buffering=1)
+    result_file.write("Instance,Solver,Cost,Cpu Time,Expanded Nodes,Generated Nodes\n")
 
     for file in sorted(glob.glob(args.instance)):
 
@@ -93,7 +97,7 @@ if __name__ == '__main__':
 
         if args.solver == "CBS":
             print("***Run CBS***")
-            cbs = CBSSolver(my_map, starts, goals)
+            cbs = CBSSolver(my_map, starts, goals, use_sma=args.sma, memory_limit=args.memory_limit)
             paths = cbs.find_solution(args.disjoint)
         elif args.solver == "Independent":
             print("***Run Independent***")
@@ -107,7 +111,16 @@ if __name__ == '__main__':
             raise RuntimeError("Unknown solver!")
 
         cost = get_sum_of_cost(paths)
-        result_file.write("{},{}\n".format(file, cost))
+        if args.solver == "CBS":
+            cpu_time = cbs.CPU_time
+            expanded = cbs.num_of_expanded
+            generated = cbs.num_of_generated
+        else:
+            cpu_time = solver.CPU_time
+            expanded = 0
+            generated = 0
+
+        result_file.write("{},{},{},{:.6f},{},{}\n".format(file, args.solver, cost, cpu_time, expanded, generated))
 
 
         if not args.batch:

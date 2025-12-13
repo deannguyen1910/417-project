@@ -1,7 +1,7 @@
 import time as timer
 import heapq
 import random
-from single_agent_planner import compute_heuristics, a_star, get_location, get_sum_of_cost
+from single_agent_planner import compute_heuristics, a_star, get_location, get_sum_of_cost, sma_star
 
 def paths_violate_constraint(constraint, paths):
     assert constraint['positive'] is True
@@ -148,7 +148,7 @@ def disjoint_splitting(collision):
 class CBSSolver(object):
     """The high-level search of CBS."""
 
-    def __init__(self, my_map, starts, goals):
+    def __init__(self, my_map, starts, goals, use_sma=False, memory_limit=None):
         """my_map   - list of lists specifying obstacle positions
         starts      - [(x1, y1), (x2, y2), ...] list of start locations
         goals       - [(x1, y1), (x2, y2), ...] list of goal locations
@@ -169,6 +169,8 @@ class CBSSolver(object):
         self.heuristics = []
         for goal in self.goals:
             self.heuristics.append(compute_heuristics(my_map, goal))
+        self.use_sma = use_sma 
+        self.memory_limit = memory_limit
 
     def push_node(self, node):
         heapq.heappush(self.open_list, (node['cost'], len(node['collisions']), self.num_of_generated, node))
@@ -198,9 +200,20 @@ class CBSSolver(object):
                 'constraints': [],
                 'paths': [],
                 'collisions': []}
-        for i in range(self.num_of_agents):  # Find initial path for each agent
+        for i in range(self.num_of_agents):
             path = a_star(self.my_map, self.starts[i], self.goals[i], self.heuristics[i],
                           i, root['constraints'], disjoint=disjoint)
+            
+            #Use SMA* for low-level search if enabled
+            if self.use_sma:  
+                path = sma_star(self.my_map, self.starts[i], self.goals[i],
+                                self.heuristics[i], i, root['constraints'],
+                                memory_limit=self.memory_limit, disjoint=disjoint)
+            else:
+                path = a_star(self.my_map, self.starts[i], self.goals[i],
+                              self.heuristics[i], i, root['constraints'],
+                              disjoint=disjoint)
+                
             if path is None:
                 raise BaseException('No solutions')
             root['paths'].append(path)
@@ -247,8 +260,16 @@ class CBSSolver(object):
                 new_paths = [p[:] for p in P['paths']]
 
                 ai = constraint['agent']
-                new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
-                                  self.heuristics[ai], ai, new_constraints, disjoint=disjoint)
+                #Replan for agent using SMA*
+                if self.use_sma:  
+                    new_path = sma_star(self.my_map, self.starts[ai], self.goals[ai],
+                                        self.heuristics[ai], ai, new_constraints,
+                                        memory_limit=self.memory_limit, disjoint=disjoint)
+                else:
+                    new_path = a_star(self.my_map, self.starts[ai], self.goals[ai],
+                                      self.heuristics[ai], ai, new_constraints,
+                                      disjoint=disjoint)
+                
                 if new_path is None:
                     continue
                 new_paths[ai] = new_path
@@ -257,8 +278,15 @@ class CBSSolver(object):
                     violators = paths_violate_constraint(constraint, new_paths)
                     infeasible = False
                     for v in violators:
-                        v_path = a_star(self.my_map, self.starts[v], self.goals[v],
-                                        self.heuristics[v], v, new_constraints, disjoint=disjoint)
+                        #Replan violating agent with SMA*
+                        if self.use_sma:
+                            v_path = sma_star(self.my_map, self.starts[v], self.goals[v],
+                                              self.heuristics[v], v, new_constraints,
+                                              memory_limit=self.memory_limit, disjoint=disjoint)
+                        else:
+                            v_path = a_star(self.my_map, self.starts[v], self.goals[v],
+                                            self.heuristics[v], v, new_constraints,
+                                            disjoint=disjoint)
                         if v_path is None:
                             infeasible = True
                             break
@@ -280,6 +308,7 @@ class CBSSolver(object):
     def print_results(self, node):
         print("\n Found a solution! \n")
         CPU_time = timer.time() - self.start_time
+        self.CPU_time = CPU_time
         print("CPU time (s):    {:.2f}".format(CPU_time))
         print("Sum of costs:    {}".format(get_sum_of_cost(node['paths'])))
         print("Expanded nodes:  {}".format(self.num_of_expanded))

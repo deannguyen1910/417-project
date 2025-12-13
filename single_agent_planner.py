@@ -307,3 +307,99 @@ def a_star(my_map, start_loc, goal_loc, h_values, agent, constraints, maxTimeSte
             push_node(open_list, waiting)
 
     return None  # Failed to find solutions
+
+def sma_star(my_map, start_loc, goal_loc, h_values, agent, constraints, memory_limit=None, maxTimeStep=None, disjoint=False): 
+    #build constraint table for this agent
+    table = build_constraint_table_disjoint(constraints, agent) if disjoint else build_constraint_table(constraints, agent)
+    #initialize the open and closed lists
+    open_list = []
+    closed_list = dict()
+    h_value = h_values[start_loc]
+    root = {'loc': start_loc, 'g_val': 0, 'h_val': h_value, 'parent': None, 'timestep': 0}
+    push_node(open_list, root)
+    closed_list[(root['loc'], root['timestep'])] = root
+    #determine effective memory limit
+    if memory_limit is None:
+        #If no limit specified, treat as infinite (no pruning)
+        mem_limit = float('inf')
+    else:
+        #ensure at least 1 node can be stored
+        mem_limit = max(1, memory_limit)
+    def can_wait_forever_from(curr):
+        #same logic as in A* for checking future constraints
+        for timestep, constraints_list in table.items():
+            if timestep <= curr['timestep']:
+                continue
+            for constraint in constraints_list:
+                pos = constraint.get('positive', False)
+                loc = constraint['loc']
+                if not pos and len(loc) == 1 and loc[0] == curr['loc']:
+                    return False
+                if pos and (len(loc) == 2 or (len(loc) == 1 and loc[0] != curr['loc'])):
+                    return False
+        return True
+    #main search loop (expand the best node first)
+    while len(open_list) > 0:
+        curr = pop_node(open_list)
+        #cut off search if beyond max allowed timestep
+        if maxTimeStep is not None and curr['timestep'] >= maxTimeStep:
+            return None
+        #test if path to goal
+        if curr['loc'] == goal_loc and can_wait_forever_from(curr):
+            return get_path(curr)
+        #Explore neighboring moves
+        for dir in range(4):
+            child_loc = move(curr['loc'], dir)
+            #skip out-of-bounds locations
+            if child_loc[0] < 0 or child_loc[0] >= len(my_map) or child_loc[1] < 0 or child_loc[1] >= len(my_map[0]):
+                continue
+              #skip blocked locations (obstacle)
+            if my_map[child_loc[0]][child_loc[1]]:
+                continue
+            child = {
+                'loc': child_loc,
+                'g_val': curr['g_val'] + 1,
+                'h_val': h_values[child_loc],
+                'parent': curr,
+                'timestep': curr['timestep'] + 1
+            }
+            #Skip moves that violate constraints
+            if is_constrained(curr['loc'], child['loc'], child['timestep'], table):
+                continue
+            if (child['loc'], child['timestep']) in closed_list:
+                existing_node = closed_list[(child['loc'], child['timestep'])]
+                if compare_nodes(child, existing_node):
+                    closed_list[(child['loc'], child['timestep'])] = child
+                    push_node(open_list, child)
+            else:
+                closed_list[(child['loc'], child['timestep'])] = child
+                push_node(open_list, child)
+            #Enforce memory bound: prune if over limit
+            if len(open_list) > mem_limit:
+                  #Identify node with largest f-value (least promising), remove the worst node to free memory, restore heap order after removal
+                worst = max(open_list)
+                open_list.remove(worst)
+                heapq.heapify(open_list)
+        #Also consider waiting in the same location
+        waiting = {
+            'loc': curr['loc'],
+            'g_val': curr['g_val'] + 1,
+            'h_val': h_values[curr['loc']],
+            'parent': curr,
+            'timestep': curr['timestep'] + 1
+        }
+        if not is_constrained(curr['loc'], waiting['loc'], waiting['timestep'], table):
+            if (waiting['loc'], waiting['timestep']) in closed_list:
+                existing_node = closed_list[(waiting['loc'], waiting['timestep'])]
+                if compare_nodes(waiting, existing_node):
+                    closed_list[(waiting['loc'], waiting['timestep'])] = waiting
+                    push_node(open_list, waiting)
+            else:
+                closed_list[(waiting['loc'], waiting['timestep'])] = waiting
+                push_node(open_list, waiting)
+            if len(open_list) > mem_limit:
+                worst = max(open_list)
+                open_list.remove(worst)
+                heapq.heapify(open_list)
+    #Failed to find a path (memory limit might be too low)
+    return None 
