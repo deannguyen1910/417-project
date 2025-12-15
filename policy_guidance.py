@@ -70,15 +70,25 @@ class PolicyHead(nn.Module):
     """
 
     def __init__(self, map_dim: int, agent_dim: int, hidden_dim: int = 64, succ_feat_dim: int = 4, dropout: float = 0.0):
+        """
+        A small MLP over concatenated map+agent+successor features.
+
+        Note: Older checkpoints (e.g., checkpoints/map_policy.pt) were trained
+        without a Dropout layer, so we build the sequence conditionally to keep
+        state_dict keys compatible (Linear, ReLU, [optional Dropout], Linear).
+        """
         super().__init__()
         input_dim = map_dim + agent_dim + succ_feat_dim
         self.hidden_dim = hidden_dim
-        self.fc = nn.Sequential(
+
+        layers = [
             nn.Linear(input_dim, hidden_dim),
             nn.ReLU(inplace=True),
-            nn.Dropout(p=dropout),
-            nn.Linear(hidden_dim, 1),
-        )
+        ]
+        if dropout and dropout > 0.0:
+            layers.append(nn.Dropout(p=dropout))
+        layers.append(nn.Linear(hidden_dim, 1))
+        self.fc = nn.Sequential(*layers)
 
     def forward(self, map_global: torch.Tensor, agent_emb: torch.Tensor, succ_feats: torch.Tensor) -> torch.Tensor:
         """
